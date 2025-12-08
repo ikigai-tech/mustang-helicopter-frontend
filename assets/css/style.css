@@ -1,0 +1,322 @@
+@font-face {
+  font-family: 'ABCGintoNormal';
+  src: url('../fonts/abc-ginto-normal/ABCGintoNormal-Bold-Trial-BF651b7b77d863b.otf') format('otf');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABCGintoNordCondensed';
+  src: url('../fonts/abc-ginto-nord-condensed/ABCGintoNordCondensed-Bold-Trial-BF651b7b7729958.otf') format('otf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABCGintoNormal';
+  src: url('../fonts/abc-ginto-normal/ABCGintoNormal-Regular-Trial-BF651b7b7846685.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TestSohneBreit-Buch';
+  src: url('../fonts/test-sonhe-breit/TestSohneBreit-Buch-BF663d89ca2ff42.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TestSohneNormal-Buch';
+  src: url('../fonts/test-sonhe-normal/TestSohne-Buch-BF663d89cd32e6a.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'TestSohneBreit-Kraftig';
+  src: url('../fonts/test-sonhe-breit/TestSohneBreit-Kraftig-BF663d89caa6b6c.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TestSohneMono-Buch';
+  src: url('../fonts/test-sonhe-mono/TestSohneMono-Buch-BF663d89cbcec64.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'TestSohneBreit-Dreiviertelfett';
+  src: url('../fonts/test-sonhe-breit/TestSohneBreit-Dreiviertelfett-BF663d89c955618.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* custom class */
+.section-wapper {
+  position: relative;
+  --max-width: 1170px;
+  --padding: 1rem;
+  width: min(var(--max-width), 100% - var(--padding)*2);
+  margin-inline: auto;
+}
+
+@media (max-width:1440px) {
+  .section-wapper {
+    --max-width: 1024px;
+  }
+}
+
+
+/*
+ ==================================================
+Dots animation after "LOADING" 
+==================================================*/
+.loadingDots .dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #FF7510;
+  opacity: 0;
+  animation: dotShow 1.5s infinite;
+}
+
+.loadingDots .dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loadingDots .dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.loadingDots .dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes dotShow {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  /* fade in */
+  50% {
+    opacity: 1;
+  }
+
+  /* stay visible */
+  70% {
+    opacity: 0;
+  }
+
+  /* fade out */
+  100% {
+    opacity: 0;
+  }
+}
+
+/*
+ ==================================================
+   Sites buttons 
+  ================================================== 
+*/
+/* primary button css */
+.primary-btn {
+  background-color: white;
+  transition: all 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-btn:hover {
+  background-color: transparent;
+  gap: 4px;
+}
+
+.btn-text {
+  transition: color 0.5s ease-in-out;
+}
+
+.primary-btn:hover .btn-text {
+  color: white;
+}
+
+.btn-icon {
+  transition: transform 0.5s ease-in-out;
+}
+
+.primary-btn:hover .btn-icon {
+  transform: rotate(45deg);
+}
+
+.btn-hover-circle {
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out, top 0.5s ease-in-out, right 0.5s ease-in-out;
+}
+
+.primary-btn:hover .btn-hover-circle {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.25);
+  top: 0;
+  right: 0;
+}
+
+
+/* secoundary button css */
+.secoundary-btn {
+  transition: all 500ms ease-in-out;
+}
+
+.secoundary-btn:hover {
+  gap: 4px;
+}
+
+.secoundary-btn .btn-text {
+  transition: color 0.5s ease-in-out;
+}
+
+.secoundary-btn:hover .btn-text {
+  color: #373737;
+}
+
+.secoundary-btn .btn-icon {
+  transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.secoundary-btn:hover .btn-icon {
+  transform: rotate(45deg);
+}
+
+.secoundary-btn .btn-icon i {
+  transition: color 0.5s ease-in-out;
+}
+
+.btn-hover-circle {
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out, top 0.5s ease-in-out, right 0.5s ease-in-out;
+}
+
+.secoundary-btn:hover .btn-hover-circle {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.25);
+  top: 0;
+  right: 0;
+}
+
+
+/*
+ ==================================================
+   Home Page Styles
+  ================================================== 
+*/
+
+/* Header Styles */
+
+.primary-navigation .nav-items li a {
+  transition: all 300ms ease-in-out;
+}
+
+.primary-navigation .nav-items li a:hover {
+  color: #FF7510;
+}
+
+/* hero section css */
+.hero-section {
+  background: linear-gradient(180deg, #1E3773 0%, #0D77C5 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  overflow: hidden;
+
+}
+
+.hero-bg-mountains img {
+  transform-origin: top center;
+}
+
+/* Sidebar container */
+.hero-sidebar {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+  box-sizing: border-box;
+}
+
+.heroSection-socialIcons {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  z-index: 50;
+}
+
+/* Rotated vertical text */
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: white;
+  user-select: none;
+  letter-spacing: 0.115em;
+  text-align: center;
+}
+
+@keyframes bounceUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+    /* move up by 10px */
+  }
+}
+
+.animate-bounce-up-down {
+  animation: bounceUpDown 1s ease-in-out infinite;
+}
+
+.heroSection-socialIcons ul li {
+  transition: all 500ms ease-in-out;
+}
+
+.heroSection-socialIcons ul li:hover {
+  background-color: #373737;
+}
+
+.heroSection-socialIcons ul li a i {
+  transition: all 300ms ease-in-out;
+}
+
+.heroSection-socialIcons ul li:hover a i {
+  color: white;
+}

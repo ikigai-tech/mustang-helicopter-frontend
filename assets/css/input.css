@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+
+@theme {
+  /* Add custom breakpoints */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-base: 768px;
+  --breakpoint-900: 900px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+  --breakpoint-3xl: 1600px;
+
+
+  /* ✨ All Imported Custom Fonts Added ✨ */
+
+  --font-ginto-normal: 'ABCGintoNormal', sans-serif;
+  --font-ginto-nord: 'ABCGintoNordCondensed', sans-serif;
+
+  --font-sohne-breit-buch: 'TestSohneBreit-Buch', sans-serif;
+  --font-sohne-normal-buch: 'TestSohneNormal-Buch', sans-serif;
+  --font-sohne-breit-kraftig: 'TestSohneBreit-Kraftig', sans-serif;
+  --font-sohne-mono: 'TestSohneMono-Buch', monospace;
+
+  /* The newly added font */
+  --font-sohne-breit-dreiviertelfett: 'TestSohneBreit-Dreiviertelfett', sans-serif;
+
+}
