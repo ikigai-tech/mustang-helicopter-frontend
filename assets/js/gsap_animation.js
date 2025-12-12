@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: footerUpperPart,
         start: "bottom top", // when top of footer hits 80% of viewport
         toggleActions: "play none none none",
-        markers: true // set true if you want to debug scroll
+        markers: false // set true if you want to debug scroll
       }
     });
   }

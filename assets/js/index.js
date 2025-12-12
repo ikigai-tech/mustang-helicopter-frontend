@@ -33,6 +33,131 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".app-header");
+  const dropdownItem = document.querySelector(".nav-item-has-dropdown");
+  const dropdownTrigger = dropdownItem.querySelector("a");
+  const dropdown = dropdownItem.querySelector(".servicesNav-dropdown");
+
+  let dropdownOpen = false;
+
+  // ---------------------------
+  // Helpers
+  // ---------------------------
+
+  function openDropdown() {
+    dropdown.style.opacity = "1";
+    dropdown.style.visibility = "visible";
+    header.classList.add("dropdown-active");
+    dropdownTrigger.setAttribute("aria-expanded", "true");
+    dropdownOpen = true;
+  }
+
+  function closeDropdown() {
+    dropdown.style.opacity = "0";
+    dropdown.style.visibility = "hidden";
+    header.classList.remove("dropdown-active");
+    dropdownTrigger.setAttribute("aria-expanded", "false");
+    dropdownOpen = false;
+  }
+
+  // ----------------------------------------------------
+  // 1) HOVER LOGIC — UPDATED AS YOU REQUESTED
+  // ----------------------------------------------------
+
+  // Hovering SERVICES = open dropdown
+  dropdownItem.addEventListener("mouseenter", () => {
+    openDropdown();
+  });
+
+  // Hovering ANY nav item
+  document.querySelectorAll(".nav-items > li").forEach(navItem => {
+    navItem.addEventListener("mouseenter", () => {
+      const hasDropdown = navItem.classList.contains("nav-item-has-dropdown");
+
+      if (!dropdownOpen) return; // nothing to manage
+
+      if (!hasDropdown) {
+        // 🔥 Hovering About Us, Fleet, Resources, Enquire → KEEP dropdown open
+        return;
+      }
+
+      // If hovering another dropdown item (future support)
+      if (navItem !== dropdownItem) {
+        closeDropdown();
+
+        const newDropdown = navItem.querySelector(".servicesNav-dropdown");
+        if (newDropdown) {
+          newDropdown.style.opacity = "1";
+          newDropdown.style.visibility = "visible";
+        }
+      }
+    });
+  });
+
+  // Leaving ENTIRE header closes dropdown
+  header.addEventListener("mouseleave", () => {
+    closeDropdown();
+  });
+
+  // ----------------------------------------------------
+  // 2) KEYBOARD ACCESSIBILITY (unchanged)
+  // ----------------------------------------------------
+
+  dropdownTrigger.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      dropdownOpen ? closeDropdown() : openDropdown();
+    }
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      openDropdown();
+      const firstLink = dropdown.querySelector("a");
+      if (firstLink) firstLink.focus();
+    }
+  });
+
+  dropdown.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeDropdown();
+      dropdownTrigger.focus();
+    }
+  });
+
+  // Click outside closes dropdown
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target) && !dropdownTrigger.contains(e.target)) {
+      closeDropdown();
+    }
+  });
+
+  // ----------------------------------------------------
+  // 3) TAB SWITCHING (unchanged)
+  // ----------------------------------------------------
+
+  document.querySelectorAll(".servicesNav-tab-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const dropdown = button.closest(".servicesNav-dropdown");
+
+      dropdown.querySelectorAll(".servicesNav-tab-pane")
+        .forEach(tab => tab.classList.add("hidden"));
+
+      const targetTabId = button.getAttribute("data-tab");
+      document.getElementById(targetTabId).classList.remove("hidden");
+
+      dropdown.querySelectorAll(".servicesNav-tab-button")
+        .forEach(btn => btn.classList.remove("active-tab"));
+
+      button.classList.add("active-tab");
+    });
+  });
+
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
   const cursor = document.querySelector(".custom-cursor");
   const carouselSection = document.querySelector(".imagecarousel-section");
 
