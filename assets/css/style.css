@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'ABCGintoNormal';
-  src: url('../fonts/abc-ginto-normal/ABCGintoNormal-Bold-Trial-BF651b7b77d863b.otf') format('otf');
+  src: url('../fonts/abc-ginto-normal/ABCGintoNormal-Bold-Trial-BF651b7b77d863b.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'ABCGintoNordCondensed';
-  src: url('../fonts/abc-ginto-nord-condensed/ABCGintoNordCondensed-Bold-Trial-BF651b7b7729958.otf') format('otf');
+  src: url('../fonts/abc-ginto-nord-condensed/ABCGintoNordCondensed-Bold-Trial-BF651b7b7729958.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'ABCGintoNormal';
-  src: url('../fonts/abc-ginto-normal/ABCGintoNormal-Regular-Trial-BF651b7b7846685.otf') format('otf');
+  src: url('../fonts/abc-ginto-normal/ABCGintoNormal-Regular-Trial-BF651b7b7846685.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: 'TestSohneBreit-Buch';
-  src: url('../fonts/test-sonhe-breit/TestSohneBreit-Buch-BF663d89ca2ff42.otf') format('otf');
+  src: url('../fonts/test-sonhe-breit/TestSohneBreit-Buch-BF663d89ca2ff42.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: 'TestSohneNormal-Buch';
-  src: url('../fonts/test-sonhe-normal/TestSohne-Buch-BF663d89cd32e6a.otf') format('otf');
+  src: url('../fonts/test-sonhe-normal/TestSohne-Buch-BF663d89cd32e6a.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -41,15 +41,32 @@
 
 @font-face {
   font-family: 'TestSohneBreit-Kraftig';
-  src: url('../fonts/test-sonhe-breit/TestSohneBreit-Kraftig-BF663d89caa6b6c.otf') format('otf');
+  src: url('../fonts/test-sonhe-breit/TestSohneBreit-Kraftig-BF663d89caa6b6c.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
+  font-family: 'TestSohneBreit-Fett';
+  src: url('../fonts/test-sonhe-breit/TestSohneBreit-Fett-BF663d89ca84caa.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TestSohneBreit-Halbfett';
+  src: url('../fonts/test-sonhe-breit/TestSohneBreit-Halbfett-BF663d89cacf645.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
   font-family: 'TestSohneMono-Buch';
-  src: url('../fonts/test-sonhe-mono/TestSohneMono-Buch-BF663d89cbcec64.otf') format('otf');
+  src: url('../fonts/test-sonhe-mono/TestSohneMono-Buch-BF663d89cbcec64.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -58,15 +75,19 @@
 
 @font-face {
   font-family: 'TestSohneBreit-Dreiviertelfett';
-  src: url('../fonts/test-sonhe-breit/TestSohneBreit-Dreiviertelfett-BF663d89c955618.otf') format('otf');
+  src: url('../fonts/test-sonhe-breit/TestSohneBreit-Dreiviertelfett-BF663d89c955618.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
+#app-wrapper {
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* custom class */
-.section-wapper {
+.section-wrapper {
   position: relative;
   --max-width: 1170px;
   --padding: 1rem;
@@ -75,7 +96,7 @@
 }
 
 @media (max-width:1440px) {
-  .section-wapper {
+  .section-wrapper {
     --max-width: 1024px;
   }
 }
@@ -85,49 +106,31 @@
  ==================================================
 Dots animation after "LOADING" 
 ==================================================*/
-.loadingDots .dot {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: #FF7510;
-  opacity: 0;
-  animation: dotShow 1.5s infinite;
+.dots::after {
+  content: "";
+  display: inline-block;
+  width: 1ch;
+  animation: dots 1s steps(3, end) infinite;
 }
 
-.loadingDots .dot:nth-child(1) {
-  animation-delay: 0s;
-}
+@keyframes dots {
 
-.loadingDots .dot:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-.loadingDots .dot:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-@keyframes dotShow {
-  0% {
-    opacity: 0;
-  }
-
+  0%,
   20% {
-    opacity: 1;
+    content: "";
   }
 
-  /* fade in */
-  50% {
-    opacity: 1;
+  40% {
+    content: ".";
   }
 
-  /* stay visible */
-  70% {
-    opacity: 0;
+  60% {
+    content: "..";
   }
 
-  /* fade out */
+  80%,
   100% {
-    opacity: 0;
+    content: "...";
   }
 }
 
@@ -228,6 +231,16 @@ Dots animation after "LOADING"
 
 /* Header Styles */
 
+.app-header.sticky {
+  transform: translateY(0) !important;
+  width: 100%;
+  background: #373737;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+
 .primary-navigation .nav-items li a {
   transition: all 300ms ease-in-out;
 }
@@ -236,12 +249,13 @@ Dots animation after "LOADING"
   color: #FF7510;
 }
 
+
+
 /* hero section css */
 .hero-section {
   background: linear-gradient(180deg, #1E3773 0%, #0D77C5 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   overflow: hidden;
-
 }
 
 .hero-bg-mountains img {
@@ -319,4 +333,636 @@ Dots animation after "LOADING"
 
 .heroSection-socialIcons ul li:hover a i {
   color: white;
+}
+
+
+/* image slider section css */
+
+.imagecarousel-section {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fefcfb;
+  height: 450px;
+  cursor: none;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  cursor: none;
+  height: 100%;
+}
+
+.carousel-wrapper:active {
+  cursor: none;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+  display: flex;
+}
+
+.carousel-item:nth-child(odd) {
+  align-items: flex-end;
+}
+
+.carousel-item:nth-child(even) {
+  align-items: flex-start;
+}
+
+.carousel-track-image {
+  width: 250px;
+  height: 330px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  user-select: none;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.custom-cursor {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #FF7510;
+  background-color: #FF7510;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, background-color 0.2s, opacity 0.2s;
+  z-index: 9999;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Marquee */
+.marqueeContainer {
+  --gap: 30px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  background-color: #373737;
+  height: 56px;
+}
+
+
+.marqueeContent {
+  --gap: 30px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+.marqueeContent.scrollRight {
+  animation: marqueeScroll-right 12s linear infinite;
+}
+
+@keyframes marqueeScroll-right {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+
+  }
+}
+
+.marqueeContainer:hover .marqueeContent {
+  animation-play-state: paused;
+}
+
+/* services section tab */
+
+.service-tab span {
+  transition: all 300ms ease-in-out;
+}
+
+.service-tab.active span {
+  font-weight: 700;
+  border-bottom-width: 4px;
+}
+
+.service-tab i {
+  transition: all 300ms ease-in-out;
+}
+
+.service-tab.active i {
+  rotate: 45deg;
+  font-weight: 700;
+}
+
+.service-content .secoundary-btn .btn-text {
+  transition: color 0.5s ease-in-out;
+}
+
+.service-content .secoundary-btn:hover .btn-text {
+  color: white;
+}
+
+
+
+/* tourism services  */
+.service-contents {
+  flex: 1;
+  min-width: 0;
+}
+
+.servicesTab-container {
+  width: calc(100vw - ((100vw - 100%) / 2));
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.tourism-services-heading {
+  max-width: 715px;
+}
+
+.tourismServices-slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 40px 0;
+  margin-top: 24px;
+}
+
+.tourismSlider-wrapper {
+  overflow: hidden;
+}
+
+.tourism-slider-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+  cursor: grab;
+}
+
+.tourism-slider-track.dragging {
+  transition: none;
+  cursor: grabbing;
+}
+
+.tourism-slide {
+  flex: 0 0 auto;
+  width: calc(100% / 2 - 100.33px);
+  border-radius: 4px;
+  text-align: center;
+  height: 430px;
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+}
+
+.tourism-slide .tourism-slide-cardImage img {
+  transition: all 300ms ease-in-out;
+}
+
+.tourism-slide:hover .tourism-slide-cardImage img {
+  transform: scale(1.125);
+}
+
+.tourism-slide-cardInfo {
+  transition: all 300ms ease-in-out;
+}
+
+.tourism-slide-card:hover .tourism-slide-cardInfo {
+  max-height: 150px;
+}
+
+.card-booking-tag {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  padding: 16px 7px;
+  font-weight: bold;
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  z-index: 10;
+  transition: all 300ms ease-in-out;
+}
+
+.tourism-slide-card:hover .card-booking-tag {
+  opacity: 0;
+}
+
+.tourism-slide-card-overlay {
+  background: rgba(255, 117, 16, 0.75);
+}
+
+.tourism-slide-card .tourism-slide-card-overlay {
+  transition: all 300ms ease-in-out;
+}
+
+.tourism-slide-card:hover .tourism-slide-card-overlay {
+  max-width: 100%;
+  opacity: 1;
+}
+
+.tourism-slide-card .more-info-btn {
+  transition: all 300ms ease-in-out;
+}
+
+.tourism-slide-card:hover .more-info-btn {
+  max-height: 150px;
+  opacity: 1;
+}
+
+.tourism-slide-cardImage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: linear-gradient(178.76deg, rgba(217, 217, 217, 0) 66.42%, rgba(54, 54, 54, 0.81) 82.08%);
+}
+
+
+/* Navigation buttons */
+.tourism-slide-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px #FF7510 solid;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease-in-out;
+}
+
+.tourism-slide-btn:hover {
+  background-color: #FF7510;
+}
+
+.tourism-slide-btn i {
+  transition: all 300ms ease-in-out;
+}
+
+.tourism-slide-btn:hover i {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .tourism-slide {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+@media (max-width: 640px) {
+  .tourism-slide {
+    width: 100%;
+  }
+}
+
+.tourism-slider-scrollbar {
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+.tourism-slider-scrollbar-thumb {
+  width: 50%;
+  height: 100%;
+  background: #373737;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  cursor: grab;
+  transition: background 0.2s ease;
+}
+
+.tourism-slider-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+
+/* stats section css */
+
+.section-bg-image {
+  position: relative;
+}
+
+.section-bg-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #373737;
+  opacity: 0.8;
+}
+
+
+
+/* why choose us section css */
+.wc-accordion .wc-item {
+  padding-bottom: 20px;
+  overflow: hidden;
+  border-bottom: 1px solid #ffffff;
+}
+
+.wc-accordion input {
+  display: none;
+}
+
+.icon-minus {
+  display: none;
+  color: #FF7510;
+}
+
+.icon-plus {
+  color: #FF7510;
+}
+
+.wc-accordion input:checked~.wc-title .icon-minus {
+  display: block;
+}
+
+.wc-accordion input:checked~.wc-title .icon-plus {
+  display: none;
+}
+
+.wc-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.wc-accordion input:checked~.wc-content {
+  max-height: 500px;
+  padding-block: 15px;
+}
+
+
+
+/*  our fleet and safety section css */
+
+.pulse-blur-light {
+  background: rgba(255, 60, 60, 1);
+  border-radius: 50%;
+  animation: blurPulse 2.2s ease-in-out infinite;
+  filter: blur(4px);
+  box-shadow:
+    0 0 20px rgba(255, 60, 60, 0.8),
+    0 0 40px rgba(255, 60, 60, 0.6),
+    0 0 70px rgba(255, 60, 60, 0.4);
+}
+
+@keyframes blurPulse {
+  0% {
+    transform: scale(1);
+    filter: blur(4px);
+    box-shadow:
+      0 0 20px rgba(255, 60, 60, 0.8),
+      0 0 40px rgba(255, 60, 60, 0.6),
+      0 0 70px rgba(255, 60, 60, 0.3);
+  }
+
+  50% {
+    transform: scale(1.25);
+    filter: blur(8px);
+    box-shadow:
+      0 0 35px rgba(255, 60, 60, 1),
+      0 0 70px rgba(255, 60, 60, 0.8),
+      0 0 100px rgba(255, 60, 60, 0.6);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: blur(4px);
+    box-shadow:
+      0 0 20px rgba(255, 60, 60, 0.8),
+      0 0 40px rgba(255, 60, 60, 0.6),
+      0 0 70px rgba(255, 60, 60, 0.3);
+  }
+}
+
+.more-info-btn.primary-btn:hover .btn-text {
+  color: #ff3c3c;
+}
+
+
+
+/* blog section css */
+
+.blog-card .blog-cardImage img {
+  transition: all 300ms ease-in-out;
+}
+
+.blog-card:hover .blog-cardImage img {
+  transform: scale(1.125);
+}
+
+.blog-card:hover .read-full-btn.primary-btn {
+  background-color: transparent;
+  gap: 4px;
+}
+
+.btn-text {
+  transition: color 0.5s ease-in-out;
+}
+
+.blog-card:hover .read-full-btn.primary-btn .btn-text {
+  color: white;
+}
+
+.btn-icon {
+  transition: transform 0.5s ease-in-out;
+}
+
+.blog-card:hover .read-full-btn.primary-btn .btn-icon {
+  transform: rotate(45deg);
+}
+
+.btn-hover-circle {
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out, top 0.5s ease-in-out, right 0.5s ease-in-out;
+}
+
+.blog-card:hover .read-full-btn.primary-btn .btn-hover-circle {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.25);
+  top: 0;
+  right: 0;
+}
+
+
+
+
+/* TESTIMONIAL section  css */
+.testimonial-slide {
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.testimonial-slide[data-active="true"] {
+  display: flex;
+}
+
+.testimonial-btn {
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.testimonial-btn:hover {
+  background-color: #FF7510;
+}
+
+.testimonial-btn i {
+  transition: all 300ms ease-in-out;
+}
+
+.testimonial-btn:hover i {
+  color: white;
+}
+
+
+
+/* footer css  */
+
+.enquire-btn.primary-btn {
+  transition: all 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #FF7510;
+}
+
+.enquire-btn.primary-btn:hover {
+  gap: 4px;
+}
+
+.footer-button .primary-btn .btn-text {
+  transition: color 0.5s ease-in-out;
+}
+
+.footer-button .enquire-btn.primary-btn:hover .btn-text {
+  color: #FF7510;
+}
+
+.footer-button .secoundary-btn .btn-text {
+  transition: color 0.5s ease-in-out;
+}
+
+.footer-button .emergency-btn.secoundary-btn:hover .btn-text {
+  color: white;
+}
+
+
+
+.footer-difter-clouds {
+  overflow: hidden;
+}
+
+
+.footer-difter-clouds-1 img {
+  animation: drift 4s ease-in-out infinite;
+}
+
+
+/* Smooth left-right movement */
+.footer-difter-clouds-1 img {
+  animation: drift 20s ease-in-out infinite;
+}
+
+/* Smooth back-and-forth movement */
+@keyframes drift {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(250%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.footer-difter-clouds-2 img {
+  animation: drift2 13s ease-in-out infinite;
+}
+
+@keyframes drift2 {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  33% {
+    transform: translateX(-100%);
+  }
+
+  66% {
+    transform: translateX(50%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.footer-difter-clouds-3 img {
+  animation: drift3 20s ease-in-out infinite;
+}
+
+@keyframes drift3 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(-250%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Scene container with perspective */
+.heli-scene {
+  width: 150px;
+  height: 68px;
+  position: relative;
+  perspective: 1000px;
+  /* key for 3D depth */
+}
+
+/* Helicopter wrapper */
+.footer-helicopter {
+  width: 150px;
+  height: 68px;
+  transform-style: preserve-3d;
+  animation: helicopterFlight 5s ease-in-out infinite;
+  position: absolute;
+  top: 25%;
+  right: 2%;
+  z-index: 60;
 }

@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, Draggable);
 
+  /** -------------------------------
+   * 1️⃣ Hero Section Preload + Scroll Animation
+   ----------------------------------*/
   const heroImages = [
     "/assets/images/hero-section/landscape-shot-beautiful-valley-surrounded-by-huge-mountains-with-snowy-peaks.png",
     "/assets/images/hero-section/clouds11-first.png",
@@ -14,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loadedCount++;
     if (loadedCount === heroImages.length) {
       const overlay = document.getElementById("loading-overlay");
-      if (overlay) overlay.style.display = "none"; // hide overlay safely
-      initScrollAnimation();
+      if (overlay) overlay.style.display = "none";
+      initHeroScrollAnimation();
     }
   };
 
@@ -26,16 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
     img.onerror = onImageLoaded;
   });
 
-  function initScrollAnimation() {
+  function initHeroScrollAnimation() {
     const heroSection = document.querySelector(".hero-section");
     const bgImage = document.querySelector(".hero-bg-mountains img");
     const scrollContent = document.querySelector(".scroll-content");
     const cloudsRight = document.querySelectorAll(".clouds-right");
-    const cloudsLeft = document.querySelector(".clouds-left");
+    const cloudsLeft = document.querySelectorAll(".clouds-left");
     const heroCtaBlock = document.querySelector(".hero-cta-block");
     const heroSidebar = document.querySelector(".hero-sidebar");
     const heroSectionSocialIcons = document.querySelector(".heroSection-socialIcons");
     const heroSectionHeading = document.querySelector(".heroSection-heading");
+    const header = document.querySelector(".app-header");
 
     if (!heroSection || !bgImage || !scrollContent) return;
 
@@ -51,30 +55,106 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    tl.fromTo(bgImage, { scale: 1 }, { scale: 0.8, y: "15%", x: "-10%", ease: "none" }, 0)
+    // Hero animations
+    tl.fromTo(header, { y: 0 }, { y: "-100%", ease: "none" }, 0)
+      .fromTo(bgImage, { scale: 1 }, { scale: 0.8, y: "15%", x: "-10%", ease: "none" }, 0)
       .fromTo(scrollContent, { y: "90%" }, { y: "35%", opacity: 1, ease: "none" }, 0);
 
-    if (cloudsRight.length)
-      tl.fromTo(cloudsRight, { y: 0, x: 0 }, { y: 350, x: 200, ease: "none", stagger: 0.1 }, 0);
+    if (cloudsRight.length) {
+      let yValue = window.innerWidth > 1600 ? 450 : 350;
+      let xValue = window.innerWidth > 1600 ? 300 : 200;
+      tl.fromTo(cloudsRight, { y: 0, x: 0 }, { y: yValue, x: xValue, ease: "none", stagger: 0.1 }, 0);
+    }
 
-    if (cloudsLeft) tl.fromTo(cloudsLeft, { y: 0, x: 0 }, { y: 350, x: -200, ease: "none" }, 0);
+    if (cloudsLeft.length) {
+      let yValue = window.innerWidth > 1600 ? 450 : 350;
+      let xValue = window.innerWidth > 1600 ? -300 : -200;
+      tl.fromTo(cloudsLeft, { y: 0, x: 0 }, { y: yValue, x: xValue, ease: "none" }, 0);
+    }
+
     if (heroCtaBlock) {
       let yValue = window.innerWidth > 1600 ? -400 : -250;
-      tl.fromTo(
-        heroCtaBlock,
-        { y: 0, opacity: 0 },
-        { y: yValue, opacity: 1, ease: "none" },
-        0
-      );
+      tl.fromTo(heroCtaBlock, { y: 0, opacity: 0 }, { y: yValue, opacity: 1, ease: "none" }, 0);
     }
+
     if (heroSidebar) tl.fromTo(heroSidebar, { opacity: 1 }, { opacity: 0, ease: "none" }, 0);
+
     if (heroSectionSocialIcons) {
       let yValue = window.innerWidth > 1600 ? 0 : -100;
       tl.fromTo(heroSectionSocialIcons, { opacity: 0, zIndex: 0, y: 0 }, { opacity: 1, zIndex: 50, y: yValue, ease: "none" }, 0);
     }
+
     if (heroSectionHeading) {
       let yValue = window.innerWidth > 1600 ? 0 : -100;
       tl.fromTo(heroSectionHeading, { y: 0 }, { y: yValue, ease: "none" }, 0);
     }
+
+    // Sticky header after hero
+    ScrollTrigger.create({
+      trigger: heroSection,
+      start: "40% top",
+      onEnter: () => header.classList.add("sticky"),
+      onLeaveBack: () => header.classList.remove("sticky"),
+    });
+  }
+
+  /** -------------------------------
+ * 2️⃣ Carousel / Draggable Setup
+ ----------------------------------*/
+  const track = document.querySelector(".carousel-track");
+  const items = gsap.utils.toArray(".carousel-item");
+  const gap = 40;
+
+  if (track && items.length) {
+    // Calculate the width of all items including gaps
+    let trackWidth = 0;
+    items.forEach(item => {
+      trackWidth += item.offsetWidth + gap;
+    });
+
+    // Duplicate the items 3x for seamless infinite drag
+    track.innerHTML += track.innerHTML + track.innerHTML;
+
+    // Create Draggable instance
+    Draggable.create(track, {
+      type: "x",
+      inertia: true,
+      cursor: "grab", // or "none" if you want no cursor
+      onDrag: updateWrap,
+      onThrowUpdate: updateWrap,
+    });
+
+    // Function to wrap the track infinitely
+    function updateWrap() {
+      gsap.set(track, {
+        x: this.x % trackWidth
+      });
+    }
+  }
+
+
+  /** -------------------------------
+   * 3️⃣ Footer Slide Animation
+   ----------------------------------*/
+  const footerUpperContent = document.querySelector(".footer-upper-content");
+  const footerUpperPart = document.querySelector(".footer-upper-part");
+
+  if (footerUpperContent && footerUpperPart) {
+    // Set initial state (hidden and below)
+    gsap.set(footerUpperContent, { opacity: 0, y: 200 });
+
+    // Animate when section scrolls into view
+    gsap.to(footerUpperContent, {
+      y: -80,
+      opacity: 1,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: footerUpperPart,
+        start: "bottom top", // when top of footer hits 80% of viewport
+        toggleActions: "play none none none",
+        markers: true // set true if you want to debug scroll
+      }
+    });
   }
 });
