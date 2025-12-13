@@ -230,14 +230,19 @@ Dots animation after "LOADING"
 */
 
 /* Header Styles */
+.app-header {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 9999;
+}
 
-.app-header.sticky {
+/* Sticky state */
+.app-header.sticky-header {
   transform: translateY(0) !important;
   width: 100%;
   background: #373737;
   backdrop-filter: blur(6px);
   transition: all 0.3s ease;
-  z-index: 9999;
+  opacity: 1;
 }
 
 
@@ -258,20 +263,24 @@ Dots animation after "LOADING"
   color: #FF7510;
 }
 
+.servicesNav-sub-link,
 .servicesNav-tab-button {
   transition: all 300ms ease-in-out;
 }
 
+.servicesNav-sub-link:hover,
 .servicesNav-tab-button:hover,
 .servicesNav-tab-button.active-tab {
   font-weight: 800;
   color: #FF7510;
 }
 
+.servicesNav-sub-link i,
 .servicesNav-tab-button i {
   transition: all 300ms ease-in-out;
 }
 
+.servicesNav-sub-link:hover i,
 .servicesNav-tab-button:hover i,
 .servicesNav-tab-button.active-tab i {
   rotate: 45deg;
@@ -282,8 +291,6 @@ Dots animation after "LOADING"
 .servicesNav-tabs-content .tourism-slide-card:hover .tourism-slide-cardInfo {
   max-height: 120px;
 }
-
-
 
 
 
@@ -1002,3 +1009,13 @@ Dots animation after "LOADING"
   right: 2%;
   z-index: 60;
 }
+
+
+
+/*
+ ==================================================
+ about us page css  
+  ================================================== 
+*/
+
+/* hero section css */

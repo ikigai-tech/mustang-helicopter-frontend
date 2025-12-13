@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroSidebar = document.querySelector(".hero-sidebar");
     const heroSectionSocialIcons = document.querySelector(".heroSection-socialIcons");
     const heroSectionHeading = document.querySelector(".heroSection-heading");
-    const header = document.querySelector(".app-header");
+
+
 
     if (!heroSection || !bgImage || !scrollContent) return;
 
@@ -56,8 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Hero animations
-    tl.fromTo(header, { y: 0 }, { y: "-100%", ease: "none" }, 0)
-      .fromTo(bgImage, { scale: 1 }, { scale: 0.8, y: "15%", x: "-10%", ease: "none" }, 0)
+    tl.fromTo(bgImage, { scale: 1 }, { scale: 0.8, y: "15%", x: "-10%", ease: "none" }, 0)
       .fromTo(scrollContent, { y: "90%" }, { y: "35%", opacity: 1, ease: "none" }, 0);
 
     if (cloudsRight.length) {
@@ -89,13 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
       tl.fromTo(heroSectionHeading, { y: 0 }, { y: yValue, ease: "none" }, 0);
     }
 
-    // Sticky header after hero
-    ScrollTrigger.create({
-      trigger: heroSection,
-      start: "40% top",
-      onEnter: () => header.classList.add("sticky"),
-      onLeaveBack: () => header.classList.remove("sticky"),
-    });
   }
 
   /** -------------------------------
