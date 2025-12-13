@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTrigger: {
         trigger: heroSection,
         start: "top top",
-        end: () => "+=" + heroSection.offsetHeight,
+        end: () => "+=" + window.innerHeight * 1.6, // match 160vh
         scrub: true,
         pin: true,
       }
@@ -133,21 +133,45 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerUpperPart = document.querySelector(".footer-upper-part");
 
   if (footerUpperContent && footerUpperPart) {
-    // Set initial state (hidden and below)
+    // Set initial state
     gsap.set(footerUpperContent, { opacity: 0, y: 200 });
 
-    // Animate when section scrolls into view
-    gsap.to(footerUpperContent, {
-      y: -80,
-      opacity: 1,
-      duration: 1.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: footerUpperPart,
-        start: "bottom top", // when top of footer hits 80% of viewport
-        toggleActions: "play none none none",
-        markers: false // set true if you want to debug scroll
+    // Responsive animations
+    const mm = gsap.matchMedia();
+
+    mm.add(
+      {
+        // Define screen sizes
+        is4K: "(min-width: 1400px)",
+        isDesktop: "(min-width: 1025px) and (max-width: 1400px)",
+        isTablet: "(min-width: 768px) and (max-width: 1024px)",
+        isMobile: "(max-width: 767px)"
+      },
+      (context) => {
+        let yEnd = -80; // default for desktop
+
+        if (context.conditions.isTablet) {
+          yEnd = -30;
+        } else if (context.conditions.isMobile) {
+          yEnd = -10;
+        } else if (context.conditions.isDesktop) {
+          yEnd = -50;
+        }
+
+        gsap.to(footerUpperContent, {
+          y: yEnd,
+          opacity: 1,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: footerUpperPart,
+            start: "bottom top",
+            toggleActions: "play none none none",
+            markers: false
+          }
+        });
       }
-    });
+    );
   }
+
 });

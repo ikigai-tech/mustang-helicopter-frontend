@@ -58,46 +58,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // Select header and hero section
-  const heroSection = document.querySelector(".hero-section");
-  if (header && heroSection) {
-    // Function to get the visual bottom of hero section
-    const getHeroBottom = () => {
-      const rect = heroSection.getBoundingClientRect();
-      const scrollTop = window.scrollY;
-      const heroHeight = rect.height;
-      return scrollTop + rect.top + heroHeight * 0.6; // trigger at 70% of hero
-    };
+  let lastScrollY = window.scrollY;
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll === 0) {
+      // User is at the top, remove sticky
+      header.classList.remove("sticky-header");
+      header.style.transform = "translateY(0)";
+    } else if (currentScroll > lastScrollY && currentScroll > 100) {
+      // Scrolling down
+      header.classList.remove("sticky-header");
+      header.style.transform = "translateY(-100%)";
+    } else if (currentScroll < lastScrollY) {
+      // Scrolling up
+      header.style.transform = "translateY(0)";
+      header.classList.add("sticky-header");
+    }
+
+    lastScrollY = currentScroll;
+  });
 
 
-    let lastScrollY = window.scrollY;
+  const hamburger = document.querySelector(".hamburger-icon");
+  const navCloseIcon = document.querySelector(".navClose-icon");
+  const primaryNavigation = document.querySelector(".primary-navigation");
 
-    // Scroll event listener
-    window.addEventListener("scroll", () => {
-      const currentScroll = window.scrollY;
-      const heroBottom = getHeroBottom();
+  // Open mobile menu
+  hamburger.addEventListener("click", () => {
+    primaryNavigation.classList.add("mobile-menu-active");
+    document.body.style.overflow = "hidden";
+  });
 
-      if (currentScroll === 0) {
-        // At top -> show header
-        header.style.transform = "translateY(0)";
-        header.classList.remove("sticky-header");
-      } else if (currentScroll < heroBottom) {
-        // Inside hero section -> hide header
-        header.style.transform = "translateY(-100%)";
-        header.classList.remove("sticky-header");
-      } else {
-        // After hero section -> show sticky header
-        header.style.transform = "translateY(0)";
-        header.classList.add("sticky-header");
-      }
-
-      lastScrollY = currentScroll;
-    });
-
-    // Optional: recalc hero bottom on resize
-    window.addEventListener("resize", () => {
-      // Nothing needed here since getHeroBottom() calculates dynamically
-    });
-  }
-
+  // Close mobile menu
+  navCloseIcon.addEventListener("click", () => {
+    primaryNavigation.classList.remove("mobile-menu-active");
+    document.body.style.overflow = "auto";
+  });
 
 });

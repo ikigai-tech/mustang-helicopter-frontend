@@ -13,396 +13,413 @@
 
 <body>
   <div id="app-wrapper" class="app-wrapper">
-    <header class="app-header fixed top-0 left-0 w-full h-[105px] z-50">
+    <header class="app-header fixed top-0 left-0 w-full base:h-[105px] h-[90px] z-50">
       <div class="nav-wrapper section-wrapper flex items-center h-full">
-        <div class="flex items-center justify-between w-full">
-          <a href="/index.html" class="w-[131px] h-[51px] block">
+        <div class="flex items-center justify-between w-full xl:px-0 px-5">
+          <a href="/index.html" class="xl:w-[131px] xl:h-[51px] w-[160px] h-[60px] block">
             <img src="/assets/images/Mustang-Logo.svg" alt="mustang logo" class="w-full h-full object-contain">
           </a>
-          <nav class="primary-navigation">
-            <ul role="menu" class="nav-items flex items-center gap-8">
-              <li><a href="/aboutus.html"
-                  class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">About
-                  us</a>
-              </li>
-              <li class="relative nav-item-has-dropdown">
-                <!-- Services Menu Item -->
-                <a href="#"
-                  class="nav-link flex items-center gap-1 sohne-breit-kraftig font-medium text-base uppercase text-white"
-                  aria-haspopup="true" aria-expanded="false" aria-controls="servicesMenu">
-                  Services
-                  <i class="bi bi-caret-down-fill text-white"></i>
-                </a>
-                <!-- Dropdown Menu -->
-                <div id="servicesMenu"
-                  class="servicesNav-dropdown fixed left-0 top-[105px] w-full bg-[#373737] text-white rounded shadow-lg transition-all duration-300 z-50 border-t-3 border-t-[#464646] opacity-0 invisible">
-                  <div class="flex items-stretch gap-10 bg-[#373737] w-full section-wrapper">
-                    <!-- Tabs Header -->
-                    <div
-                      class="servicesNav-tabs-header flex flex-col items-start gap-12 py-14 max-w-[250px] w-full shrink-0">
-                      <button
-                        class="servicesNav-tab-button active-tab flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase"
-                        data-tab="tourism">
-                        <span class="font-sohne-breit-halbfett font-normal text-sm">TOURISM </span>
-                        <i class="bi bi-arrow-up-right text-white text-base"></i>
-                      </button>
-                      <button
-                        class="servicesNav-tab-button flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap  uppercase"
-                        data-tab="emergency-services"> <span
-                          class="font-sohne-breit-halbfett font-normal text-sm">EMERGENCY
-                          SERVICES</span>
-                        <i class="bi bi-arrow-up-right text-white text-base"></i></button>
-                      <button
-                        class="servicesNav-tab-button flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase"
-                        data-tab="aerial-services"> <span class="font-sohne-breit-halbfett font-normal text-sm">AERIAL
-                          SERVICE</span>
-                        <i class="bi bi-arrow-up-right text-white text-base"></i></button>
-                    </div>
-                    <!-- Tabs Content -->
-                    <div class="servicesNav-tabs-content border-l-2 border-l-[#616161] pl-10 w-full">
-                      <div id="tourism" class="servicesNav-tab-pane flex justify-between gap-10 w-full">
-                        <ul class="py-14">
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">EBC SIGHTSEEING</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">ANNAPURNA SIGHTSEEING</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">MUKTINATH HELI</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">TILICHO</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">LUKLA</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">ABC</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="max-w-[450px] w-full shrink-0 bg-[#3D3D3D] pl-10 py-8">
-                          <h2 class="font-ginto-nord font-extrabold text-[#FF7510] text-4xl">FOR YOU</h2>
-                          <div class="flex gap-5 mt-5">
-                            <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
-                              <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
-                                <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
-                                  class="w-full h-full object-cover">
-                              </div>
-                              <div
-                                class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
-                                <div class="max-w-40 relative z-10">
-                                  <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
-                                    EBC
-                                    SIGHTSEEING</h2>
-                                  <div class="max-h-0 more-info-btn opacity-0">
-                                    <button
-                                      class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
-                                      <span
-                                        class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
-                                        MORE INFO
-                                      </span>
-                                      <span
-                                        class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
-                                        <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
-                                      </span>
-                                    </button>
+          <div class="primary-navigation flex items-center gap-3 justify-between w-full">
+            <nav class="w-full flex items-center justify-center">
+              <button
+                class="navClose-icon bg-white w-8 h-8 flex items-center justify-center cursor-pointer rounded-lg absolute base:top-10 base:right-10 top-5 right-5 xl:hidden">
+                <i class="bi bi-x text-3xl"></i>
+              </button>
+              <ul role="menu" class="nav-items flex items-center gap-8">
+                <li><a href="/aboutus.html"
+                    class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">About
+                    us</a>
+                </li>
+                <li class="relative nav-item-has-dropdown">
+                  <!-- Services Menu Item -->
+                  <a href="#"
+                    class="nav-link flex items-center gap-1 sohne-breit-kraftig font-medium text-base uppercase text-white"
+                    aria-haspopup="true" aria-expanded="false" aria-controls="servicesMenu">
+                    Services
+                    <i class="bi bi-caret-down-fill text-white"></i>
+                  </a>
+                  <!-- Dropdown Menu -->
+                  <div id="servicesMenu"
+                    class="servicesNav-dropdown fixed left-0 top-[105px] w-full bg-[#373737] text-white rounded shadow-lg transition-all duration-300 z-50 border-t-3 border-t-[#464646] opacity-0 invisible xl:block hidden">
+                    <div class="flex items-stretch gap-10 bg-[#373737] w-full section-wrapper">
+                      <!-- Tabs Header -->
+                      <div
+                        class="servicesNav-tabs-header flex flex-col items-start gap-12 py-14 max-w-[250px] w-full shrink-0">
+                        <button
+                          class="servicesNav-tab-button active-tab flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase"
+                          data-tab="tourism">
+                          <span class="font-sohne-breit-halbfett font-normal text-sm">TOURISM </span>
+                          <i class="bi bi-arrow-up-right text-white text-base"></i>
+                        </button>
+                        <button
+                          class="servicesNav-tab-button flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap  uppercase"
+                          data-tab="emergency-services"> <span
+                            class="font-sohne-breit-halbfett font-normal text-sm">EMERGENCY
+                            SERVICES</span>
+                          <i class="bi bi-arrow-up-right text-white text-base"></i></button>
+                        <button
+                          class="servicesNav-tab-button flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase"
+                          data-tab="aerial-services"> <span class="font-sohne-breit-halbfett font-normal text-sm">AERIAL
+                            SERVICE</span>
+                          <i class="bi bi-arrow-up-right text-white text-base"></i></button>
+                      </div>
+                      <!-- Tabs Content -->
+                      <div class="servicesNav-tabs-content border-l-2 border-l-[#616161] pl-10 w-full">
+                        <div id="tourism" class="servicesNav-tab-pane flex justify-between gap-10 w-full">
+                          <ul class="py-14">
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">EBC SIGHTSEEING</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">ANNAPURNA SIGHTSEEING</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">MUKTINATH HELI</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">TILICHO</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">LUKLA</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">ABC</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                          </ul>
+                          <div class="max-w-[450px] w-full shrink-0 bg-[#3D3D3D] pl-10 py-8">
+                            <h2 class="font-ginto-nord font-extrabold text-[#FF7510] text-4xl">FOR YOU</h2>
+                            <div class="flex gap-5 mt-5">
+                              <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
+                                <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                                  <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                                    class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                  class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
+                                  <div class="max-w-40 relative z-10">
+                                    <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
+                                      EBC
+                                      SIGHTSEEING</h2>
+                                    <div class="max-h-0 more-info-btn opacity-0">
+                                      <button
+                                        class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                                        <span
+                                          class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
+                                          MORE INFO
+                                        </span>
+                                        <span
+                                          class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
+                                          <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
                                   </div>
                                 </div>
-                                <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                                <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">BOOKING
+                                  AVAILABLE
                                 </div>
-                              </div>
-                              <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">BOOKING
-                                AVAILABLE
-                              </div>
-                            </a>
-                            <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
-                              <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
-                                <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
-                                  class="w-full h-full object-cover">
-                              </div>
-                              <div
-                                class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
-                                <div class="max-w-40 relative z-10">
-                                  <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
-                                    EBC
-                                    SIGHTSEEING</h2>
-                                  <div class="max-h-0 more-info-btn opacity-0">
-                                    <button
-                                      class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
-                                      <span
-                                        class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
-                                        MORE INFO
-                                      </span>
-                                      <span
-                                        class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
-                                        <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
-                                      </span>
-                                    </button>
+                              </a>
+                              <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
+                                <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                                  <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                                    class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                  class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
+                                  <div class="max-w-40 relative z-10">
+                                    <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
+                                      EBC
+                                      SIGHTSEEING</h2>
+                                    <div class="max-h-0 more-info-btn opacity-0">
+                                      <button
+                                        class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                                        <span
+                                          class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
+                                          MORE INFO
+                                        </span>
+                                        <span
+                                          class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
+                                          <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
                                   </div>
                                 </div>
-                                <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                                <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">BOOKING
+                                  AVAILABLE
                                 </div>
-                              </div>
-                              <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">BOOKING
-                                AVAILABLE
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div id="emergency-services"
-                        class="servicesNav-tab-pane hidden flex justify-between gap-10 w-full">
-                        <div class="py-14">
-                          <p class="font-sohne-mono font-normal text-sm text-white">Our operations follow rigorous
-                            aviation protocols designed for Nepal’s unique high-altitude
-                            environment. From aircraft maintenance to pilot training, safety isn’t just a priority—it’s
-                            the foundation of everything we do.</p>
-                          <a href="tel:+9779823223121"
-                            class="font-sohne-breit-buch text-[#FF7510] font-normal text-sm underline mt-3 block">
-                            CONTACT US : +977-9823223121
-                          </a>
-
-                        </div>
-                        <div class="max-w-[450px] w-full shrink-0 bg-[#3D3D3D] pl-10 py-8">
-                          <h2 class="font-ginto-nord font-extrabold text-[#FF7510] text-4xl">FOR YOU</h2>
-                          <div class="flex gap-5 mt-5">
-                            <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
-                              <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
-                                <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
-                                  class="w-full h-full object-cover">
-                              </div>
-                              <div
-                                class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
-                                <div class="max-w-40 relative z-10">
-                                  <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
-                                    EBC
-                                    SIGHTSEEING</h2>
-                                  <div class="max-h-0 more-info-btn opacity-0">
-                                    <button
-                                      class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
-                                      <span
-                                        class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
-                                        MORE INFO
-                                      </span>
-                                      <span
-                                        class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
-                                        <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
-                                      </span>
-                                    </button>
-                                  </div>
-                                </div>
-                                <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
-                                </div>
-                              </div>
-                              <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">BOOKING
-                                AVAILABLE
-                              </div>
+                        <div id="emergency-services"
+                          class="servicesNav-tab-pane hidden flex justify-between gap-10 w-full">
+                          <div class="py-14">
+                            <p class="font-sohne-mono font-normal text-sm text-white">Our operations follow rigorous
+                              aviation protocols designed for Nepal’s unique high-altitude
+                              environment. From aircraft maintenance to pilot training, safety isn’t just a
+                              priority—it’s
+                              the foundation of everything we do.</p>
+                            <a href="tel:+9779823223121"
+                              class="font-sohne-breit-buch text-[#FF7510] font-normal text-sm underline mt-3 block">
+                              CONTACT US : +977-9823223121
                             </a>
 
                           </div>
+                          <div class="max-w-[450px] w-full shrink-0 bg-[#3D3D3D] pl-10 py-8">
+                            <h2 class="font-ginto-nord font-extrabold text-[#FF7510] text-4xl">FOR YOU</h2>
+                            <div class="flex gap-5 mt-5">
+                              <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
+                                <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                                  <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                                    class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                  class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
+                                  <div class="max-w-40 relative z-10">
+                                    <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
+                                      EBC
+                                      SIGHTSEEING</h2>
+                                    <div class="max-h-0 more-info-btn opacity-0">
+                                      <button
+                                        class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                                        <span
+                                          class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
+                                          MORE INFO
+                                        </span>
+                                        <span
+                                          class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
+                                          <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                                  </div>
+                                </div>
+                                <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">BOOKING
+                                  AVAILABLE
+                                </div>
+                              </a>
+
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      <div id="aerial-services" class="servicesNav-tab-pane hidden flex justify-between gap-10 w-full">
-                        <ul class="py-14">
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">CHARTER FLIGHTS</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">SKYDIVING</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">AERIAL CARGO</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">AERIAL SURVEY</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">LUKLA</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">SLING</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#"
-                              class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
-                              <span class="font-sohne-breit-buch font-normal text-sm">AERIAL FILMING</span>
-                              <i class="bi bi-arrow-up-right text-white text-base"></i>
-                            </a>
-                          </li>
-                        </ul>
-                        <div class="max-w-[450px] w-full shrink-0 bg-[#3D3D3D] pl-10 py-8">
-                          <h2 class="font-ginto-nord font-extrabold text-[#FF7510] text-4xl">FOR YOU</h2>
-                          <div class="flex gap-5 mt-5">
-                            <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
-                              <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
-                                <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
-                                  class="w-full h-full object-cover">
-                              </div>
-                              <div
-                                class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
-                                <div class="max-w-40 relative z-10">
-                                  <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
-                                    EBC
-                                    SIGHTSEEING</h2>
-                                  <div class="max-h-0 more-info-btn opacity-0">
-                                    <button
-                                      class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
-                                      <span
-                                        class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
-                                        MORE INFO
-                                      </span>
-                                      <span
-                                        class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
-                                        <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
-                                      </span>
-                                    </button>
+                        <div id="aerial-services"
+                          class="servicesNav-tab-pane hidden flex justify-between gap-10 w-full">
+                          <ul class="py-14">
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">CHARTER FLIGHTS</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">SKYDIVING</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">AERIAL CARGO</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">AERIAL SURVEY</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">LUKLA</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">SLING</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">AERIAL FILMING</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                          </ul>
+                          <div class="max-w-[450px] w-full shrink-0 bg-[#3D3D3D] pl-10 py-8">
+                            <h2 class="font-ginto-nord font-extrabold text-[#FF7510] text-4xl">FOR YOU</h2>
+                            <div class="flex gap-5 mt-5">
+                              <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
+                                <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                                  <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                                    class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                  class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
+                                  <div class="max-w-40 relative z-10">
+                                    <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
+                                      EBC
+                                      SIGHTSEEING</h2>
+                                    <div class="max-h-0 more-info-btn opacity-0">
+                                      <button
+                                        class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                                        <span
+                                          class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
+                                          MORE INFO
+                                        </span>
+                                        <span
+                                          class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
+                                          <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
                                   </div>
                                 </div>
-                                <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                                <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">BOOKING
+                                  AVAILABLE
                                 </div>
-                              </div>
-                              <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">BOOKING
-                                AVAILABLE
-                              </div>
-                            </a>
-                            <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
-                              <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
-                                <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
-                                  class="w-full h-full object-cover">
-                              </div>
-                              <div
-                                class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
-                                <div class="max-w-40 relative z-10">
-                                  <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
-                                    EBC
-                                    SIGHTSEEING</h2>
-                                  <div class="max-h-0 more-info-btn opacity-0">
-                                    <button
-                                      class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
-                                      <span
-                                        class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
-                                        MORE INFO
-                                      </span>
-                                      <span
-                                        class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
-                                        <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
-                                      </span>
-                                    </button>
+                              </a>
+                              <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
+                                <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                                  <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                                    class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                  class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
+                                  <div class="max-w-40 relative z-10">
+                                    <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
+                                      EBC
+                                      SIGHTSEEING</h2>
+                                    <div class="max-h-0 more-info-btn opacity-0">
+                                      <button
+                                        class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                                        <span
+                                          class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
+                                          MORE INFO
+                                        </span>
+                                        <span
+                                          class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
+                                          <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
                                   </div>
                                 </div>
-                                <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                                <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">BOOKING
+                                  AVAILABLE
                                 </div>
-                              </div>
-                              <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">BOOKING
-                                AVAILABLE
-                              </div>
-                            </a>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </li>
+                </li>
 
-              <li><a href="#" class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">fleet</a>
-              </li>
-              <li><a href="#"
-                  class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">resources</a>
-              </li>
-              <li><a href="#"
-                  class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">enquire</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="nav-button flex items-center gap-4">
-            <a href="#"
-              class="primary-btn bg-white w-[157px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
-              <span class="btn-text font-sohne-breit-buch font-normal text-sm text-[#373737] uppercase relative z-10">
-                Book Now
-              </span>
-              <span class="btn-icon bg-[#373737] w-7 h-7 rounded-full flex items-center justify-center relative z-10">
-                <i class="bi bi-arrow-down-left text-white text-xs -rotate-180"></i>
-              </span>
-              <span
-                class="btn-hover-circle block bg-[#373737] w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
-            </a>
+                <li><a href="#"
+                    class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">fleet</a>
+                </li>
+                <li><a href="#"
+                    class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">resources</a>
+                </li>
+                <li><a href="#"
+                    class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">enquire</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="nav-button flex items-center gap-4">
+              <a href="#"
+                class="primary-btn bg-white w-[157px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                <span class="btn-text font-sohne-breit-buch font-normal text-sm text-[#373737] uppercase relative z-10">
+                  Book Now
+                </span>
+                <span class="btn-icon bg-[#373737] w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-white text-xs -rotate-180"></i>
+                </span>
+                <span
+                  class="btn-hover-circle block bg-[#373737] w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+              </a>
 
-            <a href="#"
-              class="emergency-btn secoundary-btn w-[172px] border border-white px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
-              <span
-                class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase leading-0 relative z-10">
-                EMERGENCY
-              </span>
-              <span class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
-                <i class="bi bi-arrow-down-left text-[#373737] text-xs -rotate-180"></i>
-              </span>
-              <span class="btn-hover-circle block bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
-            </a>
+              <a href="#"
+                class="emergency-btn secoundary-btn w-[172px] border border-white px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                <span
+                  class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase leading-0 relative z-10">
+                  EMERGENCY
+                </span>
+                <span class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-[#373737] text-xs -rotate-180"></i>
+                </span>
+                <span class="btn-hover-circle block bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+              </a>
 
+            </div>
+          </div>
+          <div class="shrink-0">
+            <button
+              class="hamburger-icon bg-white w-10 h-10 flex items-center justify-center cursor-pointer rounded-md xl:hidden"><i
+                class="bi bi-list text-xl"></i></button>
           </div>
         </div>
       </div>
     </header>
     <main>
       <!-- Hero section -->
-      <section class="hero-section h-[160vh] pt-[105px] overflow-hidden relative">
+      <section class="hero-section h-[160svh] base:pt-[105px] pt-[90px] overflow-hidden relative">
         <div class="relative h-screen">
           <div class="section-wrapper 3xl:pt-32 pt-20 flex items-start justify-between">
             <div class="flex flex-col max-w-[500px] heroSection-heading">
-              <p class="font-sohne-breit-buch font-normal text-base text-white uppercase tracking-[2px]"> Reach New
+              <p
+                class="font-sohne-breit-buch font-normal base:text-base xs:text-xs text-[10px] text-white uppercase tracking-[2px]">
+                Reach New
                 Heights
                 Effortlessly</p>
-              <h1 class="font-ginto-normal font-extrabold xl:text-[76px] text-7xl text-white">ECHOES OF
+              <h1 class="font-extrabold xl:text-[76px] lg:text-7xl xs:text-6xl text-5xl text-white">
+                ECHOES OF
                 <span class="text-[#FFBB8D]">MOUNTAINS</span>
               </h1>
             </div>
@@ -1396,9 +1413,10 @@
         </div>
         <div class="absolute top-0 left-2/4 -translate-x-2/4 footer-upper-content">
           <div class="section-wrapper h-full flex items-start gap-10">
-            <div class="w-[500px] h-[500px] bg-[#FF7510] rounded-full flex justify-center shrink-0">
+            <div
+              class="xl:w-[500px] xl:h-[500px] lg:w-[400px] h-[400px] bg-[#FF7510] rounded-full flex justify-center shrink-0">
               <div class="max-w-[345px] pt-20">
-                <h2 class="font-ginto-nord font-extrabold text-5xl uppercase text-white">READY TO TAKE
+                <h2 class="font-ginto-nord font-extrabold xl:text-5xl lg:text-4xl uppercase text-white">READY TO TAKE
                   YOUR FLIGHT ?</h2>
                 <button href="#"
                   class="book-now-btn primary-btn bg-white border border-[#FF7510] w-[157px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden cursor-pointer mt-5">
@@ -1416,7 +1434,7 @@
               </div>
             </div>
             <h2
-              class="font-extrabold text-9xl text-[#FF7510] uppercase text-right leading-[0.85] tracking-tighter pt-16">
+              class="font-extrabold 2xl:text-9xl xl:text-8xl lg:text-7xl text-[#FF7510] uppercase text-right leading-[0.85] tracking-tighter pt-16">
               MUSTANG HELI</h2>
           </div>
         </div>
