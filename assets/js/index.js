@@ -24,12 +24,26 @@ document.addEventListener("DOMContentLoaded", () => {
     import('./modules/cursor.js').then(module => module.initCursor(cursor, carouselSection));
   }
 
-  // Header dropdown service tabs
-  const serviceTabs = document.querySelectorAll('.servicesNav-tab-button');
-  const serviceContents = document.querySelectorAll('.servicesNav-tab-pane');
-  if (serviceTabs.length && serviceContents.length) {
-    import('./modules/service-tabs.js').then(module => module.initServiceTabs(serviceTabs, serviceContents));
-  }
+  import('./modules/service-tabs.js').then(module => {
+    // Header dropdown tabs
+    module.initServiceTabs(
+      document.querySelectorAll('.servicesNav-tab-button'),
+      document.querySelectorAll('.servicesNav-tab-pane')
+    );
+
+    // Page service section tabs (mobile slider)
+    module.initServiceTabs(
+      document.querySelectorAll('.service-tab'),
+      document.querySelectorAll('.service-content')
+    );
+
+    // Initialize Prev/Next buttons for mobile slider
+    if (module.initServiceTabNavigation) {
+      module.initServiceTabNavigation(); // uses default selectors inside function
+    }
+  });
+
+
 
   // Tourism slider
   const track = document.querySelector('.tourism-slider-track');
@@ -56,29 +70,25 @@ document.addEventListener("DOMContentLoaded", () => {
     import('./modules/testimonials.js').then(module => module.initTestimonials(testimonialSlides, nextBtnTestimonial, prevBtnTestimonial, indexDisplay));
   }
 
+  // Read More
+  const readMoreBtn = document.getElementById("readMoreBtn");
+  const readMoreContent = document.getElementById("readMoreContent");
 
-  // Select header and hero section
-  let lastScrollY = window.scrollY;
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
+  if (readMoreBtn && readMoreContent) {
+    import('./modules/read-more.js')
+      .then(module =>
+        module.initReadMore(readMoreBtn, readMoreContent, {
+          collapsedHeight: "180px",
+          expandedHeight: "1000px",
+        })
+      );
+  }
 
-    if (currentScroll === 0) {
-      // User is at the top, remove sticky
-      header.classList.remove("sticky-header");
-      header.style.transform = "translateY(0)";
-    } else if (currentScroll > lastScrollY && currentScroll > 100) {
-      // Scrolling down
-      header.classList.remove("sticky-header");
-      header.style.transform = "translateY(-100%)";
-    } else if (currentScroll < lastScrollY) {
-      // Scrolling up
-      header.style.transform = "translateY(0)";
-      header.classList.add("sticky-header");
-    }
-
-    lastScrollY = currentScroll;
-  });
-
+  // Sticky header
+  if (header) {
+    import('./modules/sticky-header.js')
+      .then(module => module.initStickyHeader(header));
+  }
 
   const hamburger = document.querySelector(".hamburger-icon");
   const navCloseIcon = document.querySelector(".navClose-icon");
@@ -87,13 +97,46 @@ document.addEventListener("DOMContentLoaded", () => {
   // Open mobile menu
   hamburger.addEventListener("click", () => {
     primaryNavigation.classList.add("mobile-menu-active");
+    hamburger.classList.add("hidden");
+    navCloseIcon.classList.remove("hidden");
+
     document.body.style.overflow = "hidden";
   });
 
   // Close mobile menu
   navCloseIcon.addEventListener("click", () => {
     primaryNavigation.classList.remove("mobile-menu-active");
+    hamburger.classList.remove("hidden");
+    navCloseIcon.classList.add("hidden");
     document.body.style.overflow = "auto";
   });
+
+
+
+
+
+  const tabs = document.querySelectorAll(".team-tab");
+  const panels = document.querySelectorAll(".team-panel");
+  const indicator = document.getElementById("tab-indicator");
+
+  function activateTab(tab) {
+    tabs.forEach(t => t.classList.remove("tab-active"));
+    panels.forEach(p => p.classList.add("hidden"));
+
+    tab.classList.add("tab-active");
+    const target = tab.getAttribute("data-tab");
+    document.getElementById(target).classList.remove("hidden");
+
+    // Move indicator
+    const rect = tab.getBoundingClientRect();
+    const parentRect = tab.parentElement.getBoundingClientRect();
+    indicator.style.width = `${rect.width}px`;
+    indicator.style.left = `${rect.left - parentRect.left}px`;
+  }
+
+  tabs.forEach(tab => tab.addEventListener("click", () => activateTab(tab)));
+
+  // Activate first tab by default
+  if (tabs.length) activateTab(tabs[0]);
 
 });

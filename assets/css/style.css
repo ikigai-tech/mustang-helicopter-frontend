@@ -300,118 +300,58 @@ Dots animation after "LOADING"
   .primary-navigation {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 100%;
-    max-width: 500px;
+    transform: translateY(-200%);
+    right: 0;
     min-height: 100svh;
-    height: 100%;
     background-color: #373737;
-    z-index: 999999;
-    padding-block: 50px;
-    transition: all 800ms ease-in-out;
-    flex-direction: column;
+    z-index: 999;
     align-items: start;
+    flex-direction: column;
+    justify-content: start;
+    transition: all 500ms ease-in-out;
     overflow: scroll;
   }
 
   .primary-navigation.mobile-menu-active {
-    right: 0;
+    top: 100%;
+    transform: translateY(0);
   }
 
-  .primary-navigation nav {
-    align-items: start;
-    justify-content: start;
-    width: 100%;
+  .primary-navigation nav ul li a {
+    color: white;
   }
 
-  .mobile-menu-active.primary-navigation::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100svh;
-    background-color: #373737;
-    z-index: -1;
-    opacity: 0.5;
-  }
-
-  .primary-navigation .nav-items {
+  .nav-items {
     flex-direction: column;
+    width: 100%;
     align-items: start;
-    padding-block: 40px;
-    gap: 0;
+    padding: 20px;
+  }
+
+  .nav-items li {
     width: 100%;
   }
 
-  .primary-navigation .nav-items>li {
+  .nav-items li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-button {
+    flex-direction: column;
     width: 100%;
-    padding-block: 40px;
-    border-bottom: 1px solid #ffffff;
   }
 
-  .primary-navigation .nav-items>li a {
-    font-size: 18px;
-    padding-left: 40px;
+  .nav-button a {
+    width: 100%;
+    justify-content: center;
   }
 
-  .nav-button {
-    padding-left: 20px;
-  }
-}
-
-@media (max-width:768px) {
-  .primary-navigation {
-    max-width: 400px;
-    padding-block: 30px;
+  .app-header:has(.mobile-menu-active) {
+    background-color: #373737;
   }
 
-
-  .primary-navigation .nav-items>li {
-    padding-block: 30px;
-  }
-
-  .primary-navigation .nav-items>li a {
-    padding-left: 30px;
-  }
-
-  .nav-button {
-    padding-left: 20px;
-    flex-wrap: wrap;
-  }
-}
-
-
-@media (max-width:640px) {
-  .primary-navigation {
-    max-width: 400px;
-    padding-block: 30px;
-  }
-
-  .primary-navigation .nav-items {
-    padding-bottom: 0;
-  }
-
-  .primary-navigation .nav-items>li {
-    padding-block: 25px;
-  }
-
-  .primary-navigation .nav-items>li a {
-    padding-left: 30px;
-    font-size: 1rem;
-  }
-
-}
-
-@media (max-width:480px) {
-  .primary-navigation {
-    max-width: 300px;
-    padding-block: 30px;
-  }
-
-  .primary-navigation .nav-items>li a {
-    padding-left: 20px;
-  }
 
 }
 
@@ -433,7 +373,6 @@ Dots animation after "LOADING"
   right: 0;
   top: 15%;
   width: 60px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -447,7 +386,6 @@ Dots animation after "LOADING"
   right: 0;
   top: 15%;
   width: 60px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -511,6 +449,12 @@ Dots animation after "LOADING"
   cursor: none;
 }
 
+@media (max-width:770px) {
+  .imagecarousel-section {
+    height: 100%;
+  }
+}
+
 .carousel-wrapper {
   width: 100%;
   overflow: hidden;
@@ -534,12 +478,15 @@ Dots animation after "LOADING"
   display: flex;
 }
 
-.carousel-item:nth-child(odd) {
-  align-items: flex-end;
-}
+@media (min-width:770px) {
+  .carousel-item:nth-child(odd) {
+    align-items: flex-end;
+  }
 
-.carousel-item:nth-child(even) {
-  align-items: flex-start;
+  .carousel-item:nth-child(even) {
+    align-items: flex-start;
+  }
+
 }
 
 .carousel-track-image {
@@ -550,6 +497,20 @@ Dots animation after "LOADING"
   user-select: none;
   pointer-events: none;
   overflow: hidden;
+}
+
+@media (max-width:770px) {
+  .carousel-wrapper {
+    height: 320px;
+  }
+
+  .carousel-track {
+    gap: 20px;
+  }
+
+  .carousel-track-image {
+    height: 100%;
+  }
 }
 
 .custom-cursor {
@@ -618,7 +579,7 @@ Dots animation after "LOADING"
   transition: all 300ms ease-in-out;
 }
 
-.service-tab.active span {
+.service-tab.active-tab span {
   font-weight: 700;
   border-bottom-width: 4px;
 }
@@ -627,7 +588,7 @@ Dots animation after "LOADING"
   transition: all 300ms ease-in-out;
 }
 
-.service-tab.active i {
+.service-tab.active-tab i {
   rotate: 45deg;
   font-weight: 700;
 }
@@ -691,6 +652,16 @@ Dots animation after "LOADING"
   overflow: hidden;
   display: flex;
   align-items: end;
+}
+
+@media (max-width:770px) {
+  .tourism-slide {
+    height: 380px;
+  }
+
+  .tourismServices-slider-container {
+    margin-bottom: 0;
+  }
 }
 
 .tourism-slide .tourism-slide-cardImage img {
@@ -776,6 +747,14 @@ Dots animation after "LOADING"
   transition: all 300ms ease-in-out;
 }
 
+@media (max-width:640px) {
+  .tourism-slide-btn {
+    width: 40px;
+    height: 40px;
+
+  }
+}
+
 .tourism-slide-btn:hover {
   background-color: #FF7510;
 }
@@ -795,9 +774,9 @@ Dots animation after "LOADING"
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 520px) {
   .tourism-slide {
-    width: 100%;
+    width: calc(100% / 1 - 120px);
   }
 }
 
@@ -825,6 +804,22 @@ Dots animation after "LOADING"
   cursor: grabbing;
 }
 
+
+@media (max-width: 899px) {
+  .serviceTab-slider {
+    overflow: hidden;
+  }
+
+  .serviceTab-slider .service-tab,
+  .serviceTab-slider .serviceSlider {
+    display: none;
+  }
+
+  .serviceTab-slider .service-tab.active-tab,
+  .serviceTab-slider .serviceSlider.active-tab {
+    display: flex;
+  }
+}
 
 /* stats section css */
 
@@ -1140,4 +1135,65 @@ Dots animation after "LOADING"
   ================================================== 
 */
 
-/* hero section css */
+/* OUR TEAM MEMBERS section css */
+.our-team-tabs-wrapper .team-tab span {
+  border-bottom-color: transparent;
+  transition: all 300ms ease-in-out;
+}
+
+.our-team-tabs-wrapper .team-tab:hover,
+.our-team-tabs-wrapper .team-tab.tab-active span {
+  border-bottom-color: #FF7510;
+  color: #FF7510;
+  font-weight: 600;
+}
+
+.our-team-tabs-wrapper .team-tab:hover span:nth-child(2),
+.our-team-tabs-wrapper .team-tab.tab-active span:nth-child(2) {
+  rotate: -20deg;
+}
+
+.team-card .team-cardImage img {
+  transition: all 300ms ease-in-out;
+}
+
+.team-card:hover .team-cardImage img {
+  scale: 1.125;
+}
+
+.team-cardImage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #373737;
+  opacity: 0.7;
+  z-index: 10;
+}
+
+.team-card:hover .team-cardIcon {
+  transition: all 300ms ease-in-out;
+}
+
+.team-card:hover .team-cardIcon {
+  background-color: #FF7510;
+  color: white;
+}
+
+.team-card .team-cardInfo {
+  transition: all 300ms ease-in-out;
+}
+
+.team-card:hover .team-cardInfo {
+  max-height: 400px;
+}
+
+.team-card .team-card-socialIcons {
+  opacity: 0;
+}
+
+.team-card:hover .team-card-socialIcons {
+  opacity: 0;
+}

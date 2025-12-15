@@ -30,65 +30,76 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function initHeroScrollAnimation() {
-    const heroSection = document.querySelector(".hero-section");
-    const bgImage = document.querySelector(".hero-bg-mountains img");
-    const scrollContent = document.querySelector(".scroll-content");
-    const cloudsRight = document.querySelectorAll(".clouds-right");
-    const cloudsLeft = document.querySelectorAll(".clouds-left");
-    const heroCtaBlock = document.querySelector(".hero-cta-block");
-    const heroSidebar = document.querySelector(".hero-sidebar");
-    const heroSectionSocialIcons = document.querySelector(".heroSection-socialIcons");
-    const heroSectionHeading = document.querySelector(".heroSection-heading");
+    ScrollTrigger.matchMedia({
 
+      // Only desktop & tablet above 768px
+      "(min-width: 1025px)": function () {
 
+        const heroSection = document.querySelector(".hero-section");
+        const bgImage = document.querySelector(".hero-bg-mountains img");
+        const scrollContent = document.querySelector(".scroll-content");
+        const cloudsRight = document.querySelectorAll(".clouds-right");
+        const cloudsLeft = document.querySelectorAll(".clouds-left");
+        const heroCtaBlock = document.querySelector(".hero-cta-block");
+        const heroSidebar = document.querySelector(".hero-sidebar");
+        const heroSectionSocialIcons = document.querySelector(".heroSection-socialIcons");
+        const heroSectionHeading = document.querySelector(".heroSection-heading");
 
-    if (!heroSection || !bgImage || !scrollContent) return;
+        if (!heroSection || !bgImage || !scrollContent) return;
 
-    bgImage.style.transformOrigin = "top center";
+        bgImage.style.transformOrigin = "top center";
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: heroSection,
-        start: "top top",
-        end: () => "+=" + window.innerHeight * 1.6, // match 160vh
-        scrub: true,
-        pin: true,
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: heroSection,
+            start: "top top",
+            end: () => "+=" + window.innerHeight * 1.6,
+            scrub: true,
+            pin: true,
+          }
+        });
+
+        tl.fromTo(bgImage, { scale: 1 }, { scale: 0.8, y: "15%", x: "-10%", ease: "none" }, 0)
+          .fromTo(scrollContent, { y: "90%" }, { y: "35%", opacity: 1, ease: "none" }, 0);
+
+        if (cloudsRight.length) {
+          let yValue = window.innerWidth > 1600 ? 450 : 350;
+          let xValue = window.innerWidth > 1600 ? 300 : 200;
+          tl.fromTo(cloudsRight, { x: 0, y: 0 }, { x: xValue, y: yValue, ease: "none", stagger: 0.1 }, 0);
+        }
+
+        if (cloudsLeft.length) {
+          let yValue = window.innerWidth > 1600 ? 450 : 350;
+          let xValue = window.innerWidth > 1600 ? -300 : -200;
+          tl.fromTo(cloudsLeft, { x: 0, y: 0 }, { x: xValue, y: yValue, ease: "none" }, 0);
+        }
+
+        if (heroCtaBlock) {
+          let yValue = window.innerWidth > 1600 ? -400 : -250;
+          tl.fromTo(heroCtaBlock, { y: 0, opacity: 0 }, { y: yValue, opacity: 1, ease: "none" }, 0);
+        }
+
+        if (heroSidebar) {
+          tl.fromTo(heroSidebar, { opacity: 1 }, { opacity: 0, ease: "none" }, 0);
+        }
+
+        if (heroSectionSocialIcons) {
+          let yValue = window.innerWidth > 1600 ? 0 : -100;
+          tl.fromTo(
+            heroSectionSocialIcons,
+            { opacity: 0, zIndex: 0, y: 0 },
+            { opacity: 1, zIndex: 50, y: yValue, ease: "none" },
+            0
+          );
+        }
+
+        if (heroSectionHeading) {
+          let yValue = window.innerWidth > 1600 ? 0 : -100;
+          tl.fromTo(heroSectionHeading, { y: 0 }, { y: yValue, ease: "none" }, 0);
+        }
       }
+
     });
-
-    // Hero animations
-    tl.fromTo(bgImage, { scale: 1 }, { scale: 0.8, y: "15%", x: "-10%", ease: "none" }, 0)
-      .fromTo(scrollContent, { y: "90%" }, { y: "35%", opacity: 1, ease: "none" }, 0);
-
-    if (cloudsRight.length) {
-      let yValue = window.innerWidth > 1600 ? 450 : 350;
-      let xValue = window.innerWidth > 1600 ? 300 : 200;
-      tl.fromTo(cloudsRight, { y: 0, x: 0 }, { y: yValue, x: xValue, ease: "none", stagger: 0.1 }, 0);
-    }
-
-    if (cloudsLeft.length) {
-      let yValue = window.innerWidth > 1600 ? 450 : 350;
-      let xValue = window.innerWidth > 1600 ? -300 : -200;
-      tl.fromTo(cloudsLeft, { y: 0, x: 0 }, { y: yValue, x: xValue, ease: "none" }, 0);
-    }
-
-    if (heroCtaBlock) {
-      let yValue = window.innerWidth > 1600 ? -400 : -250;
-      tl.fromTo(heroCtaBlock, { y: 0, opacity: 0 }, { y: yValue, opacity: 1, ease: "none" }, 0);
-    }
-
-    if (heroSidebar) tl.fromTo(heroSidebar, { opacity: 1 }, { opacity: 0, ease: "none" }, 0);
-
-    if (heroSectionSocialIcons) {
-      let yValue = window.innerWidth > 1600 ? 0 : -100;
-      tl.fromTo(heroSectionSocialIcons, { opacity: 0, zIndex: 0, y: 0 }, { opacity: 1, zIndex: 50, y: yValue, ease: "none" }, 0);
-    }
-
-    if (heroSectionHeading) {
-      let yValue = window.innerWidth > 1600 ? 0 : -100;
-      tl.fromTo(heroSectionHeading, { y: 0 }, { y: yValue, ease: "none" }, 0);
-    }
-
   }
 
   /** -------------------------------
@@ -123,55 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
         x: this.x % trackWidth
       });
     }
-  }
-
-
-  /** -------------------------------
-   * 3️⃣ Footer Slide Animation
-   ----------------------------------*/
-  const footerUpperContent = document.querySelector(".footer-upper-content");
-  const footerUpperPart = document.querySelector(".footer-upper-part");
-
-  if (footerUpperContent && footerUpperPart) {
-    // Set initial state
-    gsap.set(footerUpperContent, { opacity: 0, y: 200 });
-
-    // Responsive animations
-    const mm = gsap.matchMedia();
-
-    mm.add(
-      {
-        // Define screen sizes
-        is4K: "(min-width: 1400px)",
-        isDesktop: "(min-width: 1025px) and (max-width: 1400px)",
-        isTablet: "(min-width: 768px) and (max-width: 1024px)",
-        isMobile: "(max-width: 767px)"
-      },
-      (context) => {
-        let yEnd = -80; // default for desktop
-
-        if (context.conditions.isTablet) {
-          yEnd = -30;
-        } else if (context.conditions.isMobile) {
-          yEnd = -10;
-        } else if (context.conditions.isDesktop) {
-          yEnd = -50;
-        }
-
-        gsap.to(footerUpperContent, {
-          y: yEnd,
-          opacity: 1,
-          duration: 1.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: footerUpperPart,
-            start: "bottom top",
-            toggleActions: "play none none none",
-            markers: false
-          }
-        });
-      }
-    );
   }
 
 });
