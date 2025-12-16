@@ -56,9 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Map
   const mapObj = document.getElementById("mapObj");
-  if (mapObj) {
-    import('./modules/map.js').then(module => module.initMap(mapObj));
-  }
+  import('./modules/map.js').then(module => module.initMap(mapObj));
+
 
   // Testimonials
   const testimonialSlides = document.querySelectorAll('.testimonial-slide');

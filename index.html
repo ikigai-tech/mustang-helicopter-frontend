@@ -856,7 +856,6 @@
           </div>
         </div>
       </section>
-
       <!-- Image Slider Section -->
       <section class="imagecarousel-section sm:pb-16">
         <div class="carousel-wrapper">
@@ -914,7 +913,6 @@
           </div>
         </div>
       </section>
-
 
       <!-- Services Section -->
       <section class="900:py-20 md:py-16 py-10 services-section overflow-hidden">
@@ -1267,7 +1265,7 @@
             </div>
           </div>
         </div>
-        <div class="900:pt-20 md:pt-16 pt-10 relative z-10">
+        <div class="900:pt-20 md:pt-16 pt-10 900:pb-0 pb-20 relative z-10">
           <div class="w-full relative z-10 section-heading flex flex-col items-center justify-center">
             <p class="font-sohne-breit-buch font-normal text-white uppercase sm:text-sm text-xs">OUR FLEET AND SAFETY
             </p>
@@ -1311,7 +1309,7 @@
             </a>
           </div>
         </div>
-        <div class="section-wrapper relative z-10 900:pt-20 md:pt-16 pt-10 pb-20">
+        <div class="section-wrapper relative z-10 900:pt-20 md:pt-16 pt-10 900:pb-0 pb-20 900:block hidden">
           <div class="max-w-[380px] w-full mb-8">
             <p class="font-sohne-breit-buch font-normal text-white uppercase sm:text-sm text-xs">DESTINATIONS WE COVER
             </p>
@@ -1319,75 +1317,79 @@
               OUR POPULAR DESTINATIONS
             </h2>
           </div>
-          <!-- <div class="mt-5">
-            <object id="mapObj" data="./assets/images/Map.svg" type="image/svg+xml"></object>
-          </div> -->
-          <div class="grid md:grid-cols-3 gap-5">
-            <div class="destinations-card">
-              <div class="w-full h-[220px] rounded-sm overflow-hidden destinations-cardImage">
-                <img src="./assets/images/halicopter-image.png" alt="" class="w-full h-full object-cover" />
-              </div>
-              <div class="space-y-3 mt-3">
-                <h2
-                  class="font-ginto-nord font-extrabold uppercase text-white lg:text-[28px] lg:leading-[30px] text-2xl">
-                  EBC sightseeing</h2>
-                <div class="space-y-2">
-                  <div class="flex items-center gap-2">
-                    <div class="w-[22px] h-5"><img src="./assets/images/icons/Helicopter.svg" alt=""
-                        class="w-full h-full object-contain"></div>
-                    <p class="font-sohne-mono font-normal text-base text-white">Flight Time: 1Hrs</p>
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <i class="bi bi-clock text-white text-xl"></i>
-                    <p class="font-sohne-mono font-normal text-base text-white">Ground Time: 3Hrs</p>
-                  </div>
+          <div class="flex 900:items-center gap-5 900:-translate-y-[60px] 900:flex-row flex-col-reverse">
+            <div id="destinationsCards-container" class="lg:max-w-[380px] max-w-[300px] shrink-0 w-full">
+              <div class="destinations-card" id="EBC-card">
+                <div class="w-full h-[220px] rounded-sm overflow-hidden destinations-cardImage">
+                  <img src="./assets/images/halicopter-image.png" alt="" class="w-full h-full object-cover" />
                 </div>
-                <a href="#"
-                  class="more-info-btn primary-btn bg-[#FF7510]! border border-[#FF7510] w-[157px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
-                  <span
-                    class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase relative z-10 text-nowrap">
-                    MORE INFO
-                  </span>
-                  <span class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
-                    <i class="bi bi-arrow-down-left text-[#FF7510] text-xs -rotate-180"></i>
-                  </span>
-                  <span
-                    class="btn-hover-circle block bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
-                </a>
+                <div class="space-y-3 mt-3">
+                  <h2
+                    class="font-ginto-nord font-extrabold uppercase text-white lg:text-[28px] lg:leading-[30px] text-2xl">
+                    EBC sightseeing</h2>
+                  <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                      <div class="w-[22px] h-5"><img src="./assets/images/icons/Helicopter.svg" alt=""
+                          class="w-full h-full object-contain"></div>
+                      <p class="font-sohne-mono font-normal text-base text-white">Flight Time: 1Hrs</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <i class="bi bi-clock text-white text-xl"></i>
+                      <p class="font-sohne-mono font-normal text-base text-white">Ground Time: 3Hrs</p>
+                    </div>
+                  </div>
+                  <a href="#"
+                    class="more-info-btn primary-btn bg-[#FF7510]! border border-[#FF7510] w-[157px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                    <span
+                      class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase relative z-10 text-nowrap">
+                      MORE INFO
+                    </span>
+                    <span class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                      <i class="bi bi-arrow-down-left text-[#FF7510] text-xs -rotate-180"></i>
+                    </span>
+                    <span
+                      class="btn-hover-circle block bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="destinations-card hidden" id="Simikot-card">
+                <div class="w-full h-[220px] rounded-sm overflow-hidden">
+                  <img src="./assets/images/halicopter-image.png" alt="" class="w-full h-full object-cover" />
+                </div>
+                <div class="space-y-3 mt-3">
+                  <h2
+                    class="font-ginto-nord font-extrabold uppercase text-white lg:text-[28px] lg:leading-[30px] text-2xl">
+                    EBC sightseeing</h2>
+                  <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                      <div class="w-[22px] h-5"><img src="./assets/images/icons/Helicopter.svg" alt=""
+                          class="w-full h-full object-contain"></div>
+                      <p class="font-sohne-mono font-normal text-base text-white">Flight Time: 1Hrs</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <i class="bi bi-clock text-white text-xl"></i>
+                      <p class="font-sohne-mono font-normal text-base text-white">Ground Time: 3Hrs</p>
+                    </div>
+                  </div>
+                  <a href="#"
+                    class="more-info-btn primary-btn bg-[#FF7510]! border border-[#FF7510] w-[157px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                    <span
+                      class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase relative z-10 text-nowrap">
+                      MORE INFO
+                    </span>
+                    <span class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                      <i class="bi bi-arrow-down-left text-[#FF7510] text-xs -rotate-180"></i>
+                    </span>
+                    <span
+                      class="btn-hover-circle block bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="destinations-card">
-              <div class="w-full h-[220px] rounded-sm overflow-hidden">
-                <img src="./assets/images/halicopter-image.png" alt="" class="w-full h-full object-cover" />
-              </div>
-              <div class="space-y-3 mt-3">
-                <h2
-                  class="font-ginto-nord font-extrabold uppercase text-white lg:text-[28px] lg:leading-[30px] text-2xl">
-                  EBC sightseeing</h2>
-                <div class="space-y-2">
-                  <div class="flex items-center gap-2">
-                    <div class="w-[22px] h-5"><img src="./assets/images/icons/Helicopter.svg" alt=""
-                        class="w-full h-full object-contain"></div>
-                    <p class="font-sohne-mono font-normal text-base text-white">Flight Time: 1Hrs</p>
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <i class="bi bi-clock text-white text-xl"></i>
-                    <p class="font-sohne-mono font-normal text-base text-white">Ground Time: 3Hrs</p>
-                  </div>
-                </div>
-                <a href="#"
-                  class="more-info-btn primary-btn bg-[#FF7510]! border border-[#FF7510] w-[157px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
-                  <span
-                    class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase relative z-10 text-nowrap">
-                    MORE INFO
-                  </span>
-                  <span class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
-                    <i class="bi bi-arrow-down-left text-[#FF7510] text-xs -rotate-180"></i>
-                  </span>
-                  <span
-                    class="btn-hover-circle block bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
-                </a>
-              </div>
+            <div>
+              <object id="mapObj" data="./assets/images/mapofnepalmustanghelo.svg" type="image/svg+xml" width="100%"
+                class="900:h-[500px] h-[300px]">
+              </object>
             </div>
           </div>
         </div>
