@@ -120,29 +120,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+  // Initialize Team Tabs
+  import('./modules/team-tabs.js').then(module => {
+    module.initTeamTabs({
+      tabSelector: ".team-tab",
+      panelSelector: ".team-panel",
+      indicatorSelector: "#tab-indicator"
+    });
+  });
 
-  const tabs = document.querySelectorAll(".team-tab");
-  const panels = document.querySelectorAll(".team-panel");
-  const indicator = document.getElementById("tab-indicator");
-
-  function activateTab(tab) {
-    tabs.forEach(t => t.classList.remove("tab-active"));
-    panels.forEach(p => p.classList.add("hidden"));
-
-    tab.classList.add("tab-active");
-    const target = tab.getAttribute("data-tab");
-    document.getElementById(target).classList.remove("hidden");
-
-    // Move indicator
-    const rect = tab.getBoundingClientRect();
-    const parentRect = tab.parentElement.getBoundingClientRect();
-    indicator.style.width = `${rect.width}px`;
-    indicator.style.left = `${rect.left - parentRect.left}px`;
-  }
-
-  tabs.forEach(tab => tab.addEventListener("click", () => activateTab(tab)));
-
-  // Activate first tab by default
-  if (tabs.length) activateTab(tabs[0]);
 
 });
