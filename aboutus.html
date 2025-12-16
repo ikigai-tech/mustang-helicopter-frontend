@@ -19,17 +19,12 @@
           <a href="/index.html" class="w-[131px] h-[51px] block">
             <img src="/assets/images/Mustang-Logo.svg" alt="mustang logo" class="w-full h-full object-contain">
           </a>
-          <div class="primary-navigation flex items-center gap-3 justify-between w-full">
+          <div class="primary-navigation xl:flex hidden items-center gap-3 justify-between w-full">
             <nav class="w-full flex items-center justify-center relative">
               <ul role="menu" class="nav-items flex items-center gap-8">
-                <li class="xl:hidden block"><a href="/"
-                    class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">Home
-                  </a>
-                </li>
                 <li><a href="/aboutus.html"
                     class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">
                     <span>About us</span>
-                    <i class="bi bi-arrow-right-short xl:hidden block text-3xl"></i>
                   </a>
                 </li>
                 <li class="relative nav-item-has-dropdown">
@@ -39,7 +34,6 @@
                     aria-haspopup="true" aria-expanded="false" aria-controls="servicesMenu">
                     Services
                     <i class="bi bi-caret-down-fill text-white xl:block hidden"></i>
-                    <i class="bi bi-arrow-right-short xl:hidden block text-3xl"></i>
                   </a>
                   <!-- Dropdown Menu -->
                   <div id="servicesMenu"
@@ -366,17 +360,14 @@
 
                 <li><a href="#" class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">
                     <span>fleet</span>
-                    <i class="bi bi-arrow-right-short xl:hidden block text-3xl"></i>
                   </a>
                 </li>
                 <li><a href="#" class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">
                     <span>resources</span>
-                    <i class="bi bi-arrow-right-short xl:hidden block text-3xl"></i>
                   </a>
                 </li>
                 <li><a href="#" class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">
                     <span>enquire</span>
-                    <i class="bi bi-arrow-right-short xl:hidden block text-3xl"></i>
                   </a>
                 </li>
               </ul>
@@ -409,8 +400,242 @@
 
             </div>
           </div>
+          <!-- mobile navigation -->
+          <div class="fixed left-0 top-[90px] xl:top-[105px] h-[calc(100svh-90px)] xl:h-[calc(100svh-105px)] w-full bg-[#383838]
+         mobile-navigation xl:hidden flex flex-col justify-between gap-10 pb-10">
+            <nav class="w-full flex items-center justify-start relative md:p-10 sm:p-8 p-6">
+              <ul role="menu" class="flex flex-col items-start gap-10 w-full">
+                <li class="w-full mnav-item">
+                  <a href="/"
+                    class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
+                    <span>Home</span>
+                    <i class="bi bi-arrow-right-short text-3xl"></i>
+                  </a>
+                </li>
+                <li class="w-full mnav-item">
+                  <a href="/aboutus.html"
+                    class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
+                    <span>About us</span>
+                    <i class="bi bi-arrow-right-short text-3xl"></i>
+                  </a>
+                </li>
+                <li class="w-full mnav-item mnav-has-children mnav-topLevel">
+                  <a href="#"
+                    class="mnav-link mnav-toggle w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                    Services
+                    <i class="bi bi-arrow-right-short text-3xl"></i>
+                  </a>
+                  <ul class="mnav-submenu hidden flex flex-col gap-10">
+                    <li class="mnav-item mnav-has-children w-full">
+                      <a href="#"
+                        class="w-full mnav-link mnav-toggle flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                        <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                        <span>TOURISM </span>
+                        <i class="bi bi-arrow-right-short text-3xl"></i>
+                      </a>
+                      <ul class="mnav-submenu hidden flex flex-col gap-5 mt-5">
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>EBC SIGHTSEEING</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>ANNAPURNA SIGHTSEEING</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>MUKTINATH HELI</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>TILICHO</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>LUKLA</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>ABC</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="mnav-item mnav-has-children">
+                      <a href=""
+                        class="mnav-link mnav-toggle flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                        <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                        <span>EMERGENCY
+                          SERVICES</span>
+                        <i class="bi bi-arrow-right-short text-3xl"></i>
+                      </a>
+                      <ul class="mnav-submenu hidden flex flex-col gap-5 mt-5">
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>EBC SIGHTSEEING</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>ANNAPURNA SIGHTSEEING</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>MUKTINATH HELI</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>TILICHO</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>LUKLA</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>ABC</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="mnav-item mnav-has-children">
+                      <a href=""
+                        class="mnav-link mnav-toggle flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                        <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                        <span>AERIAL
+                          SERVICE</span>
+                        <i class="bi bi-arrow-right-short text-3xl"></i>
+                      </a>
+                      <ul class="mnav-submenu hidden flex flex-col gap-5 mt-5">
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>EBC SIGHTSEEING</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>ANNAPURNA SIGHTSEEING</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>MUKTINATH HELI</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>TILICHO</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>LUKLA</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>ABC</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="w-full mnav-item">
+                  <a href="#"
+                    class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
+                    <span>fleet</span>
+                    <i class="bi bi-arrow-right-short text-3xl"></i>
+                  </a>
+                </li>
+                <li class="w-full mnav-item">
+                  <a href="#"
+                    class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
+                    <span>resources</span>
+                    <i class="bi bi-arrow-right-short text-3xl"></i>
+                  </a>
+                </li>
+                <li class="w-full mnav-item">
+                  <a href="#"
+                    class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
+                    <span>enquire</span>
+                    <i class="bi bi-arrow-right-short text-3xl"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="nav-button flex flex-col items-center gap-4">
+              <a href="#"
+                class="primary-btn bg-white w-full px-2 py-2.5 rounded-full flex items-center justify-center gap-2.5 relative overflow-hidden">
+                <span class="btn-text font-sohne-breit-buch font-normal text-sm text-[#373737] uppercase relative z-10">
+                  Book Now
+                </span>
+                <span class="btn-icon bg-[#373737] w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-white text-xs -rotate-180"></i>
+                </span>
+              </a>
+              <a href="#"
+                class="emergency-btn secoundary-btn w-full border border-white px-2 py-2.5 rounded-full flex items-center justify-center gap-2.5 relative overflow-hidden">
+                <span
+                  class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase leading-0 relative z-10">
+                  EMERGENCY
+                </span>
+                <span class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-[#373737] text-xs -rotate-180"></i>
+                </span>
+              </a>
+
+            </div>
+          </div>
           <div class="shrink-0">
-            <button class="hamburger-icon cursor-pointer rounded-md xl:hidden text-white"><i
+            <button class="hamburger-icon cursor-pointer rounded-md xl:hidden text-white block"><i
                 class="bi bi-list text-3xl"></i></button>
             <button class="navClose-icon cursor-pointer rounded-lg hidden">
               <i class="bi bi-x text-4xl text-[#FF7510]"></i>

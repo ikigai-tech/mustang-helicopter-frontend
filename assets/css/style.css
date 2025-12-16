@@ -48,6 +48,14 @@
 }
 
 @font-face {
+  font-family: 'TestSohne-Kraftig';
+  src: url('../fonts/test-sonhe-normal/TestSohne-Kraftig-BF663d89cd37e26.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'TestSohneBreit-Fett';
   src: url('../fonts/test-sonhe-breit/TestSohneBreit-Fett-BF663d89ca84caa.otf') format('opentype');
   font-weight: 800;
@@ -287,74 +295,52 @@ Dots animation after "LOADING"
   color: #FF7510;
 }
 
-
 .servicesNav-tabs-content .tourism-slide-card:hover .tourism-slide-cardInfo {
   max-height: 120px;
 }
 
 
+/* mobile navigation css */
 
-/* tab navigation css */
-
-@media (max-width:1200px) {
-  .primary-navigation {
-    position: fixed;
-    top: 0;
-    transform: translateY(-200%);
-    right: 0;
-    min-height: 100svh;
-    background-color: #373737;
-    z-index: 999;
-    align-items: start;
-    flex-direction: column;
-    justify-content: start;
-    transition: all 500ms ease-in-out;
-    overflow: scroll;
-  }
-
-  .primary-navigation.mobile-menu-active {
-    top: 100%;
-    transform: translateY(0);
-  }
-
-  .primary-navigation nav ul li a {
-    color: white;
-  }
-
-  .nav-items {
-    flex-direction: column;
-    width: 100%;
-    align-items: start;
-    padding: 20px;
-  }
-
-  .nav-items li {
-    width: 100%;
-  }
-
-  .nav-items li a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav-button {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-button a {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .app-header:has(.mobile-menu-active) {
-    background-color: #373737;
-  }
-
-
+.mobile-navigation {
+  transform: translateY(-200%);
+  background-color: #373737;
+  z-index: 999;
+  transition: all 500ms ease-in-out;
+  overflow-y: auto;
 }
 
+.mobile-navigation.mobile-menu-active {
+  transform: translateY(0);
+}
+
+.app-header:has(.mobile-menu-active) {
+  background-color: #373737;
+}
+
+.mnav-item.mnav-open>.mnav-toggle {
+  justify-content: flex-start;
+  color: #FF7510;
+}
+
+.mnav-item.mnav-has-children:has(> ul.mnav-submenu > li.mnav-open)>a.mnav-link {
+  display: none;
+}
+
+.mnav-item.mnav-open>.mnav-toggle {
+  padding-bottom: 40px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.mnav-item.mnav-open>.mnav-toggle .bi-arrow-left-short {
+  display: block;
+}
+
+
+.mnav-item.mnav-open>.mnav-toggle .bi-arrow-right-short {
+  display: none;
+}
 
 /* hero section css */
 .hero-section {
@@ -928,6 +914,9 @@ Dots animation after "LOADING"
 }
 
 
+/* popular destinations section  csss */
+
+
 
 /* blog section css */
 
@@ -1047,7 +1036,7 @@ Dots animation after "LOADING"
 
 /* Smooth left-right movement */
 .footer-difter-clouds-1 img {
-  animation: drift 20s ease-in-out infinite;
+  animation: drift 30s ease-in-out infinite;
 }
 
 /* Smooth back-and-forth movement */
@@ -1067,7 +1056,7 @@ Dots animation after "LOADING"
 
 
 .footer-difter-clouds-2 img {
-  animation: drift2 13s ease-in-out infinite;
+  animation: drift2 20s ease-in-out infinite;
 }
 
 @keyframes drift2 {
@@ -1089,7 +1078,7 @@ Dots animation after "LOADING"
 }
 
 .footer-difter-clouds-3 img {
-  animation: drift3 20s ease-in-out infinite;
+  animation: drift3 30s ease-in-out infinite;
 }
 
 @keyframes drift3 {

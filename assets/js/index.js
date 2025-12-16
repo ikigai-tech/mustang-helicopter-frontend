@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const hamburger = document.querySelector(".hamburger-icon");
   const navCloseIcon = document.querySelector(".navClose-icon");
-  const primaryNavigation = document.querySelector(".primary-navigation");
+  const primaryNavigation = document.querySelector(".mobile-navigation");
 
   // Open mobile menu
   hamburger.addEventListener("click", () => {
@@ -112,6 +112,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+  // mobile navigation logic
+  import('./modules/mobile-nav-accordion.js').then(module => {
+    module.initMobileNavAccordion(
+      document.querySelector(".mobile-navigation")
+    );
+  });
 
 
 
