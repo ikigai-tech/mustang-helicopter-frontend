@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-
   // Tourism slider
   const track = document.querySelector('.tourism-slider-track');
   const nextBtn = document.querySelector('.tourism-slide-btn.next');

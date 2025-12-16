@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
    * 1️⃣ Hero Section Preload + Scroll Animation
    ----------------------------------*/
   const heroImages = [
-    "/assets/images/hero-section/landscape-shot-beautiful-valley-surrounded-by-huge-mountains-with-snowy-peaks.png",
-    "/assets/images/hero-section/clouds11-first.png",
-    "/assets/images/hero-section/clouds11-secound.png",
-    "/assets/images/hero-section/freepik__enhance__12911_3.png"
+    "./assets/images/hero-section/landscape-shot-beautiful-valley-surrounded-by-huge-mountains-with-snowy-peaks.png",
+    "./assets/images/hero-section/clouds11-first.png",
+    "./assets/images/hero-section/clouds11-secound.png",
+    "./assets/images/hero-section/freepik__enhance__12911_3.png"
   ];
 
   let loadedCount = 0;
