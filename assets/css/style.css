@@ -1158,7 +1158,7 @@ Dots animation after "LOADING"
   width: 100%;
   height: 100%;
   background-color: #373737;
-  opacity: 0.7;
+  opacity: 0.6;
   z-index: 10;
 }
 
@@ -1172,7 +1172,7 @@ Dots animation after "LOADING"
 }
 
 .team-card .team-cardInfo {
-  transition: all 300ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 .team-card:hover .team-cardInfo {
@@ -1181,8 +1181,67 @@ Dots animation after "LOADING"
 
 .team-card .team-card-socialIcons {
   opacity: 0;
+  transition: all 300ms ease-in-out;
 }
 
 .team-card:hover .team-card-socialIcons {
-  opacity: 0;
+  opacity: 1;
+}
+
+#teamPrevBtn,
+#teamNextBtn {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  .teamTabButtons-slider {
+    overflow: hidden;
+  }
+
+  .teamTabButtons-slider .team-tab {
+    display: none;
+  }
+
+  .teamTabButtons-slider .team-tab.tab-active {
+    display: flex;
+  }
+
+  .teamTabButtons {
+    justify-content: center !important;
+  }
+
+  .teamTabButtons .team-tab span:nth-child(2) {
+    display: none;
+  }
+
+  #teamPrevBtn,
+  #teamNextBtn {
+    display: block;
+  }
+
+  .team-panels .team-panel .grid {
+    display: flex !important;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .team-panels .team-panel .grid>div {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+
+  /* Optional: hide scrollbar */
+  .team-panels .team-panel .grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .team-panels .team-panel .grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+
 }
