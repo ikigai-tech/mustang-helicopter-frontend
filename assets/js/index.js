@@ -1,13 +1,3 @@
-// Disable automatic scroll restoration
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}
-
-// Force scroll to top after all resources load
-window.addEventListener('load', () => {
-  window.scrollTo(0, 0);
-});
-
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".app-header");
   // Loader

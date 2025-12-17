@@ -1,3 +1,6 @@
+/* ===============================
+   Service Tabs (Content Switch)
+================================ */
 export function initServiceTabs(serviceTabs, serviceContents, options = {}) {
   if (!serviceTabs.length || !serviceContents.length) return;
 
@@ -7,12 +10,14 @@ export function initServiceTabs(serviceTabs, serviceContents, options = {}) {
     autoInit = true
   } = options;
 
+  let isAutoInit = true;
+
   serviceTabs.forEach(tabButton => {
-    tabButton.addEventListener('click', () => {
+    tabButton.addEventListener('click', (e) => {
       const targetId = tabButton.dataset.tab;
       if (!targetId) return;
 
-      // Find matching content INSIDE provided contents
+      // Find matching content
       const targetSection = Array.from(serviceContents).find(
         section => section.id === targetId
       );
@@ -28,26 +33,30 @@ export function initServiceTabs(serviceTabs, serviceContents, options = {}) {
       );
       targetSection.classList.remove(hiddenClass);
 
-      // Mobile: keep active tab centered in slider
-      tabButton.scrollIntoView({
-        behavior: 'smooth',
-        inline: 'center',
-        block: 'nearest'
-      });
+      // ✅ Scroll ONLY on real user interaction
+      if (!isAutoInit && e.isTrusted) {
+        tabButton.scrollIntoView({
+          behavior: 'smooth',
+          inline: 'center',
+          block: 'nearest'
+        });
+      }
     });
   });
 
-  // Auto-activate first tab only once
+  // Auto-activate first tab (NO scroll)
   if (autoInit) {
     const activeTab = Array.from(serviceTabs).find(tab =>
       tab.classList.contains(activeClass)
     );
     (activeTab || serviceTabs[0])?.click();
+    isAutoInit = false;
   }
 }
 
-
-
+/* ===============================
+   Service Tab Navigation (Prev / Next)
+================================ */
 export function initServiceTabNavigation(
   sliderSelector = '.serviceTab-slider',
   tabSelector = '.service-tab',
@@ -69,9 +78,17 @@ export function initServiceTabNavigation(
     if (index < 0) index = tabs.length - 1;
     if (index >= tabs.length) index = 0;
 
-    tabs[index].click(); // reuse your existing tab logic
+    // ✅ Triggers user-initiated click → scroll works correctly
+    tabs[index].dispatchEvent(
+      new MouseEvent('click', { bubbles: true })
+    );
   };
 
-  prevBtn.addEventListener('click', () => goToIndex(getActiveIndex() - 1));
-  nextBtn.addEventListener('click', () => goToIndex(getActiveIndex() + 1));
+  prevBtn.addEventListener('click', () =>
+    goToIndex(getActiveIndex() - 1)
+  );
+
+  nextBtn.addEventListener('click', () =>
+    goToIndex(getActiveIndex() + 1)
+  );
 }

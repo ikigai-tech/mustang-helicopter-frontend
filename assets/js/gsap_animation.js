@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Ensure the page starts at the top
-  window.scrollTo(0, 0);
-
   gsap.registerPlugin(ScrollTrigger, Draggable);
 
   /** -------------------------------
@@ -140,5 +137,53 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+
+
+  // Footer animation
+
+  const testimonialsSection = document.querySelector(".testimonials-section");
+  const footerContent = document.querySelector(".orange-circle");
+  const footerHeading = document.querySelector(".footerTop-content h2");
+  const footerCTA = document.querySelector(".footerTop-content-cta");
+
+  if (testimonialsSection && footerContent && footerHeading && footerCTA) {
+    let startPoint = window.innerWidth > 900 ? "bottom -50%" : "bottom 40%";
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: testimonialsSection, // trigger on testimonials section
+        start: startPoint,
+        toggleActions: "play none none none",
+      }
+    });
+
+    // Circle animation
+    tl.from(footerContent, {
+      scale: 0,
+      rotation: 180,
+      opacity: 0,
+      duration: 2.3,
+      ease: "back.out(1.7)"
+    });
+
+    // Heading animation
+    if (footerHeading.offsetParent !== null) {
+      tl.from(footerHeading, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+      }, "-=0.8");
+    }
+
+    // CTA animation
+    tl.from(footerCTA, {
+      x: -200,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    }, "-=0.5");
+  }
+
+
 
 });
