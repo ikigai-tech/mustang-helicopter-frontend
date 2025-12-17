@@ -1,4 +1,11 @@
 export function initLoader(loader, appWrapper) {
+
+  // Ensure the page starts at the top
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+
   const dots = loader.querySelector(".dots");
   let dotCount = 0;
 

@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Ensure the page starts at the top
+  window.scrollTo(0, 0);
+
   gsap.registerPlugin(ScrollTrigger, Draggable);
 
   /** -------------------------------
@@ -19,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const overlay = document.getElementById("loading-overlay");
       if (overlay) overlay.style.display = "none";
       initHeroScrollAnimation();
+      // Refresh ScrollTrigger after everything is ready
+      ScrollTrigger.refresh();
     }
   };
 

@@ -103,7 +103,7 @@
   margin-inline: auto;
 }
 
-@media (max-width:1440px) {
+@media (max-width:1300px) {
   .section-wrapper {
     --max-width: 1024px;
   }
@@ -346,7 +346,6 @@ Dots animation after "LOADING"
 .hero-section {
   background: linear-gradient(180deg, #1E3773 0%, #0D77C5 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-  overflow: hidden;
 }
 
 .hero-bg-mountains img {
@@ -916,7 +915,13 @@ Dots animation after "LOADING"
 
 /* popular destinations section  csss */
 
+.destinations-card .destinations-cardImage img {
+  transition: all 300ms ease-in-out;
+}
 
+.destinations-card:hover .destinations-cardImage img {
+  transform: scale(1.125);
+}
 
 /* blog section css */
 
@@ -990,6 +995,16 @@ Dots animation after "LOADING"
 .testimonial-btn:hover i {
   color: white;
 }
+
+
+.testimonial-slideImage .testimonial-slideImageBlock img {
+  transition: all 300ms ease-in-out;
+}
+
+.testimonial-slideImage:hover .testimonial-slideImageBlock img {
+  transform: scale(1.125);
+}
+
 
 
 
@@ -1243,5 +1258,33 @@ Dots animation after "LOADING"
     scrollbar-width: none;
   }
 
+}
 
+
+
+
+/* message from chairman */
+
+.read-more-content {
+  position: relative;
+}
+
+.read-more-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  pointer-events: none;
+
+  /* Fade to background color */
+  background: linear-gradient(to bottom,
+      rgba(55, 55, 55, 0) 0%,
+      rgba(55, 55, 55, 0.7) 60%,
+      rgba(55, 55, 55, 1) 100%);
+}
+
+/* When expanded, remove fade */
+.read-more-content.expanded .read-more-fade {
+  display: none;
 }
