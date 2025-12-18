@@ -1065,7 +1065,7 @@ Dots animation after "LOADING"
 /* Cloud layers with different speeds */
 
 .cloud-difter-1 {
-  animation: drift-center 120s ease-in-out infinite;
+  animation: drift-center 320s ease-in-out infinite;
 }
 
 @keyframes drift-center {
@@ -1091,7 +1091,7 @@ Dots animation after "LOADING"
 }
 
 .cloud-difter-2 {
-  animation: cloudDriftMedium 45s linear infinite;
+  animation: cloudDriftMedium 100s linear infinite;
 }
 
 
@@ -1106,7 +1106,7 @@ Dots animation after "LOADING"
 }
 
 .cloud-difter-3 {
-  animation: cloudDriftFast 95s linear infinite;
+  animation: cloudDriftFast 110s linear infinite;
 }
 
 
