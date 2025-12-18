@@ -25,11 +25,6 @@ export function initTeamTabs({
     const targetId = tab.getAttribute("data-tab");
     const panel = document.getElementById(targetId);
     if (panel) panel.classList.remove(hiddenClass);
-
-    // Scroll active tab into view (for mobile)
-    if (slider) {
-      tab.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-    }
   }
 
   // Click event on each tab

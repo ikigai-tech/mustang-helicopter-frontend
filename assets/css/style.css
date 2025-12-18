@@ -103,7 +103,7 @@
   margin-inline: auto;
 }
 
-@media (max-width:1440px) {
+@media (max-width:1300px) {
   .section-wrapper {
     --max-width: 1024px;
   }
@@ -346,7 +346,6 @@ Dots animation after "LOADING"
 .hero-section {
   background: linear-gradient(180deg, #1E3773 0%, #0D77C5 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-  overflow: hidden;
 }
 
 .hero-bg-mountains img {
@@ -519,6 +518,7 @@ Dots animation after "LOADING"
     height: 100%;
   }
     .aviation-carousel-track-image {
+      width: 90%;
     height: 100%;
   }
 }
@@ -940,7 +940,13 @@ Dots animation after "LOADING"
 
 /* popular destinations section  csss */
 
+.destinations-card .destinations-cardImage img {
+  transition: all 300ms ease-in-out;
+}
 
+.destinations-card:hover .destinations-cardImage img {
+  transform: scale(1.125);
+}
 
 /* blog section css */
 
@@ -1016,6 +1022,15 @@ Dots animation after "LOADING"
 }
 
 
+.testimonial-slideImage .testimonial-slideImageBlock img {
+  transition: all 300ms ease-in-out;
+}
+
+.testimonial-slideImage:hover .testimonial-slideImageBlock img {
+  transform: scale(1.125);
+}
+
+
 
 /* footer css  */
 
@@ -1047,77 +1062,103 @@ Dots animation after "LOADING"
 }
 
 
+/* Cloud layers with different speeds */
 
-.footer-difter-clouds {
-  overflow: hidden;
+.cloud-difter-1 {
+  animation: drift-center 120s ease-in-out infinite;
 }
 
-
-.footer-difter-clouds-1 img {
-  animation: drift 4s ease-in-out infinite;
-}
-
-
-/* Smooth left-right movement */
-.footer-difter-clouds-1 img {
-  animation: drift 30s ease-in-out infinite;
-}
-
-/* Smooth back-and-forth movement */
-@keyframes drift {
-  0% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(250%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-
-.footer-difter-clouds-2 img {
-  animation: drift2 20s ease-in-out infinite;
-}
-
-@keyframes drift2 {
+@keyframes drift-center {
   0% {
     transform: translateX(-50%);
   }
 
-  33% {
+  25% {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
     transform: translateX(-100%);
   }
 
-  66% {
-    transform: translateX(50%);
-  }
-
   100% {
     transform: translateX(-50%);
   }
 }
 
-.footer-difter-clouds-3 img {
-  animation: drift3 30s ease-in-out infinite;
+.cloud-difter-2 {
+  animation: cloudDriftMedium 45s linear infinite;
 }
 
-@keyframes drift3 {
+
+@keyframes cloudDriftMedium {
   0% {
     transform: translateX(0%);
   }
 
-  50% {
-    transform: translateX(-250%);
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.cloud-difter-3 {
+  animation: cloudDriftFast 95s linear infinite;
+}
+
+
+@keyframes cloudDriftFast {
+  0% {
+    transform: translateX(0%);
   }
 
   100% {
-    transform: translateX(0%);
+    transform: translateX(100%);
   }
 }
+
+
+/* .
+
+/* .
+
+.cloud-difter-3 {
+  animation: cloudDriftFast 30s linear infinite;
+} */
+
+/* 
+@keyframes cloudDriftMedium {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(30%);
+  }
+}
+
+@keyframes cloudDriftFast {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(40%);
+  }
+} */
+
+
+@media (max-width:768px) {
+  .footertop-mountain-image img {
+    object-fit: cover;
+  }
+
+}
+
+
 
 /* Scene container with perspective */
 .heli-scene {
@@ -1267,5 +1308,33 @@ Dots animation after "LOADING"
     scrollbar-width: none;
   }
 
+}
 
+
+
+
+/* message from chairman */
+
+.read-more-content {
+  position: relative;
+}
+
+.read-more-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  pointer-events: none;
+
+  /* Fade to background color */
+  background: linear-gradient(to bottom,
+      rgba(55, 55, 55, 0) 0%,
+      rgba(55, 55, 55, 0.7) 60%,
+      rgba(55, 55, 55, 1) 100%);
+}
+
+/* When expanded, remove fade */
+.read-more-content.expanded .read-more-fade {
+  display: none;
 }

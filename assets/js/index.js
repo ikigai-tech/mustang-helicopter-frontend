@@ -1,4 +1,3 @@
-// main.js
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".app-header");
   // Loader
