@@ -485,6 +485,27 @@ Dots animation after "LOADING"
   overflow: hidden;
 }
 
+
+.aviation-carousel-track-image {
+  width: 600px;
+  height: 420px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  user-select: none;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.carousel-bg-container {
+    /* Top 50% Black, Bottom 50% Red */
+    background: linear-gradient(to bottom, #ffffff 50%, #373737 50%);
+    position: relative;
+    width: 100%;
+  }
+
+
+
+
 @media (max-width:770px) {
   .carousel-wrapper {
     height: 320px;
@@ -495,6 +516,9 @@ Dots animation after "LOADING"
   }
 
   .carousel-track-image {
+    height: 100%;
+  }
+    .aviation-carousel-track-image {
     height: 100%;
   }
 }
