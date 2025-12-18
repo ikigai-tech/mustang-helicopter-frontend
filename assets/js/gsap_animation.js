@@ -1,189 +1,218 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger, Draggable);
 
-  /** -------------------------------
-   * 1️⃣ Hero Section Preload + Scroll Animation
-   ----------------------------------*/
-  const heroImages = [
-    "./assets/images/hero-section/landscape-shot-beautiful-valley-surrounded-by-huge-mountains-with-snowy-peaks.png",
-    "./assets/images/hero-section/clouds11-first.png",
-    "./assets/images/hero-section/clouds11-secound.png",
-    "./assets/images/hero-section/freepik__enhance__12911_3.png"
-  ];
-
-  let loadedCount = 0;
-
-  const onImageLoaded = () => {
-    loadedCount++;
-    if (loadedCount === heroImages.length) {
-      const overlay = document.getElementById("loading-overlay");
-      if (overlay) overlay.style.display = "none";
-      initHeroScrollAnimation();
-      // Refresh ScrollTrigger after everything is ready
-      ScrollTrigger.refresh();
-    }
-  };
-
-  heroImages.forEach(src => {
-    const img = new Image();
-    img.src = src;
-    img.onload = onImageLoaded;
-    img.onerror = onImageLoaded;
-  });
-
+  /* =====================================================
+   * 1️⃣ HERO SCROLL ANIMATION
+   ===================================================== */
   function initHeroScrollAnimation() {
     ScrollTrigger.matchMedia({
+      "(min-width: 1025px)": () => {
+        const elements = {
+          section: document.querySelector(".hero-section"),
+          bgImage: document.querySelector(".hero-bg-mountains img"),
+          scrollContent: document.querySelector(".scroll-content"),
+          cloudsRight: document.querySelectorAll(".clouds-right"),
+          cloudsLeft: document.querySelectorAll(".clouds-left"),
+          ctaBlock: document.querySelector(".hero-cta-block"),
+          sidebar: document.querySelector(".hero-sidebar"),
+          socialIcons: document.querySelector(".heroSection-socialIcons"),
+          heading: document.querySelector(".heroSection-heading"),
+        };
 
-      // Only desktop & tablet above 768px
-      "(min-width: 1025px)": function () {
+        if (!elements.section || !elements.bgImage || !elements.scrollContent) return;
 
-        const heroSection = document.querySelector(".hero-section");
-        const bgImage = document.querySelector(".hero-bg-mountains img");
-        const scrollContent = document.querySelector(".scroll-content");
-        const cloudsRight = document.querySelectorAll(".clouds-right");
-        const cloudsLeft = document.querySelectorAll(".clouds-left");
-        const heroCtaBlock = document.querySelector(".hero-cta-block");
-        const heroSidebar = document.querySelector(".hero-sidebar");
-        const heroSectionSocialIcons = document.querySelector(".heroSection-socialIcons");
-        const heroSectionHeading = document.querySelector(".heroSection-heading");
+        elements.bgImage.style.transformOrigin = "top center";
 
-        if (!heroSection || !bgImage || !scrollContent) return;
-
-        bgImage.style.transformOrigin = "top center";
+        const isLargeScreen = window.innerWidth > 1600;
 
         const tl = gsap.timeline({
           scrollTrigger: {
-            trigger: heroSection,
+            trigger: elements.section,
             start: "top top",
             end: () => "+=" + window.innerHeight * 1.6,
             scrub: true,
             pin: true,
-          }
+          },
         });
 
-        tl.fromTo(bgImage, { scale: 1 }, { scale: 0.8, y: "15%", x: "-10%", ease: "none" }, 0)
-          .fromTo(scrollContent, { y: "90%" }, { y: "35%", opacity: 1, ease: "none" }, 0);
+        /* Background + Content */
+        tl.fromTo(
+          elements.bgImage,
+          { scale: 1 },
+          { scale: 0.8, x: "-10%", y: "15%", ease: "none" },
+          0
+        ).fromTo(
+          elements.scrollContent,
+          { y: "90%" },
+          { y: "35%", opacity: 1, ease: "none" },
+          0
+        );
 
-        if (cloudsRight.length) {
-          let yValue = window.innerWidth > 1600 ? 450 : 350;
-          let xValue = window.innerWidth > 1600 ? 300 : 200;
-          tl.fromTo(cloudsRight, { x: 0, y: 0 }, { x: xValue, y: yValue, ease: "none", stagger: 0.1 }, 0);
-        }
-
-        if (cloudsLeft.length) {
-          let yValue = window.innerWidth > 1600 ? 450 : 350;
-          let xValue = window.innerWidth > 1600 ? -300 : -200;
-          tl.fromTo(cloudsLeft, { x: 0, y: 0 }, { x: xValue, y: yValue, ease: "none" }, 0);
-        }
-
-        if (heroCtaBlock) {
-          let yValue = window.innerWidth > 1600 ? -400 : -250;
-          tl.fromTo(heroCtaBlock, { y: 0, opacity: 0 }, { y: yValue, opacity: 1, ease: "none" }, 0);
-        }
-
-        if (heroSidebar) {
-          tl.fromTo(heroSidebar, { opacity: 1 }, { opacity: 0, ease: "none" }, 0);
-        }
-
-        if (heroSectionSocialIcons) {
-          let yValue = window.innerWidth > 1600 ? 0 : -100;
+        /* Clouds */
+        if (elements.cloudsRight.length) {
           tl.fromTo(
-            heroSectionSocialIcons,
-            { opacity: 0, zIndex: 0, y: 0 },
-            { opacity: 1, zIndex: 50, y: yValue, ease: "none" },
+            elements.cloudsRight,
+            { x: 0, y: 0 },
+            {
+              x: isLargeScreen ? 300 : 200,
+              y: isLargeScreen ? 450 : 350,
+              stagger: 0.1,
+              ease: "none",
+            },
             0
           );
         }
 
-        if (heroSectionHeading) {
-          let yValue = window.innerWidth > 1600 ? 0 : -100;
-          tl.fromTo(heroSectionHeading, { y: 0 }, { y: yValue, ease: "none" }, 0);
+        if (elements.cloudsLeft.length) {
+          tl.fromTo(
+            elements.cloudsLeft,
+            { x: 0, y: 0 },
+            {
+              x: isLargeScreen ? -300 : -200,
+              y: isLargeScreen ? 450 : 350,
+              ease: "none",
+            },
+            0
+          );
         }
-      }
 
+        /* CTA */
+        if (elements.ctaBlock) {
+          tl.fromTo(
+            elements.ctaBlock,
+            { y: 0, opacity: 0 },
+            {
+              y: isLargeScreen ? -400 : -250,
+              opacity: 1,
+              ease: "none",
+            },
+            0
+          );
+        }
+
+        /* Sidebar */
+        if (elements.sidebar) {
+          tl.fromTo(
+            elements.sidebar,
+            { opacity: 1 },
+            { opacity: 0, ease: "none" },
+            0
+          );
+        }
+
+        /* Social Icons */
+        if (elements.socialIcons) {
+          tl.fromTo(
+            elements.socialIcons,
+            { opacity: 0, y: 0, zIndex: 0 },
+            {
+              opacity: 1,
+              y: isLargeScreen ? 0 : -100,
+              zIndex: 50,
+              ease: "none",
+            },
+            0
+          );
+        }
+
+        /* Heading */
+        if (elements.heading) {
+          tl.fromTo(
+            elements.heading,
+            { y: 0 },
+            { y: isLargeScreen ? 0 : -100, ease: "none" },
+            0
+          );
+        }
+      },
     });
   }
 
-  /** -------------------------------
- * 2️⃣ Carousel / Draggable Setup
- ----------------------------------*/
-  const track = document.querySelector(".carousel-track");
-  const items = gsap.utils.toArray(".carousel-item");
-  const gap = 40;
+  initHeroScrollAnimation();
 
-  if (track && items.length) {
-    // Calculate the width of all items including gaps
+  /* =====================================================
+   * 2️⃣ CAROUSEL / DRAGGABLE
+   ===================================================== */
+  function initCarousel() {
+    const track = document.querySelector(".carousel-track");
+    const items = gsap.utils.toArray(".carousel-item");
+    const gap = 40;
+
+    if (!track || !items.length) return;
+
     let trackWidth = 0;
     items.forEach(item => {
       trackWidth += item.offsetWidth + gap;
     });
 
-    // Duplicate the items 3x for seamless infinite drag
+    // Duplicate items for infinite drag
     track.innerHTML += track.innerHTML + track.innerHTML;
 
-    // Create Draggable instance
     Draggable.create(track, {
       type: "x",
       inertia: true,
-      cursor: "grab", // or "none" if you want no cursor
-      onDrag: updateWrap,
-      onThrowUpdate: updateWrap,
+      cursor: "grab",
+      onDrag: wrap,
+      onThrowUpdate: wrap,
     });
 
-    // Function to wrap the track infinitely
-    function updateWrap() {
+    function wrap() {
       gsap.set(track, {
-        x: this.x % trackWidth
+        x: this.x % trackWidth,
       });
     }
   }
 
+  initCarousel();
 
-  // Footer animation
+  /* =====================================================
+   * 3️⃣ FOOTER ANIMATION
+   ===================================================== */
+  function initFooterAnimation() {
+    const footerTop = document.querySelector(".footer-top");
+    const circle = document.querySelector(".orange-circle");
+    const heading = document.querySelector(".footerTop-content h2");
+    const cta = document.querySelector(".footerTop-content-cta");
 
-  const testimonialsSection = document.querySelector(".testimonials-section");
-  const footerContent = document.querySelector(".orange-circle");
-  const footerHeading = document.querySelector(".footerTop-content h2");
-  const footerCTA = document.querySelector(".footerTop-content-cta");
-
-  if (testimonialsSection && footerContent && footerHeading && footerCTA) {
-    let startPoint = window.innerWidth > 900 ? "bottom -50%" : "bottom 40%";
+    if (!footerTop || !circle || !heading || !cta) return;
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: testimonialsSection, // trigger on testimonials section
-        start: startPoint,
+        trigger: footerTop,
+        start: "top 60%",
         toggleActions: "play none none none",
-      }
+      },
     });
 
-    // Circle animation
-    tl.from(footerContent, {
+    tl.from(circle, {
       scale: 0,
       rotation: 180,
       opacity: 0,
       duration: 2.3,
-      ease: "back.out(1.7)"
+      ease: "back.out(1.7)",
     });
 
-    // Heading animation
-    if (footerHeading.offsetParent !== null) {
-      tl.from(footerHeading, {
+    tl.from(
+      heading,
+      {
         y: 100,
         opacity: 0,
         duration: 1,
-        ease: "power3.out"
-      }, "-=0.8");
-    }
+        ease: "power3.out",
+      },
+      "-=0.8"
+    );
 
-    // CTA animation
-    tl.from(footerCTA, {
-      x: -200,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out"
-    }, "-=0.5");
+    tl.from(
+      cta,
+      {
+        x: -200,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      },
+      "-=0.5"
+    );
   }
 
-
-
+  initFooterAnimation();
 });
