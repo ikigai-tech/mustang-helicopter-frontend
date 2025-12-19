@@ -31,3 +31,19 @@
   --font-sohne-breit-dreiviertelfett: 'TestSohneBreit-Dreiviertelfett', sans-serif;
 
 }
+
+
+/* 2️⃣ Reusable components go here */
+@layer components {
+  .hover-scale-img {
+    @apply relative overflow-hidden rounded-lg;
+  }
+
+  .hover-scale-img img {
+    @apply w-full h-full object-cover transition-transform duration-500 ease-out;
+  }
+
+  .hover-scale-img:hover img {
+    @apply scale-[1.125];
+  }
+}

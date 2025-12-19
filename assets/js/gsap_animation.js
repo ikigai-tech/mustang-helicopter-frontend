@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* =====================================================
    * 2️⃣ CAROUSEL / DRAGGABLE
    ===================================================== */
+
   function initCarousel() {
     const track = document.querySelector(".carousel-track");
     const items = gsap.utils.toArray(".carousel-item");
@@ -140,27 +141,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!track || !items.length) return;
 
-    let trackWidth = 0;
-    items.forEach(item => {
-      trackWidth += item.offsetWidth + gap;
-    });
+    // Width of ONE set of items
+    let setWidth = 0;
+    items.forEach(item => setWidth += item.offsetWidth + gap);
 
-    // Duplicate items for infinite drag
+    // Duplicate items 3x for seamless infinite drag
     track.innerHTML += track.innerHTML + track.innerHTML;
+    const allItems = gsap.utils.toArray(".carousel-item");
 
-    Draggable.create(track, {
+    // Create Draggable
+    const draggable = Draggable.create(track, {
       type: "x",
       inertia: true,
       cursor: "grab",
       onDrag: wrap,
       onThrowUpdate: wrap,
-    });
+      snap: function (value) {
+        return Math.round(value / (setWidth / items.length)) * (setWidth / items.length);
+      }
+    })[0];
 
     function wrap() {
-      gsap.set(track, {
-        x: this.x % trackWidth,
-      });
+      let x = draggable.x % setWidth;
+      if (x > 0) x -= setWidth;
+      gsap.set(track, { x });
     }
+
+    draggable.addEventListener("release", wrap);
+
+    // Buttons: move one card width with animation
+    const nextBtn = document.querySelector(".carousel-next");
+    const prevBtn = document.querySelector(".carousel-prev");
+    const itemWidth = setWidth / items.length; // one card width
+
+    nextBtn.addEventListener("click", () => {
+      // Animate track using GSAP
+      gsap.to(draggable, {
+        duration: 0.5,
+        x: draggable.x - itemWidth,
+        ease: "power3.out",
+        onUpdate: wrap
+      });
+    });
+
+    prevBtn.addEventListener("click", () => {
+      gsap.to(draggable, {
+        duration: 0.5,
+        x: draggable.x + itemWidth,
+        ease: "power3.out",
+        onUpdate: wrap
+      });
+    });
   }
 
   initCarousel();

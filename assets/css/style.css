@@ -89,6 +89,8 @@
   font-display: swap;
 }
 
+
+
 #app-wrapper {
   opacity: 0;
   pointer-events: none;
@@ -463,6 +465,16 @@ Dots animation after "LOADING"
   display: flex;
 }
 
+.carousel-btn {
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF7510;
+  color: white;
+  border-radius: 10px;
+}
+
 @media (min-width:770px) {
   .carousel-item:nth-child(odd) {
     align-items: flex-end;
@@ -485,24 +497,12 @@ Dots animation after "LOADING"
 }
 
 
-.aviation-carousel-track-image {
-  width: 600px;
-  height: 420px;
-  border-radius: 4px;
-  flex-shrink: 0;
-  user-select: none;
-  pointer-events: none;
-  overflow: hidden;
-}
 
 .carousel-bg-container {
-    /* Top 50% Black, Bottom 50% Red */
-    background: linear-gradient(to bottom, #ffffff 50%, #373737 50%);
-    position: relative;
-    width: 100%;
-  }
-
-
+  background: linear-gradient(to bottom, #ffffff 50%, #373737 50%);
+  position: relative;
+  width: 100%;
+}
 
 
 @media (max-width:770px) {
@@ -517,8 +517,9 @@ Dots animation after "LOADING"
   .carousel-track-image {
     height: 100%;
   }
-    .aviation-carousel-track-image {
-      width: 90%;
+
+  .aviation-carousel-track-image {
+    width: 90%;
     height: 100%;
   }
 }
@@ -660,6 +661,9 @@ Dots animation after "LOADING"
   text-align: center;
   height: 430px;
   overflow: hidden;
+}
+
+.tourism-slide-card {
   display: flex;
   align-items: end;
 }
@@ -743,8 +747,8 @@ Dots animation after "LOADING"
 
 /* Navigation buttons */
 .tourism-slide-btn {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 1px #FF7510 solid;
   color: #fff;
@@ -792,7 +796,7 @@ Dots animation after "LOADING"
 
 .tourism-slider-scrollbar {
   width: 100%;
-  height: 6px;
+  height: 5px;
   background: #ddd;
   border-radius: 3px;
   position: relative;
@@ -1337,4 +1341,154 @@ Dots animation after "LOADING"
 /* When expanded, remove fade */
 .read-more-content.expanded .read-more-fade {
   display: none;
+}
+
+
+/* tourism page styles */
+.tourism-main .tourismServices-slider-container {
+  position: relative;
+  width: calc(100vw - ((100vw - 100%) / 2));
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.tourism-main .tourism-slide {
+  width: calc(100% / 3 - 100.33px);
+  height: 370px;
+}
+
+.tourism-main .tourism-slide .card-booking-tag {
+  padding: 16px 4px;
+  font-weight: normal;
+}
+
+@media (max-width: 1024px) {
+  .tourism-main .tourism-slide {
+    width: calc(100% / 3 - 10px);
+  }
+}
+
+@media (max-width: 770px) {
+  .tourism-main .tourism-slide {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+@media (max-width: 500px) {
+  .tourism-main .tourism-slide {
+    width: calc(100% / 1 - 100px);
+  }
+}
+
+/* faq section */
+.wc-accordion .wc-item {
+  padding-bottom: 0;
+  border-bottom: 0 solid #d7d7d7;
+}
+
+
+/* emergency services page */
+
+.aviation-carousel-track-image {
+  width: 600px;
+  height: 420px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  user-select: none;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+
+@media (max-width:770px) {
+  .aviation-carousel-track-image {
+    width: 500px;
+    height: 100%;
+  }
+}
+
+@media (max-width:649px) {
+  .aviation-carousel-track-image {
+    width: 400px;
+  }
+}
+
+
+@media (max-width:520px) {
+  .aviation-carousel-track-image {
+    width: 360px;
+  }
+}
+
+@media (max-width:400px) {
+  .aviation-carousel-track-image {
+    width: 300px;
+  }
+}
+
+
+
+
+/* aviation page css */
+/* <!-- highlights slider --> */
+
+.highlight-slider-wrapper .tourism-slide {
+  width: calc(100% / 1 - 10px);
+  align-items: center;
+  text-align: start;
+  height: 100%;
+}
+
+.highlight-slider-wrapper .tourism-slider-scrollbar-thumb {
+  background: #FF7510;
+
+}
+
+@media (max-width:900px) {
+  .highlight-slider-wrapper .tourism-slide {
+    flex-direction: column;
+  }
+
+}
+
+
+.aviation-main .explore-services-section .tourismServices-slider-container {
+  position: relative;
+  width: calc(100vw - ((100vw - 100%) / 2));
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.aviation-main .explore-services-section .tourism-slide {
+  width: calc(100% / 4 - 10.33px);
+  height: 370px;
+}
+
+.aviation-main .explore-services-section .tourism-slide .card-booking-tag {
+  padding: 16px 4px;
+  font-weight: normal;
+}
+
+@media (max-width: 1200px) {
+  .aviation-main .explore-services-section .tourism-slide {
+    width: calc(100% / 3 - 70px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .aviation-main .explore-services-section .tourism-slide {
+    width: calc(100% / 3 - 10px);
+  }
+}
+
+@media (max-width: 770px) {
+  .aviation-main .explore-services-section .tourism-slide {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+@media (max-width: 500px) {
+  .aviation-main .explore-services-section .tourism-slide {
+    width: calc(100% / 1 - 100px);
+  }
 }

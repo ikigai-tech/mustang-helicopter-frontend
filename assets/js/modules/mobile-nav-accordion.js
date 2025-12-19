@@ -29,5 +29,10 @@ export function initMobileNavAccordion(container) {
     // Toggle current item
     item.classList.toggle("mnav-open", !isOpen);
     submenu.classList.toggle("hidden");
+    if (!submenu.classList.contains("hidden")) {
+      submenu.classList.add("flex");
+    } else {
+      submenu.classList.remove("flex");
+    }
   });
 }

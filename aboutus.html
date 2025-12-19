@@ -177,8 +177,7 @@
                             </div>
                           </div>
                         </div>
-                        <div id="emergency-services"
-                          class="servicesNav-tab-pane hidden flex justify-between gap-10 w-full">
+                        <div id="emergency-services" class="servicesNav-tab-pane flex justify-between gap-10 w-full">
                           <div class="py-14">
                             <p class="font-sohne-mono font-normal text-sm text-white">Our operations follow rigorous
                               aviation protocols designed for Nepal’s unique high-altitude
@@ -230,8 +229,7 @@
                             </div>
                           </div>
                         </div>
-                        <div id="aerial-services"
-                          class="servicesNav-tab-pane hidden flex justify-between gap-10 w-full">
+                        <div id="aerial-services" class="servicesNav-tab-pane flex justify-between gap-10 w-full">
                           <ul class="py-14">
                             <li>
                               <a href="#"
@@ -427,7 +425,7 @@
                     Services
                     <i class="bi bi-arrow-right-short text-3xl"></i>
                   </a>
-                  <ul class="mnav-submenu hidden flex flex-col gap-10">
+                  <ul class="mnav-submenu hidden flex-col gap-10">
                     <li class="mnav-item mnav-has-children w-full">
                       <a href="#"
                         class="w-full mnav-link mnav-toggle flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
@@ -435,7 +433,7 @@
                         <span>TOURISM </span>
                         <i class="bi bi-arrow-right-short text-3xl"></i>
                       </a>
-                      <ul class="mnav-submenu hidden flex flex-col gap-5 mt-5">
+                      <ul class="mnav-submenu hidden flex-col gap-5 mt-5">
                         <li>
                           <a href="#"
                             class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
@@ -488,7 +486,7 @@
                           SERVICES</span>
                         <i class="bi bi-arrow-right-short text-3xl"></i>
                       </a>
-                      <ul class="mnav-submenu hidden flex flex-col gap-5 mt-5">
+                      <ul class="mnav-submenu hidden flex-col gap-5 mt-5">
                         <li>
                           <a href="#"
                             class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
@@ -541,7 +539,7 @@
                           SERVICE</span>
                         <i class="bi bi-arrow-right-short text-3xl"></i>
                       </a>
-                      <ul class="mnav-submenu hidden flex flex-col gap-5 mt-5">
+                      <ul class="mnav-submenu hidden flex-col gap-5 mt-5">
                         <li>
                           <a href="#"
                             class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
@@ -635,7 +633,7 @@
             </div>
           </div>
           <div class="shrink-0">
-            <button class="hamburger-icon cursor-pointer rounded-md xl:hidden text-white block"><i
+            <button class="hamburger-icon cursor-pointer rounded-md xl:hidden text-white"><i
                 class="bi bi-list text-3xl"></i></button>
             <button class="navClose-icon cursor-pointer rounded-lg hidden">
               <i class="bi bi-x text-4xl text-[#FF7510]"></i>
@@ -674,8 +672,8 @@
           </div>
           <div
             class="900:w-[300px] 900:h-[300px] w-[250px] h-[250px] rounded-full bg-[#FF7510] flex items-start justify-center shrink-0 pt-16">
-            <div class="900:w-[230px] w-[160px] h-[90px] "><img src="./assets/images/Mustang-Logo-Marketing-white.svg"
-                alt="" class="w-full h-full object-contain"></div>
+            <div class="900:w-[230px] w-40 h-[90px] "><img src="./assets/images/Mustang-Logo-Marketing-white.svg" alt=""
+                class="w-full h-full object-contain"></div>
           </div>
         </div>
       </section>
@@ -775,8 +773,13 @@
         </div>
       </section>
       <!-- values section -->
-      <section class="values-section bg-[#373737] py-12 overflow-hidden">
-        <div class="section-wrapper">
+      <section class="values-section bg-[#373737] py-12 overflow-hidden relative">
+        <div class="absolute inset-0 z-10 w-full h-[820px]">
+          <div class="w-full h-[470px] absolute bottom-0 left-0">
+            <img src="./assets/images/section-background-mountain-image.png" alt="" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="section-wrapper relative z-20">
           <div class="max-w-[580px] w-full relative z-10 section-heading">
             <p class="font-sohne-breit-buch font-normal text-white uppercase sm:text-sm text-xs">VALUES</p>
             <h2 class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510]">
@@ -1232,7 +1235,7 @@
         <div class="absolute top-0 left-0 w-full h-full footerTop-content">
           <div class="section-wrapper flex items-start md:justify-between justify-center ">
             <div
-              class="xl:w-[500px] xl:h-[500px] 900:w-[450px] 900:h-[450px] md:w-[360px] md:h-[360px] w-[320px] h-[320px] bg-[#FF7510] rounded-full shrink-0 orange-circle">
+              class="xl:w-[500px] xl:h-[500px] 900:w-[450px] 900:h-[450px] md:w-[360px] md:h-[360px] w-[320px] h-80 bg-[#FF7510] rounded-full shrink-0 orange-circle">
             </div>
             <h2
               class="font-extrabold xl:text-9xl lg:text-[110px] 900:text-8xl md:text-[80px] text-7xl text-[#FF7510] uppercase text-right leading-[0.85] tracking-tighter pt-20 md:block hidden">
@@ -1249,7 +1252,7 @@
                 TO TAKE
                 YOUR FLIGHT ?</h2>
               <button href="#"
-                class="book-now-btn primary-btn bg-white border border-[#FF7510] md:w-[157px] w-[130px] md:px-2 md:py-2.5 px-1 py-1.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden cursor-pointer">
+                class="book-now-btn primary-btn bg-white border border-[#FF7510] hover:border-white md:w-[157px] w-[130px] md:px-2 md:py-2.5 px-1 py-1.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden cursor-pointer">
                 <span
                   class="btn-text font-sohne-breit-buch font-normal md:text-sm text-xs text-[#FF7510] uppercase relative z-10 text-nowrap">
                   BOOK NOW

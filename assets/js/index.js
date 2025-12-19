@@ -44,14 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // Tourism slider
-  const track = document.querySelector('.tourism-slider-track');
-  const nextBtn = document.querySelector('.tourism-slide-btn.next');
-  const prevBtn = document.querySelector('.tourism-slide-btn.prev');
-  const scrollbar = document.querySelector('.tourism-slider-scrollbar');
-  const thumb = document.querySelector('.tourism-slider-scrollbar-thumb');
-  if (track && nextBtn && prevBtn && scrollbar && thumb) {
-    import('./modules/tourism-slider.js').then(module => module.initSlider(track, nextBtn, prevBtn, scrollbar, thumb));
-  }
+  document.querySelectorAll('.custonSlider-block').forEach(block => {
+    const track = block.querySelector('.tourism-slider-track');
+    const nextBtn = block.querySelector('.tourism-slide-btn.next');
+    const prevBtn = block.querySelector('.tourism-slide-btn.prev');
+    const scrollbar = block.querySelector('.tourism-slider-scrollbar');
+    const thumb = block.querySelector('.tourism-slider-scrollbar-thumb');
+
+    if (track && nextBtn && prevBtn && scrollbar && thumb) {
+      import('./modules/tourism-slider.js')
+        .then(module => {
+          module.initSlider(track, nextBtn, prevBtn, scrollbar, thumb);
+        });
+    }
+  });
+
 
   // Map
   const mapObj = document.getElementById("mapObj");
