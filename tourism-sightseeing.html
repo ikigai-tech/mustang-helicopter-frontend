@@ -1,0 +1,2209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/output.css">
+  <title>Aviation Services</title>
+</head>
+
+<body>
+  <div id="app-wrapper" class="app-wrapper relative">
+    <header class="app-header fixed top-0 left-0 w-full xl:h-[105px] h-[90px] z-50">
+      <div class="nav-wrapper section-wrapper flex items-center h-full">
+        <div class="flex items-center justify-between w-full xl:px-0">
+          <a href="/index.html" class="w-[131px] h-[51px] block">
+            <img src="./assets/images/Mustang-Logo.svg" alt="mustang logo" class="w-full h-full object-contain">
+          </a>
+          <div class="primary-navigation xl:flex hidden items-center gap-3 justify-between w-full">
+            <nav class="w-full flex items-center justify-center relative">
+              <ul role="menu" class="nav-items flex items-center gap-8">
+                <li><a href="/aboutus.html"
+                    class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">
+                    <span>About us</span>
+                  </a>
+                </li>
+                <li class="relative nav-item-has-dropdown">
+                  <!-- Services Menu Item -->
+                  <a href="#"
+                    class="nav-link flex items-center gap-1 sohne-breit-kraftig font-medium text-base uppercase text-white"
+                    aria-haspopup="true" aria-expanded="false" aria-controls="servicesMenu">
+                    Services
+                    <i class="bi bi-caret-down-fill text-white xl:block hidden"></i>
+                  </a>
+                  <!-- Dropdown Menu -->
+                  <div id="servicesMenu"
+                    class="servicesNav-dropdown fixed left-0 top-[105px] w-full bg-[#373737] text-white rounded shadow-lg transition-all duration-300 z-50 border-t-3 border-t-[#464646] opacity-0 invisible xl:block hidden">
+                    <div class="flex items-stretch gap-10 bg-[#373737] w-full section-wrapper">
+                      <!-- Tabs Header -->
+                      <div
+                        class="servicesNav-tabs-header flex flex-col items-start gap-12 py-14 max-w-[250px] w-full shrink-0">
+                        <button
+                          class="servicesNav-tab-button active-tab flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase"
+                          data-tab="tourism">
+                          <span class="font-sohne-breit-halbfett font-normal text-sm">TOURISM
+                          </span>
+                          <i class="bi bi-arrow-up-right text-white text-base"></i>
+                        </button>
+                        <button
+                          class="servicesNav-tab-button flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap  uppercase"
+                          data-tab="emergency-services"> <span
+                            class="font-sohne-breit-halbfett font-normal text-sm">EMERGENCY
+                            SERVICES</span>
+                          <i class="bi bi-arrow-up-right text-white text-base"></i></button>
+                        <button
+                          class="servicesNav-tab-button flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase"
+                          data-tab="aerial-services"> <span class="font-sohne-breit-halbfett font-normal text-sm">AERIAL
+                            SERVICE</span>
+                          <i class="bi bi-arrow-up-right text-white text-base"></i></button>
+                      </div>
+                      <!-- Tabs Content -->
+                      <div class="servicesNav-tabs-content border-l-2 border-l-[#616161] pl-10 w-full">
+                        <div id="tourism" class="servicesNav-tab-pane flex justify-between gap-10 w-full">
+                          <ul class="py-14">
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">EBC
+                                  SIGHTSEEING</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">ANNAPURNA
+                                  SIGHTSEEING</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">MUKTINATH
+                                  HELI</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">TILICHO</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">LUKLA</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">ABC</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                          </ul>
+                          <div class="max-w-[450px] w-full shrink-0 bg-[#3D3D3D] pl-10 py-8">
+                            <h2 class="font-ginto-nord font-extrabold text-[#FF7510] text-4xl">
+                              FOR YOU</h2>
+                            <div class="flex gap-5 mt-5">
+                              <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
+                                <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                                  <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                                    class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                  class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
+                                  <div class="max-w-40 relative z-10">
+                                    <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
+                                      EBC
+                                      SIGHTSEEING</h2>
+                                    <div class="max-h-0 more-info-btn opacity-0">
+                                      <button
+                                        class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                                        <span
+                                          class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
+                                          MORE INFO
+                                        </span>
+                                        <span
+                                          class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
+                                          <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                                  </div>
+                                </div>
+                                <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">
+                                  BOOKING
+                                  AVAILABLE
+                                </div>
+                              </a>
+                              <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
+                                <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                                  <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                                    class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                  class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
+                                  <div class="max-w-40 relative z-10">
+                                    <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
+                                      EBC
+                                      SIGHTSEEING</h2>
+                                    <div class="max-h-0 more-info-btn opacity-0">
+                                      <button
+                                        class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                                        <span
+                                          class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
+                                          MORE INFO
+                                        </span>
+                                        <span
+                                          class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
+                                          <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                                  </div>
+                                </div>
+                                <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">
+                                  BOOKING
+                                  AVAILABLE
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="emergency-services" class="servicesNav-tab-pane flex justify-between gap-10 w-full">
+                          <div class="py-14">
+                            <p class="font-sohne-mono font-normal text-sm text-white">Our
+                              operations follow rigorous
+                              aviation protocols designed for Nepal’s unique high-altitude
+                              environment. From aircraft maintenance to pilot training,
+                              safety isn’t just a
+                              priority—it’s
+                              the foundation of everything we do.</p>
+                            <a href="tel:+9779823223121"
+                              class="font-sohne-breit-buch text-[#FF7510] font-normal text-sm underline mt-3 block">
+                              CONTACT US : +977-9823223121
+                            </a>
+
+                          </div>
+                          <div class="max-w-[450px] w-full shrink-0 bg-[#3D3D3D] pl-10 py-8">
+                            <h2 class="font-ginto-nord font-extrabold text-[#FF7510] text-4xl">
+                              FOR YOU</h2>
+                            <div class="flex gap-5 mt-5">
+                              <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
+                                <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                                  <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                                    class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                  class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
+                                  <div class="max-w-40 relative z-10">
+                                    <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
+                                      EBC
+                                      SIGHTSEEING</h2>
+                                    <div class="max-h-0 more-info-btn opacity-0">
+                                      <button
+                                        class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                                        <span
+                                          class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
+                                          MORE INFO
+                                        </span>
+                                        <span
+                                          class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
+                                          <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                                  </div>
+                                </div>
+                                <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">
+                                  BOOKING
+                                  AVAILABLE
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="aerial-services" class="servicesNav-tab-pane flex justify-between gap-10 w-full">
+                          <ul class="py-14">
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">CHARTER
+                                  FLIGHTS</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">SKYDIVING</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">AERIAL
+                                  CARGO</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">AERIAL
+                                  SURVEY</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">LUKLA</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">SLING</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"
+                                class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                <span class="font-sohne-breit-buch font-normal text-sm">AERIAL
+                                  FILMING</span>
+                                <i class="bi bi-arrow-up-right text-white text-base"></i>
+                              </a>
+                            </li>
+                          </ul>
+                          <div class="max-w-[450px] w-full shrink-0 bg-[#3D3D3D] pl-10 py-8">
+                            <h2 class="font-ginto-nord font-extrabold text-[#FF7510] text-4xl">
+                              FOR YOU</h2>
+                            <div class="flex gap-5 mt-5">
+                              <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
+                                <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                                  <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                                    class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                  class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
+                                  <div class="max-w-40 relative z-10">
+                                    <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
+                                      EBC
+                                      SIGHTSEEING</h2>
+                                    <div class="max-h-0 more-info-btn opacity-0">
+                                      <button
+                                        class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                                        <span
+                                          class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
+                                          MORE INFO
+                                        </span>
+                                        <span
+                                          class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
+                                          <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                                  </div>
+                                </div>
+                                <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">
+                                  BOOKING
+                                  AVAILABLE
+                                </div>
+                              </a>
+                              <a href="#" class="flex-1 relative tourism-slide-card h-[255px] flex items-end">
+                                <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                                  <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                                    class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                  class="relative z-10 tourism-slide-cardInfo w-full p-2 max-h-[175px] h-full flex items-end">
+                                  <div class="max-w-40 relative z-10">
+                                    <h2 class="font-ginto-normal font-extrabold text-xl text-white text-start">
+                                      EBC
+                                      SIGHTSEEING</h2>
+                                    <div class="max-h-0 more-info-btn opacity-0">
+                                      <button
+                                        class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                                        <span
+                                          class="font-sohne-breit-buch font-normal text-xs text-white uppercase leading-0 relative z-10">
+                                          MORE INFO
+                                        </span>
+                                        <span
+                                          class="btn-icon bg-white w-6 h-6 rounded-full flex items-center justify-center relative z-10">
+                                          <i class="bi bi-arrow-down-left text-[#373737] text-[10px] -rotate-180"></i>
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                                  </div>
+                                </div>
+                                <div class="card-booking-tag font-sohne-breit-buch font-normal text-xs">
+                                  BOOKING
+                                  AVAILABLE
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li><a href="#" class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">
+                    <span>fleet</span>
+                  </a>
+                </li>
+                <li><a href="#" class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">
+                    <span>resources</span>
+                  </a>
+                </li>
+                <li><a href="#" class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">
+                    <span>enquire</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="nav-button flex items-center gap-4">
+              <a href="#"
+                class="primary-btn bg-white w-[157px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                <span class="btn-text font-sohne-breit-buch font-normal text-sm text-[#373737] uppercase relative z-10">
+                  Book Now
+                </span>
+                <span class="btn-icon bg-[#373737] w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-white text-xs -rotate-180"></i>
+                </span>
+                <span
+                  class="btn-hover-circle xl:block hidden bg-[#373737] w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+              </a>
+
+              <a href="#"
+                class="emergency-btn secoundary-btn w-[172px] border border-white px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                <span
+                  class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase leading-0 relative z-10">
+                  EMERGENCY
+                </span>
+                <span class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-[#373737] text-xs -rotate-180"></i>
+                </span>
+                <span
+                  class="btn-hover-circle bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0 xl:block hidden "></span>
+              </a>
+
+            </div>
+          </div>
+          <!-- mobile navigation -->
+          <div class="fixed left-0 top-[90px] xl:top-[105px] h-[calc(100svh-90px)] xl:h-[calc(100svh-105px)] w-full bg-[#383838]
+         mobile-navigation xl:hidden flex flex-col justify-between gap-10 pb-10">
+            <nav class="w-full flex items-center justify-start relative md:p-10 sm:p-8 p-6">
+              <ul role="menu" class="flex flex-col items-start gap-10 w-full">
+                <li class="w-full mnav-item">
+                  <a href="/"
+                    class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
+                    <span>Home</span>
+                    <i class="bi bi-arrow-right-short text-3xl"></i>
+                  </a>
+                </li>
+                <li class="w-full mnav-item">
+                  <a href="/aboutus.html"
+                    class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
+                    <span>About us</span>
+                    <i class="bi bi-arrow-right-short text-3xl"></i>
+                  </a>
+                </li>
+                <li class="w-full mnav-item mnav-has-children mnav-topLevel">
+                  <a href="#"
+                    class="mnav-link mnav-toggle w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                    Services
+                    <i class="bi bi-arrow-right-short text-3xl"></i>
+                  </a>
+                  <ul class="mnav-submenu hidden flex-col gap-10">
+                    <li class="mnav-item mnav-has-children w-full">
+                      <a href="#"
+                        class="w-full mnav-link mnav-toggle flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                        <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                        <span>TOURISM </span>
+                        <i class="bi bi-arrow-right-short text-3xl"></i>
+                      </a>
+                      <ul class="mnav-submenu hidden flex-col gap-5 mt-5">
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>EBC SIGHTSEEING</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>ANNAPURNA SIGHTSEEING</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>MUKTINATH HELI</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>TILICHO</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>LUKLA</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>ABC</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="mnav-item mnav-has-children">
+                      <a href=""
+                        class="mnav-link mnav-toggle flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                        <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                        <span>EMERGENCY
+                          SERVICES</span>
+                        <i class="bi bi-arrow-right-short text-3xl"></i>
+                      </a>
+                      <ul class="mnav-submenu hidden flex-col gap-5 mt-5">
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>EBC SIGHTSEEING</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>ANNAPURNA SIGHTSEEING</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>MUKTINATH HELI</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>TILICHO</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>LUKLA</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>ABC</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="mnav-item mnav-has-children">
+                      <a href=""
+                        class="mnav-link mnav-toggle flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                        <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                        <span>AERIAL
+                          SERVICE</span>
+                        <i class="bi bi-arrow-right-short text-3xl"></i>
+                      </a>
+                      <ul class="mnav-submenu hidden flex-col gap-5 mt-5">
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>EBC SIGHTSEEING</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>ANNAPURNA SIGHTSEEING</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>MUKTINATH HELI</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>TILICHO</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>LUKLA</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="font-sohne-breit-buch font-normal text-lg flex items-center justify-between text-white">
+                            <span>ABC</span>
+                            <i class="bi bi-arrow-right-short text-3xl"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="w-full mnav-item">
+                  <a href="#"
+                    class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
+                    <span>fleet</span>
+                    <i class="bi bi-arrow-right-short text-3xl"></i>
+                  </a>
+                </li>
+                <li class="w-full mnav-item">
+                  <a href="#"
+                    class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
+                    <span>resources</span>
+                    <i class="bi bi-arrow-right-short text-3xl"></i>
+                  </a>
+                </li>
+                <li class="w-full mnav-item">
+                  <a href="#"
+                    class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
+                    <span>enquire</span>
+                    <i class="bi bi-arrow-right-short text-3xl"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="nav-button flex flex-col items-center gap-4">
+              <a href="#"
+                class="primary-btn bg-white w-full px-2 py-2.5 rounded-full flex items-center justify-center gap-2.5 relative overflow-hidden">
+                <span class="btn-text font-sohne-breit-buch font-normal text-sm text-[#373737] uppercase relative z-10">
+                  Book Now
+                </span>
+                <span class="btn-icon bg-[#373737] w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-white text-xs -rotate-180"></i>
+                </span>
+              </a>
+              <a href="#"
+                class="emergency-btn secoundary-btn w-full border border-white px-2 py-2.5 rounded-full flex items-center justify-center gap-2.5 relative overflow-hidden">
+                <span
+                  class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase leading-0 relative z-10">
+                  EMERGENCY
+                </span>
+                <span class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-[#373737] text-xs -rotate-180"></i>
+                </span>
+              </a>
+
+            </div>
+          </div>
+          <div class="shrink-0">
+            <button class="hamburger-icon cursor-pointer rounded-md xl:hidden text-white"><i
+                class="bi bi-list text-3xl"></i></button>
+            <button class="navClose-icon cursor-pointer rounded-lg hidden">
+              <i class="bi bi-x text-4xl text-[#FF7510]"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="aviation-main">
+      <!-- hero section -->
+      <section class="hero-section h-screen xl:pt-[105px] pt-[90px] relative">
+        <div class="section-wrapper md:pt-20 pt-5 flex items-center justify-between gap-10 relative z-20">
+          <div class="flex flex-col">
+            <div class="flex sm:items-center gap-1 sm:flex-row flex-col">
+              <a href="#" class="font-sohne-breit-halbfett font-semibold text-white text-sm capitalize">OUR SERVIC
+                /</a>
+              <a href="#" class="font-sohne-breit-halbfett font-semibold text-white text-sm uppercase">TOURISM AND
+                SIGHTSEEING (EBC SIGHTSEEING)</a>
+            </div>
+            <h2
+              class="font-extrabold 2xl:text-[76px] xl:leading-[101%] lg:text-6xl text-5xl text-white uppercase tracking-[-2px] pb-2">
+              EBC SIGHTSEEING
+            </h2>
+            <div class="mt-4">
+              <a href="#"
+                class="primary-btn bg-white w-[157px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                <span class="btn-text font-sohne-breit-buch font-normal text-sm text-[#373737] uppercase relative z-10">
+                  Book Now
+                </span>
+                <span class="btn-icon bg-[#373737] w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-white text-xs -rotate-180"></i>
+                </span>
+                <span
+                  class="btn-hover-circle xl:block hidden bg-[#373737] w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+              </a>
+            </div>
+          </div>
+          <div class="heroSection-socialIcons hidden lg:flex flex-col gap-3 3xl:pt-20! pt-10!">
+            <div class="flex items-center flex-col gap-1">
+              <span class="bg-white block h-[52px] w-[3px]"></span>
+              <div class="flex flex-col gap-0.5">
+                <span class="block w-[3px] h-[3px] bg-white rounded-2xl"></span>
+                <span class="block w-[3px] h-[3px] bg-white rounded-2xl"></span>
+              </div>
+            </div>
+            <ul class="space-y-3">
+              <li class="bg-white w-7 h-7 rounded-full flex items-center justify-center">
+                <a href="">
+                  <i class="fa-brands fa-instagram text-sm"></i>
+                </a>
+              </li>
+              <li class="bg-white w-7 h-7 rounded-full flex items-center justify-center"><a href="">
+                  <i class="fa-brands fa-facebook-f text-sm"></i>
+                </a></li>
+              <li class="bg-white w-7 h-7 rounded-full flex items-center justify-center"><a href="">
+                  <i class="fa-brands fa-whatsapp text-sm"></i>
+                </a></li>
+              <li class="bg-white w-7 h-7 rounded-full flex items-center justify-center"><a href="">
+                  <i class="fa-brands fa-x-twitter text-sm"></i>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-full z-10">
+          <div class="absolute bottom-0 left-0 w-full h-full z-10">
+            <img src="/assets/images/image-17.png" alt="" class="w-full h-full object-cover lg:object-cover object-top">
+          </div>
+          <div class="absolute inset-0 z-20"
+            style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.84) 4.84%, rgba(102, 102, 102, 0) 100%);">
+            <div class="absolute -bottom-[30%] left-0 w-full h-full z-10">
+              <img src="/assets/images/hero-section-bottom-clouds.png" alt="" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- page section navigation -->
+      <section class="page-section-navigation-wrapper">
+        <section class="page-section-navigation z-50 sticky top-0 h-full bg-white">
+          <div class="section-wrapper overflow-x-auto">
+            <nav class="secoundary-navigation-bar bg-white z-40">
+              <ul class="flex items-center 900:justify-center gap-8 p-4">
+                <li>
+                  <a href="#overview" class="sectionNav-items py-2 flex items-center gap-3 text-nowrap text-[#373737]">
+                    <span class="font-sohne-mono font-normal text-xl uppercase">OVERVIEW</span>
+                    <i class="bi bi-arrow-up-right text-base"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#details" class="sectionNav-items py-2 flex items-center gap-3 text-nowrap text-[#373737]">
+                    <span class="font-sohne-mono font-normal text-xl uppercase">DETAILS</span>
+                    <i class="bi bi-arrow-up-right text-base"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#highlights"
+                    class="sectionNav-items py-2 flex items-center gap-3 text-nowrap text-[#373737]">
+                    <span class="font-sohne-mono font-normal text-xl uppercase">HIGHLIGHTS</span>
+                    <i class="bi bi-arrow-up-right text-base"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#itinerary" class="sectionNav-items py-2 flex items-center gap-3 text-nowrap text-[#373737]">
+                    <span class="font-sohne-mono font-normal text-xl uppercase">ITINERARY</span>
+                    <i class="bi bi-arrow-up-right text-base"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#practical-info"
+                    class="sectionNav-items py-2 flex items-center gap-3 text-nowrap text-[#373737]">
+                    <span class="font-sohne-mono font-normal text-xl uppercase">PRACTICAL INFO</span>
+                    <i class="bi bi-arrow-up-right text-base"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+        <!-- Overview Section -->
+        <section id="overview" class="relative z-20 900:py-20 md:py-16 py-10">
+          <div class="section-wrapper flex items-center xl:gap-20 lg:gap-10 gap-8 900:flex-row flex-col">
+            <div class="grid grid-cols-2 gap-6 900:max-w-[350px] max-w-[500px] w-full shrink-0">
+              <div class="flex flex-col items-center">
+                <div class="w-[41px] h-[35px]">
+                  <img src="./assets/images/icons/Altitude.svg" alt="" class="w-full h-full object-contain">
+                </div>
+                <h2
+                  class="font-sohne-breit-kraftig font-medium uppercase sm:text-xl text-lg text-[#FF7510] text-center">
+                  ALTITUDE
+                </h2>
+                <p class="font-sohne-mono-kraftig font-medium uppercase text-base text-[#373737] text-center">5364m</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="w-[41px] h-[35px]">
+                  <img src="./assets/images/icons/orange-heli-icon.svg" alt="" class="w-full h-full object-contain">
+                </div>
+                <h2
+                  class="font-sohne-breit-kraftig font-medium uppercase sm:text-xl text-lg text-[#FF7510] text-center">
+                  DURATION
+                </h2>
+                <p class="font-sohne-mono-kraftig font-medium uppercase text-base text-[#373737] text-center">1hrs
+                  30min
+                </p>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="w-[41px] h-[35px]">
+                  <img src="./assets/images/icons/PAX.svg" alt="" class="w-full h-full object-contain">
+                </div>
+                <h2
+                  class="font-sohne-breit-kraftig font-medium uppercase sm:text-xl text-lg text-[#FF7510] text-center">
+                  PAX SIZE
+                </h2>
+                <p class="font-sohne-mono-kraftig font-medium uppercase text-base text-[#373737] text-center">1-5 Pax
+                </p>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="w-[41px] h-[35px]">
+                  <img src="./assets/images/icons/PAX.svg" alt="" class="w-full h-full object-contain">
+                </div>
+                <h2
+                  class="font-sohne-breit-kraftig font-medium uppercase sm:text-xl text-lg text-[#FF7510] text-center">
+                  BEST SEASON
+                </h2>
+                <p class="font-sohne-mono-kraftig font-medium uppercase text-base text-[#373737] text-center">Spring
+                  and
+                  Autumn</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <h2 class="font-ginto-nord font-extrabold lg:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510]">A
+                Skybound
+                Path to
+                the World’s Highest Peaks</h2>
+              <div>
+                <p class="font-sohne-breit-buch font-normal text-base text-[#373737]">
+                  Experience the breathtaking beauty of the Himalayas with our Everest Base Camp (EBC) Sightseeing tour.
+                  Soar above the majestic peaks, including Mount Everest, and witness stunning views of glaciers,
+                  valleys,
+                  and traditional Sherpa villages. This unforgettable helicopter tour offers a unique perspective of the
+                  world's highest mountain range, providing ample photo opportunities.
+                </p>
+                <p class="font-sohne-breit-buch font-normal text-base text-[#373737] pt-5">
+                  Experience the breathtaking beauty of the Himalayas with our Everest Base Camp (EBC) Sightseeing tour.
+                  Soar above the majestic peaks, including Mount Everest, and witness stunning views of glaciers,
+                  valleys,
+                  and traditional Sherpa villages. This unforgettable helicopter tour offers a unique perspective of the
+                  world's highest mountain range, providing ample photo opportunities and a chance to appreciate the
+                  grandeur of nature from the sky. Perfect for adventure seekers and nature lovers alike, our EBC
+                  Sightseeing
+                  tour promises an exhilarating experience that will leave you with lasting memories.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Details Section -->
+        <section id="details" class="relative md:pt-[200px] sm:pt-[170px] pt-[140px]">
+          <div class="carousel-wrapper absolute top-0 left-0 w-full md:h-[420px]! sm:h-[370px] h-80 z-10">
+            <button
+              class="carousel-btn carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 z-10 md:hidden flex">
+              <i class="bi bi-arrow-left-short text-2xl"></i>
+            </button>
+            <button
+              class="carousel-btn carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 z-10 md:hidden flex">
+              <i class="bi bi-arrow-right-short text-2xl"></i>
+            </button>
+            <div class="carousel-track flex h-full">
+              <div class="carousel-item">
+                <div class="aviation-carousel-track-image">
+                  <img src="./assets/images/aviation-service/aviationCarousel1.svg" alt=""
+                    class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="aviation-carousel-track-image">
+                  <img src="./assets/images/aviation-service/aviationCarousel2.svg" alt=""
+                    class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="aviation-carousel-track-image">
+                  <img src="./assets/images/aviation-service/aviationCarousel1.svg" alt=""
+                    class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="aviation-carousel-track-image">
+                  <img src="./assets/images/aviation-service/aviationCarousel2.svg" alt=""
+                    class="w-full h-full object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#373737] relative max-h-[1200px] h-full pt-[250px]">
+            <div class="flex items-center flex-col justify-content gap-2 section-wrapper">
+              <div class="max-w-[750px] mx-auto">
+                <h2
+                  class="font-ginto-nord font-bold text-4xl md:text-5xl lg:text-6xl uppercase tracking-[-2px] text-[#FF7510] text-center">
+                  SEE THE ROOF OF THE WORLD
+                  FROM THE SKIES
+                </h2>
+              </div>
+              <div
+                class="mt-3 space-y-5 read-more-content overflow-hidden transition-all duration-500 max-h-[300px] pb-14"
+                id="readMoreContent">
+                <p class="font-sohne-mono font-normal text-white text-base">
+                  The Everest Base Camp Helicopter Tour is designed for those who want to witness the majesty of the
+                  world’s
+                  highest mountain without weeks of trekking. This experience blends comfort, speed, and breathtaking
+                  proximity to the Himalayas, offering a perspective that is impossible to capture from the ground.
+                </p>
+                <p class="font-sohne-mono font-normal text-white text-base"> From the moment you depart Kathmandu, the
+                  journey feels transformative. The landscape changes fast—urban
+                  rooftops give way to rolling hills, deep river valleys, and the first glimmers of snow-capped peaks.
+                  As
+                  you rise higher, the helicopter slips into a world ruled by rock, ice, and ancient mountain walls.</p>
+
+                <p class="font-sohne-mono font-normal text-white text-base"> From the moment you depart Kathmandu, the
+                  journey feels transformative. The landscape changes fast—urban
+
+                  The heart of the experience unfolds in the Khumbu region. Flying over the legendary villages of Namche
+                  and
+                  Tengboche reveals how deeply life here is tied to the mountains. Sharp ridgelines, prayer flags
+                  fluttering
+                  on cliff edges, and the steep trails trekkers take for days appear small beneath you, offering a rare
+                  sense of scale and wonder.</p>
+                <p class="font-sohne-mono font-normal text-white text-base"> From the moment you depart Kathmandu, the
+                  journey feels transformative. The landscape changes fast—urban
+
+                  The highlight of the journey is the spectacular aerial sweep over Everest Base Camp and the dramatic
+                  Khumbu Icefall. Viewed from above, the glacier system feels alive—shifting, cracking, and glittering
+                  under
+                  the sun. These are the landscapes that challenge the world’s strongest climbers, yet you witness them
+                  in
+                  complete comfort.</p>
+                <p class="font-sohne-mono font-normal text-white text-base"> From the moment you depart Kathmandu, the
+                  journey feels transformative. The landscape changes fast—urban
+
+                  A landing at Kala Patthar brings you face-to-face with Everest in a way few experiences can match. The
+                  vantage point offers the closest and clearest view of the summit, rising above the clouds in absolute
+                  silence. At 5,545 meters, the air is thin and crisp, the sunlight sharp and golden across the ridges.
+                  It
+                  is a moment people remember for a lifetime.
+                  After the adrenaline of high altitude, the descent to Syangboche invites a gentler experience. Here,
+                  surrounded by open skies and distant peaks, you enjoy breakfast with Everest in full view. It is
+                  serene,
+                  almost surreal—like pausing in a dream before returning to reality.</p>
+                <p class="font-sohne-mono font-normal text-white text-base"> From the moment you depart Kathmandu, the
+                  journey feels transformative. The landscape changes fast—urban
+
+                  The return flight traces the valleys back toward Lukla and then Kathmandu, offering one last panorama
+                  of
+                  the mountain world before you transition back into the city.
+                  This tour is crafted for travelers who want a powerful, immersive, and time-efficient encounter with
+                  Everest. It captures the essence of the Himalayas—its beauty, scale, and emotion—within a single
+                  unforgettable morning.
+                </p>
+                <!-- BLUR / FADE OVERLAY -->
+                <div class="read-more-fade h-[260px]!"></div>
+              </div>
+              <!-- BUTTON -->
+              <button id="readMoreBtn" class="flex items-center gap-2 cursor-pointer mt-4 group absolute bottom-5"
+                aria-expanded="false">
+                <span
+                  class="w-[50px] h-[50px] rounded-full border border-[#FF7510] flex items-center justify-center transition-transform duration-300 group-[.expanded]:rotate-180 group-hover:bg-[#FF7510]">
+                  <i class="bi bi-arrow-down text-[#FF7510] group-hover:text-white"></i>
+                </span>
+                <span class="font-sohne-breit-buch font-normal text-sm text-white uppercase" data-readmore-content>
+                  READ FULL DETAIL
+                </span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- Highlights Section -->
+        <section id="highlights" class="relative z-20 900:py-20 md:py-16 py-10">
+          <div class="section-wrapper">
+            <h2 class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510]">
+              BEST TIMES TO VISIT</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+              <div class="highlight-card bg-[#FFA468] p-8 rounded-sm overflow-hidden relative h-[285px]">
+                <div class="flex items-start justify-between gap-5 relative z-10">
+                  <div class="flex flex-col gap-2">
+                    <h3
+                      class="font-ginto-nord font-extrabold lg:text-[32px] lg:leading-[111%] text-3xl uppercase tracking-[-2px] text-white">
+                      SPRING SEASON</h3>
+                    <div class="flex items-center gap-2 text-white">
+                      <i class="bi bi-calendar4"></i>
+                      <span class="font-sohne-mono font-normal text-base">March-May</span>
+                    </div>
+                    <ul class="space-y-2 list-inside">
+                      <li class="font-sohne-mono font-normal text-xl text-white flex items-center gap-2">
+                        <span class="inline-block w-2 h-2 bg-white rounded-full"></span>
+                        <span>Clear Views of Everest</span>
+                      </li>
+                      <li class="font-sohne-mono font-normal text-xl text-white flex items-center gap-2">
+                        <span class="inline-block w-2 h-2 bg-white rounded-full"></span>
+                        <span> Blooming Rhododendrons</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="w-[75px] h-[75px]">
+                    <img src="/assets/images/icons/clover.svg" alt="" class="w-full h-full object-contain" />
+                  </div>
+                </div>
+                <div class="absolute bottom-0 left-0">
+                  <img src="/assets/images/PikPng.com_everest-png_4587132 1.png" alt="" class="w-full h-auto" />
+                </div>
+              </div>
+              <div class="highlight-card bg-[#FF7510] p-8 rounded-sm overflow-hidden relative h-[285px]">
+                <div class="flex items-start justify-between gap-5 relative z-10">
+                  <div class="flex flex-col gap-2">
+                    <h3
+                      class="font-ginto-nord font-extrabold lg:text-[32px] lg:leading-[111%] text-3xl uppercase tracking-[-2px] text-white">
+                      AUTUMN SEASON</h3>
+                    <div class="flex items-center gap-2 text-white">
+                      <i class="bi bi-calendar4"></i>
+                      <span class="font-sohne-mono font-normal text-base">March-May</span>
+                    </div>
+                    <ul class="space-y-2 list-inside">
+                      <li class="font-sohne-mono font-normal text-xl text-white flex items-center gap-2">
+                        <span class="inline-block w-2 h-2 bg-white rounded-full"></span>
+                        <span>Clear Views of Everest</span>
+                      </li>
+                      <li class="font-sohne-mono font-normal text-xl text-white flex items-center gap-2">
+                        <span class="inline-block w-2 h-2 bg-white rounded-full"></span>
+                        <span> Blooming Rhododendrons</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="w-[75px] h-[75px]">
+                    <img src="/assets/images/icons/leaf.svg" alt="" class="w-full h-full object-contain" />
+                  </div>
+                </div>
+                <div class="absolute bottom-0 left-0">
+                  <img src="/assets/images/PikPng.com_everest-png_4587132 1.png" alt="" class="w-full h-auto" />
+                </div>
+              </div>
+              <div class="highlight-card bg-[#A44E15] p-8 rounded-sm overflow-hidden relative h-[285px]">
+                <div class="flex items-start justify-between gap-5 relative z-10">
+                  <div class="flex flex-col gap-2">
+                    <h3
+                      class="font-ginto-nord font-extrabold lg:text-[32px] lg:leading-[111%] text-3xl uppercase tracking-[-2px] text-white">
+                      WINTER SEASON</h3>
+                    <div class="flex items-center gap-2 text-white">
+                      <i class="bi bi-calendar4"></i>
+                      <span class="font-sohne-mono font-normal text-base">March-May</span>
+                    </div>
+                    <ul class="space-y-2 list-inside">
+                      <li class="font-sohne-mono font-normal text-xl text-white flex items-center gap-2">
+                        <span class="inline-block w-2 h-2 bg-white rounded-full"></span>
+                        <span>Clear Views of Everest</span>
+                      </li>
+                      <li class="font-sohne-mono font-normal text-xl text-white flex items-center gap-2">
+                        <span class="inline-block w-2 h-2 bg-white rounded-full"></span>
+                        <span> Blooming Rhododendrons</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="w-[75px] h-[75px]">
+                    <img src="/assets/images/icons/snow-pleats.svg" alt="" class="w-full h-full object-contain" />
+                  </div>
+                </div>
+                <div class="absolute bottom-0 left-0">
+                  <img src="/assets/images/PikPng.com_everest-png_4587132 1.png" alt="" class="w-full h-auto" />
+                </div>
+              </div>
+              <div class="highlight-card bg-[#512A11] p-8 rounded-sm overflow-hidden relative h-[285px]">
+                <div class="flex items-start justify-between gap-5 relative z-10">
+                  <div class="flex flex-col gap-2">
+                    <h3
+                      class="font-ginto-nord font-extrabold lg:text-[32px] lg:leading-[111%] text-3xl uppercase tracking-[-2px] text-white">
+                      MONSOON SEASON</h3>
+                    <div class="flex items-center gap-2 text-white">
+                      <i class="bi bi-calendar4"></i>
+                      <span class="font-sohne-mono font-normal text-base">March-May</span>
+                    </div>
+                    <ul class="space-y-2 list-inside">
+                      <li class="font-sohne-mono font-normal text-xl text-white flex items-center gap-2">
+                        <span class="inline-block w-2 h-2 bg-white rounded-full"></span>
+                        <span>Clear Views of Everest</span>
+                      </li>
+                      <li class="font-sohne-mono font-normal text-xl text-white flex items-center gap-2">
+                        <span class="inline-block w-2 h-2 bg-white rounded-full"></span>
+                        <span> Blooming Rhododendrons</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="w-[75px] h-[75px]">
+                    <img src="/assets/images/icons/clouds.svg" alt="" class="w-full h-full object-contain" />
+                  </div>
+                </div>
+                <div class="absolute bottom-0 left-0">
+                  <img src="/assets/images/PikPng.com_everest-png_4587132 1.png" alt="" class="w-full h-auto" />
+                </div>
+              </div>
+            </div>
+            <div class="900:pt-20 md:pt-16 pt-10">
+              <div class="max-w-[380px] w-full relative z-10 section-heading">
+                <h2
+                  class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510]">
+                  HIGHLIGHTS
+                </h2>
+              </div>
+              <div class="flex items-center gap-10 mt-5 900:flex-row flex-col">
+                <div class="w-[434px] h-[580px] shrink-0 rounded-lg overflow-hidden 900:block hidden">
+                  <img src="./assets/images/couple-images-selfiee.jpg" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="wc-accordion space-y-8 flex-1">
+                  <div class="wc-item pb-5! border-b! border-b-[#d7d7d7]!">
+                    <input type="radio" name="wcAcc" id="wc1" checked>
+                    <label for="wc1" class="wc-title cursor-pointer flex items-center justify-between gap-5">
+                      <span
+                        class="font-sohne-breit-dreiviertelfett font-medium lg:text-2xl md:text-xl sm:text-lg text-base text-[#FF7510] capitalize">Highly
+                        Skilled Pilots
+                        With Himalayan
+                        Expertis</span>
+                      <div>
+                        <span class="icon-minus"><i class="bi bi-dash text-3xl text-[#FF7510]"></i></span>
+                        <span class="icon-plus"><i class="bi bi-plus text-3xl text-[#FF7510]"></i></span>
+                      </div>
+                    </label>
+                    <div class="wc-content">
+                      <p class="font-sohne-mono font-normal md:text-base text-sm text-[#373737]">Our operations follow
+                        rigorous
+                        aviation
+                        protocols designed for Nepal’s unique high-altitude environment. From aircraft maintenance to
+                        pilot training, safety isn’t just a priority—it’s the foundation of everything we do.</p>
+                    </div>
+                  </div>
+                  <div class="wc-item pb-5! border-b! border-b-[#d7d7d7]!">
+                    <input type="radio" name="wcAcc" id="wc2" checked>
+                    <label for="wc2" class="wc-title cursor-pointer flex items-center justify-between gap-5">
+                      <span
+                        class="font-sohne-breit-dreiviertelfett font-medium lg:text-2xl md:text-xl sm:text-lg text-base text-[#FF7510] capitalize">Highly
+                        Skilled Pilots
+                        With Himalayan
+                        Expertis</span>
+                      <div>
+                        <span class="icon-minus"><i class="bi bi-dash text-3xl text-[#FF7510]"></i></span>
+                        <span class="icon-plus"><i class="bi bi-plus text-3xl text-[#FF7510]"></i></span>
+                      </div>
+                    </label>
+                    <div class="wc-content">
+                      <p class="font-sohne-mono font-normal md:text-base text-sm text-[#373737]">Our operations follow
+                        rigorous
+                        aviation
+                        protocols designed for Nepal’s unique high-altitude environment. From aircraft maintenance to
+                        pilot training, safety isn’t just a priority—it’s the foundation of everything we do.</p>
+                    </div>
+                  </div>
+                  <div class="wc-item pb-5! border-b! border-b-[#d7d7d7]!">
+                    <input type="radio" name="wcAcc" id="wc3" checked>
+                    <label for="wc3" class="wc-title cursor-pointer flex items-center justify-between gap-5">
+                      <span
+                        class="font-sohne-breit-dreiviertelfett font-medium lg:text-2xl md:text-xl sm:text-lg text-base text-[#FF7510] capitalize">Highly
+                        Skilled Pilots
+                        With Himalayan
+                        Expertis</span>
+                      <div>
+                        <span class="icon-minus"><i class="bi bi-dash text-3xl text-[#FF7510]"></i></span>
+                        <span class="icon-plus"><i class="bi bi-plus text-3xl text-[#FF7510]"></i></span>
+                      </div>
+                    </label>
+                    <div class="wc-content">
+                      <p class="font-sohne-mono font-normal md:text-base text-sm text-[#373737]">Our operations follow
+                        rigorous
+                        aviation
+                        protocols designed for Nepal’s unique high-altitude environment. From aircraft maintenance to
+                        pilot training, safety isn’t just a priority—it’s the foundation of everything we do.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Itinerary Section -->
+        <section id="itinerary" class="bg-[#373737] relative z-20 900:py-20 md:py-16 py-10 overflow-hidden">
+          <!-- EXPLORE OUR SERVICES -->
+          <div class="section-wrapper md:space-y-10 sm:space-y-8 space-y-6">
+            <div class="max-w-[300px] w-full relative z-20 section-heading">
+              <p class="font-sohne-breit-buch font-normal text-white uppercase">ITINERARY</p>
+              <h2 class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510]">
+                YOUR
+                JOURNEY
+              </h2>
+            </div>
+            <div class="itinerarySlider-container custonSlider-block">
+              <div class="itinerarySlider-wrapper overflow-hidden w-full">
+                <div class="tourism-slider-track">
+                  <a href="#" class="tourism-slide relative tourism-slide-card gap-7">
+                    <div class="md:w-[320px] w-full md:h-full h-[300px] shrink-0 hover-scale-img">
+                      <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                        class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative pr-2 md:pl-0 pl-4">
+                      <span
+                        class="absolute -top-7 md:-left-7 left-0 font-sohne-breit-dreiviertelfett text-8xl text-[#FFBB8D]">1</span>
+                      <div class="relative z-10">
+                        <h3
+                          class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510] text-start">
+                          ARRIVAL TO
+                          TIA, KTM</h3>
+                        <div class="flex items-center gap-2 mt-3 text-white">
+                          <div class="w-5 h-5">
+                            <img src="./assets/images/icons/Helicopter.svg" alt="" class="w-full h-full object-contain">
+                          </div>
+                          <span>Flight Time: 10-20 Mins</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-3 text-white">
+                          <i class="bi bi-clock"></i>
+                          <span>Ground Time: 15-20 Mins</span>
+                        </div>
+                        <p class="font-sohne-mono font-normal text-white text-base mt-2 text-start">
+                          Begin your adventure with a scenic helicopter flight from Kathmandu to Everest Base Camp.
+                          Enjoy
+                          breathtaking views of the Himalayas as you soar above the clouds.
+                        </p>
+                      </div>
+
+                    </div>
+                  </a>
+                  <a href="#" class="tourism-slide relative tourism-slide-card gap-7">
+                    <div class="w-[320px] h-full shrink-0 hover-scale-img">
+                      <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                        class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative pr-2">
+                      <span
+                        class="absolute -top-7 -left-7 font-sohne-breit-dreiviertelfett text-8xl text-[#FFBB8D]">2</span>
+                      <div class="relative z-10">
+                        <h3
+                          class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510] text-start">
+                          ARRIVAL TO
+                          TIA, KTM</h3>
+                        <div class="flex items-center gap-2 mt-3 text-white">
+                          <div class="w-5 h-5">
+                            <img src="./assets/images/icons/Helicopter.svg" alt="" class="w-full h-full object-contain">
+                          </div>
+                          <span>Flight Time: 10-20 Mins</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-3 text-white">
+                          <i class="bi bi-clock"></i>
+                          <span>Ground Time: 15-20 Mins</span>
+                        </div>
+                        <p class="font-sohne-mono font-normal text-white text-base mt-2 text-start">
+                          Begin your adventure with a scenic helicopter flight from Kathmandu to Everest Base Camp.
+                          Enjoy
+                          breathtaking views of the Himalayas as you soar above the clouds.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="tourism-slide relative tourism-slide-card gap-7">
+                    <div class="w-[320px] h-full shrink-0 hover-scale-img">
+                      <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                        class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative pr-2">
+                      <span
+                        class="absolute -top-7 -left-7 font-sohne-breit-dreiviertelfett text-8xl text-[#FFBB8D]">3</span>
+                      <div class="relative z-10">
+                        <h3
+                          class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510] text-start">
+                          ARRIVAL TO
+                          TIA, KTM</h3>
+                        <div class="flex items-center gap-2 mt-3 text-white">
+                          <div class="w-5 h-5">
+                            <img src="./assets/images/icons/Helicopter.svg" alt="" class="w-full h-full object-contain">
+                          </div>
+                          <span>Flight Time: 10-20 Mins</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-3 text-white">
+                          <i class="bi bi-clock"></i>
+                          <span>Ground Time: 15-20 Mins</span>
+                        </div>
+                        <p class="font-sohne-mono font-normal text-white text-base mt-2 text-start">
+                          Begin your adventure with a scenic helicopter flight from Kathmandu to Everest Base Camp.
+                          Enjoy
+                          breathtaking views of the Himalayas as you soar above the clouds.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center justify-between gap-10 mt-5 pr-5">
+                <div class="flex items-center gap-5">
+                  <button class="tourism-slide-btn prev border border-white!"><i
+                      class="bi bi-arrow-left text-white"></i></button>
+                  <button class="tourism-slide-btn next border border-white!"><i
+                      class="bi bi-arrow-right text-white"></i></button>
+                </div>
+                <!-- Progress bar -->
+                <div class="tourism-slider-scrollbar hidden">
+                  <div class="tourism-slider-scrollbar-thumb"></div>
+                </div>
+                <div class="itinerary-progressBar w-full h-1 bg-white rounded-full relative">
+                  <span
+                    class="itinerary-progressBar-fill w-5.5 h-5.5 bg-white  rounded-full overflow-hidden absolute -top-[9px] left-0 flex items-center justify-center">
+                    <span class="itinerary-progressBar-fill-inner bg-[#FF7510] block w-3 h-3 rounded-full"></span>
+                  </span>
+                  <span
+                    class="itinerary-progressBar-fill w-3.5 h-3.5 bg-white  rounded-full overflow-hidden absolute -top-[5px] right-2/4 translate-x-2/4 flex items-center justify-center">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Practical Info Section -->
+        <section id="practical-info" class="900:py-20 md:py-16 py-10 relative">
+          <div class="section-wrapper">
+            <div class="section-heading">
+              <h2 class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510]">
+                Guided by the Best in the Sky
+              </h2>
+            </div>
+            <div class="flex items-center justify-content gap-10 mt-7 900:flex-row flex-col-reverse">
+              <div class="sm:max-w-[570px] w-full shrink-0 gap-4 grid sm:grid-cols-2">
+                <div
+                  class="h-[300px] w-full rounded-sm overflow-hidden relative team-card p-4 flex items-end cursor-pointer">
+                  <div class="absolute top-0 left-0 w-full h-full team-cardImage">
+                    <img src="./assets/images/couple-images-selfiee.jpg" alt="" class="w-full h-full object-cover">
+                  </div>
+                  <div
+                    class="bg-white w-[35px] h-[35px] flex items-center justify-center absolute top-5 right-5 z-10 rounded-full text-[#FF7510] team-cardIcon">
+                    <span class="inline-block -rotate-90">
+                      <i class="bi bi-arrow-down-right text-sm"></i>
+                    </span>
+                  </div>
+                  <div class="relative z-10 max-h-[50px] space-y-3 team-cardInfo">
+                    <div class="flex flex-col items-start">
+                      <h2 class="font-ginto-nord font-bold text-2xl text-white uppercase">Mukhia Gurung</h2>
+                      <p class="font-sohne-breit-buch font-normal text-sm text-white">VICE CHAIRMAN </p>
+                    </div>
+                    <ul class="flex items-center gap-2 mp-3 team-card-socialIcons opacity-0">
+                      <li>
+                        <a href="#" class="w-5 h-5 bg-white flex items-center justify-center rounded-full">
+                          <i class="bi bi-instagram text-[10px]"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class="w-5 h-5 bg-white flex items-center justify-center rounded-full">
+                          <i class="fa-brands fa-facebook-f text-[10px]"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="h-[300px] w-full rounded-sm overflow-hidden relative team-card p-4 flex items-end cursor-pointer">
+                  <div class="absolute top-0 left-0 w-full h-full team-cardImage">
+                    <img src="./assets/images/couple-images-selfiee.jpg" alt="" class="w-full h-full object-cover">
+                  </div>
+                  <div
+                    class="bg-white w-[35px] h-[35px] flex items-center justify-center absolute top-5 right-5 z-10 rounded-full text-[#FF7510] team-cardIcon">
+                    <span class="inline-block -rotate-90">
+                      <i class="bi bi-arrow-down-right text-sm"></i>
+                    </span>
+                  </div>
+                  <div class="relative z-10 max-h-[50px] space-y-3 team-cardInfo">
+                    <div class="flex flex-col items-start">
+                      <h2 class="font-ginto-nord font-bold text-2xl text-white uppercase">Mukhia Gurung</h2>
+                      <p class="font-sohne-breit-buch font-normal text-sm text-white">VICE CHAIRMAN </p>
+                    </div>
+                    <ul class="flex items-center gap-2 mp-3 team-card-socialIcons opacity-0">
+                      <li>
+                        <a href="#" class="w-5 h-5 bg-white flex items-center justify-center rounded-full">
+                          <i class="bi bi-instagram text-[10px]"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class="w-5 h-5 bg-white flex items-center justify-center rounded-full">
+                          <i class="fa-brands fa-facebook-f text-[10px]"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1">
+                <p class="font-sohne-mono font-normal text-base text-[#373737]"> Behind every flight is a team of elite
+                  aviators
+                  trained to
+                  operate in some of the most challenging
+                  airspace on Earth. Our pilots bring years of experience in high-altitude flying, technical rescue
+                  operations, and Himalayan weather navigation. Each of them is handpicked for their skill, discipline,
+                  and
+                  calm decision-making—qualities that define safe and successful missions.
+                  <br>
+                  <br>
+                  (Press on Card to read their bio)
+                </p>
+              </div>
+            </div>
+            <div class="900:pt-20 md:pt-16 pt-10">
+              <div class="section-heading max-w-[500px] w-full relative z-10 mx-auto">
+                <h2
+                  class="font-ginto-nord font-extrabold xl:text-[70px] md:text-6xl text-5xl text-[#FF7510] uppercase tracking-[-2px] xl:leading-[57px] md:leading-[50px] leading-10 text-center">
+                  LET’S TAKE YOUR FLIGHT
+                </h2>
+              </div>
+              <!-- tabs block -->
+              <div class="w-full mt-10 our-team-tabs-wrapper">
+                <div class="flex relative space-x-5 teamTabButtons">
+                  <button
+                    class="team-tab pb-2 text-[#373737] transition-colors duration-300 flex items-center gap-2 cursor-pointer"
+                    data-tab="what-include">
+                    <span
+                      class="font-sohne-breit-buch font-normal uppercase 2xl:text-xl xl:text-lg sm:text-base text-sm pb-1 border-b-3 text-nowrap">WHAT’S
+                      INCLUDED</span>
+                    <span class="inline-block -rotate-80">
+                      <i class="bi bi-arrow-down-right text-base"></i>
+                    </span>
+                  </button>
+                  <button
+                    class="team-tab pb-2 text-[#373737] transition-colors duration-300 flex items-center gap-2 cursor-pointer"
+                    data-tab="your-requirements">
+                    <span
+                      class="font-sohne-breit-buch font-normal uppercase 2xl:text-xl xl:text-lg sm:text-base text-sm pb-1 border-b-3 text-nowrap">YOUR
+                      REQUIREMENTS</span>
+                    <span class="inline-block -rotate-80">
+                      <i class="bi bi-arrow-down-right text-base"></i>
+                    </span>
+                  </button>
+                  <!-- <span id="tab-indicator" class="absolute bottom-0 h-0.5 bg-orange-500 transition-all duration-300"></span> -->
+                </div>
+                <div class="team-panels space-y-6 mt-4">
+                  <div class="team-panel hidden" id="what-include">
+                    <div class="flex items-center justify-center gap-10 900:flex-row flex-col">
+                      <div>
+                        <h2 class="font-ginto-nord font-extrabold text-2xl text-[#FF7510] uppercase">WHAT’S INCLUDED
+                        </h2>
+                        <ul class="list-disc list-inside space-y-2 mt-3">
+                          <li class="font-sohne-mono font-normal sm:text-base text-sm text-[#373737]">Round-trip
+                            helicopter
+                            transfers
+                            between Kathmandu and Everest Base Camp</li>
+                          <li class="font-sohne-mono font-normal sm:text-base text-sm text-[#373737]">Scenic flight over
+                            the
+                            Himalayas
+                            with views of
+                            Everest, Lhotse, Nuptse, and other peaks</li>
+                          <li class="font-sohne-mono font-normal sm:text-base text-sm text-[#373737]">Professional pilot
+                            and crew
+                            with
+                            high-altitude
+                            experience</li>
+                        </ul>
+                      </div>
+                      <div
+                        class="bg-[#373737] relative md:p-8 sm:p-6 p-4 rounded-sm overflow-hidden max-w-[485px] w-full shrink-0 sm:h-[285px] xs:h-[250px] h-[210px]">
+                        <div class="relative z-10">
+                          <h2
+                            class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510] 900:max-w-[300px] shrink-0">
+                            LET’S START BOOKING
+                          </h2>
+                          <a href="#"
+                            class="more-info-btn primary-btn bg-[#FF7510]! border border-[#FF7510] w-[215px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden mt-4">
+                            <span
+                              class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase relative z-10 text-nowrap">
+                              TAKE YOUR FLIGHT
+                            </span>
+                            <span
+                              class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                              <i class="bi bi-arrow-down-left text-[#FF7510] text-xs -rotate-180"></i>
+                            </span>
+                            <span
+                              class="btn-hover-circle block bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+                          </a>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full">
+                          <img src="./assets/images/PikPng.com_everest-png_4587132 1.png"
+                            alt="Inclusions and Exclusions" class="w-full h-auto" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team-panel hidden" id="your-requirements">
+                    <div class="flex items-center justify-center gap-10 900:flex-row flex-col">
+                      <div>
+                        <h2 class="font-ginto-nord font-extrabold text-2xl text-[#FF7510] uppercase">WHAT’S INCLUDED
+                        </h2>
+                        <ul class="list-disc list-inside space-y-2 mt-3">
+                          <li class="font-sohne-mono font-normal sm:text-base text-sm text-[#373737]">Round-trip
+                            helicopter
+                            transfers
+                            between Kathmandu and Everest Base Camp</li>
+                          <li class="font-sohne-mono font-normal sm:text-base text-sm text-[#373737]">Scenic flight over
+                            the
+                            Himalayas
+                            with views of
+                            Everest, Lhotse, Nuptse, and other peaks</li>
+                          <li class="font-sohne-mono font-normal sm:text-base text-sm text-[#373737]">Professional pilot
+                            and crew
+                            with
+                            high-altitude
+                            experience</li>
+                        </ul>
+                      </div>
+                      <div
+                        class="bg-[#373737] relative md:p-8 sm:p-6 p-4 rounded-sm overflow-hidden max-w-[485px] w-full shrink-0 sm:h-[285px] xs:h-[250px] h-[210px]">
+                        <div class="relative z-10">
+                          <h2
+                            class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510] 900:max-w-[300px] shrink-0">
+                            LET’S START BOOKING
+                          </h2>
+                          <a href="#"
+                            class="more-info-btn primary-btn bg-[#FF7510]! border border-[#FF7510] w-[215px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden mt-4">
+                            <span
+                              class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase relative z-10 text-nowrap">
+                              TAKE YOUR FLIGHT
+                            </span>
+                            <span
+                              class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                              <i class="bi bi-arrow-down-left text-[#FF7510] text-xs -rotate-180"></i>
+                            </span>
+                            <span
+                              class="btn-hover-circle block bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+                          </a>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full">
+                          <img src="./assets/images/PikPng.com_everest-png_4587132 1.png"
+                            alt="Inclusions and Exclusions" class="w-full h-auto" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="w-full sm:h-full h-[300px] overflow-hidden">
+              <img src="./assets/images/clouds-covering-mountains.png" alt="" class="w-full h-full object-cover" />
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-[280px]"
+              style="background: linear-gradient(180deg, rgba(83, 83, 83, 0) 0%, rgba(255, 255, 255, 0.99) 83.95%);">
+            </div>
+          </div>
+          <div class="fixed-buttons flex items-center sm:flex-row flex-col sm:gap-4! gap-0! z-70 sm:w-auto w-full">
+            <!-- BUTTON 1 -->
+            <a href="#"
+              class="group primary-btn bg-[#FF7510]! sm:w-[157px] w-full px-2 py-2.5 sm:rounded-full flex items-center justify-center sm:justify-end gap-2.5 relative overflow-hidden">
+              <span
+                class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase relative z-10 group-hover:text-[#FF7510]!">
+                Book Now
+              </span>
+              <span class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                <i class="bi bi-arrow-down-left text-[#FF7510] text-xs -rotate-180"></i>
+              </span>
+              <span
+                class="btn-hover-circle xl:block hidden bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+            </a>
+
+            <!-- BUTTON 2 -->
+            <a href="#"
+              class="group primary-btn bg-[#80BE1C]! sm:w-[235px] w-full px-2 py-2.5 sm:rounded-full flex items-center justify-center sm:justify-end gap-2.5 relative overflow-hidden">
+              <span
+                class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase relative z-10 group-hover:text-[#80BE1C]!">
+                CHAT ON WHATSAPP
+              </span>
+              <span class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                <i class="bi bi-arrow-down-left text-[#80BE1C] text-xs -rotate-180"></i>
+              </span>
+              <span
+                class="btn-hover-circle xl:block hidden bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+            </a>
+          </div>
+        </section>
+      </section>
+      <!-- FREQUENTLY ASKED  QUESTION section -->
+      <section class="why-choose-us-section 900:pb-20 md:pb-16 pb-10 relative">
+        <div class="section-wrapper flex flex-col 900:flex-row xl:gap-15 900:gap-10 gap-5 relative z-10">
+          <div class="max-w-[440px] shrink-0 w-full relative z-10 section-heading">
+            <h2 class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510]">
+              FREQUENTLY ASKED
+              QUESTION
+            </h2>
+            <div class="mt-4 900:block hidden">
+              <a href="#"
+                class="group secoundary-btn w-[142px] border border-[#FF7510] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                <span
+                  class="btn-text font-sohne-breit-buch font-normal text-sm text-[#FF7510] uppercase leading-0 relative z-10 group-hover:text-white!">
+                  SEE ALL
+                </span>
+                <span class="btn-icon bg-[#FF7510] w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-white text-xs -rotate-180"></i>
+                </span>
+                <span
+                  class="btn-hover-circle block bg-[#FF7510] w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center gap-10 900:flex-row flex-col">
+
+            <div class="wc-accordion space-y-6 flex-1">
+              <div class="wc-item flex items-start 900:gap-10 md:gap-8 sm:gap-6 gap-4">
+                <div>
+                  <input type="radio" name="wcAcc" id="wc1" checked>
+                  <label for="wc1" class="wc-title cursor-pointer flex items-center justify-between gap-5">
+                    <span
+                      class="font-sohne-breit-kraftig font-medium lg:text-2xl md:text-xl sm:text-lg text-base text-[#373737] capitalize pb-4">Highly
+                      Skilled Pilots
+                      With Himalayan
+                      Expertis</span>
+                    <span class="icon-minus"><i class="bi bi-dash text-3xl"></i></span>
+                    <span class="icon-plus"><i class="bi bi-plus text-3xl"></i></span>
+                  </label>
+                  <div class="wc-content border-b-2 border-[#CACACA]">
+                    <p class="font-sohne-mono font-normal md:text-base text-sm text-[#373737]">Our
+                      operations follow
+                      rigorous
+                      aviation
+                      protocols designed for Nepal’s unique high-altitude environment. From
+                      aircraft maintenance to
+                      pilot training, safety isn’t just a priority—it’s the foundation of
+                      everything we do.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wc-item flex items-start 900:gap-10 md:gap-8 sm:gap-6 gap-4">
+                <div>
+                  <input type="radio" name="wcAcc" id="wc2" checked>
+                  <label for="wc2" class="wc-title cursor-pointer flex items-center justify-between gap-5">
+                    <span
+                      class="font-sohne-breit-kraftig font-medium lg:text-2xl md:text-xl sm:text-lg text-base text-[#373737] capitalize pb-4">Highly
+                      Skilled Pilots
+                      With Himalayan
+                      Expertis</span>
+                    <span class="icon-minus"><i class="bi bi-dash text-3xl"></i></span>
+                    <span class="icon-plus"><i class="bi bi-plus text-3xl"></i></span>
+                  </label>
+                  <div class="wc-content border-b-2 border-[#CACACA]">
+                    <p class="font-sohne-mono font-normal md:text-base text-sm text-[#373737]">Our
+                      operations follow
+                      rigorous
+                      aviation
+                      protocols designed for Nepal’s unique high-altitude environment. From
+                      aircraft maintenance to
+                      pilot training, safety isn’t just a priority—it’s the foundation of
+                      everything we do.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wc-item flex items-start 900:gap-10 md:gap-8 sm:gap-6 gap-4">
+
+                <div>
+                  <input type="radio" name="wcAcc" id="wc3" checked>
+                  <label for="wc3" class="wc-title cursor-pointer flex items-center justify-between gap-5">
+                    <span
+                      class="font-sohne-breit-kraftig font-medium lg:text-2xl md:text-xl sm:text-lg text-base text-[#373737] capitalize pb-4">Highly
+                      Skilled Pilots
+                      With Himalayan
+                      Expertis</span>
+                    <span class="icon-minus"><i class="bi bi-dash text-3xl"></i></span>
+                    <span class="icon-plus"><i class="bi bi-plus text-3xl"></i></span>
+                  </label>
+                  <div class="wc-content border-b-2 border-[#CACACA]">
+                    <p class="font-sohne-mono font-normal md:text-base text-sm text-[#373737]">Our
+                      operations follow
+                      rigorous
+                      aviation
+                      protocols designed for Nepal’s unique high-altitude environment. From
+                      aircraft maintenance to
+                      pilot training, safety isn’t just a priority—it’s the foundation of
+                      everything we do.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 900:hidden block">
+            <a href="#"
+              class="group secoundary-btn w-[142px] border border-[#FF7510] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+              <span
+                class="btn-text font-sohne-breit-buch font-normal text-sm text-[#FF7510] uppercase leading-0 relative z-10 group-hover:text-white!">
+                SEE ALL
+              </span>
+              <span class="btn-icon bg-[#FF7510] w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                <i class="bi bi-arrow-down-left text-white text-xs -rotate-180"></i>
+              </span>
+              <span
+                class="btn-hover-circle block bg-[#FF7510] w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- OUR CLIENT’S TESTIMONIAL section -->
+      <section class="testimonials-section 900:pb-20 md:pb-16 pb-10">
+        <div class="section-wrapper">
+          <div class="max-w-[380px] w-full">
+            <p class="font-sohne-breit-buch font-normal text-[#373737] uppercase sm:text-sm text-xs">
+              OUR CLIENT’S TESTIMONIALS
+            </p>
+            <h2 class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510]">
+              THEIR STORIES
+            </h2>
+          </div>
+          <!-- Testimonial Slider -->
+          <div class="testimonial-slider relative">
+            <!-- Slide 1 -->
+            <div
+              class="testimonial-slide text-center flex items-start justify-between lg:gap-14 gap-8 900:flex-row flex-col-reverse"
+              data-active="true">
+              <div class="flex flex-col items-start gap-4 900:pt-5">
+                <div class="flex items-center gap-2">
+                  <div class="w-[22px] h-[22px] shrink-0 ">
+                    <img src="./assets/images/icons/qoutes-icon.svg" alt="" class="w-full h-full">
+                  </div>
+                  <h2 class="font-ginto-nord font-extrabold text-2xl text-[#FF7510]">Mountains & Myths
+                  </h2>
+                </div>
+                <p class="font-sohne-mono font-normal text-base text-[#373737] text-start">“Flying with
+                  Mustang
+                  Helicopter was
+                  nothing
+                  short of extraordinary. From the moment we took
+                  off, the
+                  team’s professionalism and expertise made us feel completely safe, while the
+                  breathtaking Himalayan
+                  views left us speechless.
+
+                  Whether it’s an emergency rescue or a scenic adventure, Mustang Helicopter truly
+                  goes above and
+                  beyond—connecting people to the mountains in ways we never imagined.</p>
+
+              </div>
+              <div
+                class="900:w-[451px] 900:h-[386px] w-full md:h-[340px] sm:h-[300px] h-[270px] relative 900:-translate-y-20 shrink-0 900:pt-0 pt-5 testimonial-slideImage">
+                <div class="w-full h-full rounded-lg overflow-hidden testimonial-slideImageBlock">
+                  <img src="./assets/images/couple-images-selfiee.jpg" alt="" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-2 -left-20 rounded-lg bg-white  flex-col items-end p-4 900:flex hidden">
+                  <h2 class="font-sohne-breit-kraftig font-medium text-xl text-[#373737]">Jake
+                    Heisenberg </h2>
+                  <p class="font-sohne-breit-buch font-normal text-sm text-[#373737]">Regular Traveler
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 1 -->
+            <div
+              class="testimonial-slide text-center flex items-start justify-between lg:gap-14 gap-8 900:flex-row flex-col-reverse"
+              data-active="true">
+              <div class="flex flex-col items-start gap-4 900:pt-5">
+                <div class="flex items-center gap-2">
+                  <div class="w-[22px] h-[22px] shrink-0 ">
+                    <img src="./assets/images/icons/qoutes-icon.svg" alt="" class="w-full h-full">
+                  </div>
+                  <h2 class="font-ginto-nord font-extrabold text-2xl text-[#FF7510]">Mountains & Myths
+                  </h2>
+                </div>
+                <p class="font-sohne-mono font-normal text-base text-[#373737] text-start">“Flying with
+                  Mustang
+                  Helicopter was
+                  nothing
+                  short of extraordinary. From the moment we took
+                  off, the
+                  team’s professionalism and expertise made us feel completely safe, while the
+                  breathtaking Himalayan
+                  views left us speechless.
+
+                  Whether it’s an emergency rescue or a scenic adventure, Mustang Helicopter truly
+                  goes above and
+                  beyond—connecting people to the mountains in ways we never imagined.</p>
+
+              </div>
+              <div
+                class="900:w-[451px] 900:h-[386px] w-full md:h-[340px] sm:h-[300px] h-[270px] relative 900:-translate-y-20 shrink-0 900:pt-0 pt-5 testimonial-slideImage">
+                <div class="w-full h-full rounded-lg overflow-hidden testimonial-slideImageBlock">
+                  <img src="./assets/images/couple-images-selfiee.jpg" alt="" class="w-full h-full object-cover" />
+                </div>
+                <div class="absolute bottom-2 -left-20 rounded-lg bg-white  flex-col items-end p-4 900:flex hidden">
+                  <h2 class="font-sohne-breit-kraftig font-medium text-xl text-[#373737]">Jake
+                    Heisenberg </h2>
+                  <p class="font-sohne-breit-buch font-normal text-sm text-[#373737]">Regular Traveler
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Slider Controls -->
+            <div
+              class="testimonial-controls flex 900:justify-start justify-center items-center 900:mt-3 mt-5 gap-2.5 900:absolute 900:bottom-0 900:left-2/4 900:-translate-x-2/4">
+              <button id="testimonial-prev"
+                class="testimonial-btn border border-[#FF7510] w-[51px] h-[51px] flex items-center justify-center rounded-full"><i
+                  class="bi bi-arrow-left text-[#FF7510]"></i></button>
+              <button id="testimonial-next"
+                class="testimonial-btn border border-[#FF7510] w-[51px] h-[51px] flex items-center justify-center rounded-full"><i
+                  class="bi bi-arrow-right text-[#FF7510]"></i></button>
+              <span class="testimonial-index font-sohne-breit-buch font-nomral text-base text-[#FF7510]">1/3</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="explore-more-tours-section 900:pb-20 md:pb-16 pb-10 overflow-hidden">
+        <div class="section-wrapper">
+          <h2 class="font-ginto-nord font-extrabold md:text-5xl text-4xl uppercase tracking-[-2px] text-[#FF7510]">
+            EXPLORE MORE TOURS
+          </h2>
+          <div class="tourSlider-container custonSlider-block mt-7">
+            <div class="tourismSlider-wrapper overflow-hidden w-full">
+              <div class="tourism-slider-track">
+                <a href="#" class="tourism-slide relative tourism-slide-card">
+                  <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                    <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div
+                    class="relative z-10 tourism-slide-cardInfo w-full md:p-5 p-3 900:max-h-[225px] md:max-h-[200px] max-h-[180px] h-full flex items-end">
+                    <div class="max-w-[210px] space-y-2 relative z-10">
+                      <h2
+                        class="font-ginto-normal font-extrabold lg:text-[32px] lg:leading-7 md:text-3xl text-2xl text-white text-start">
+                        EBC
+                        SIGHTSEEING</h2>
+                      <div class="max-h-0 more-info-btn opacity-0">
+                        <button
+                          class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                          <span
+                            class="font-sohne-breit-buch font-normal text-sm text-white uppercase leading-0 relative z-10">
+                            MORE INFO
+                          </span>
+                          <span
+                            class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                            <i class="bi bi-arrow-down-left text-[#373737] text-xs -rotate-180"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                    </div>
+                  </div>
+                  <div class="card-booking-tag font-sohne-breit-buch font-normal md:text-base sm:text-sm text-xs">
+                    BOOKING AVAILABLE
+                  </div>
+                </a>
+                <a href="#" class="tourism-slide relative tourism-slide-card">
+                  <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                    <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div
+                    class="relative z-10 tourism-slide-cardInfo w-full md:p-5 p-3 900:max-h-[225px] md:max-h-[200px] max-h-[180px] h-full flex items-end">
+                    <div class="max-w-[210px] space-y-2 relative z-10">
+                      <h2
+                        class="font-ginto-normal font-extrabold lg:text-[32px] lg:leading-7 md:text-3xl text-2xl text-white text-start">
+                        EBC
+                        SIGHTSEEING</h2>
+                      <div class="max-h-0 more-info-btn opacity-0">
+                        <button
+                          class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                          <span
+                            class="font-sohne-breit-buch font-normal text-sm text-white uppercase leading-0 relative z-10">
+                            MORE INFO
+                          </span>
+                          <span
+                            class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                            <i class="bi bi-arrow-down-left text-[#373737] text-xs -rotate-180"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                    </div>
+                  </div>
+                  <div class="card-booking-tag font-sohne-breit-buch font-normal md:text-base sm:text-sm text-xs">
+                    BOOKING AVAILABLE
+                  </div>
+                </a>
+                <a href="#" class="tourism-slide relative tourism-slide-card">
+                  <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                    <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div
+                    class="relative z-10 tourism-slide-cardInfo w-full md:p-5 p-3 900:max-h-[225px] md:max-h-[200px] max-h-[180px] h-full flex items-end">
+                    <div class="max-w-[210px] space-y-2 relative z-10">
+                      <h2
+                        class="font-ginto-normal font-extrabold lg:text-[32px] lg:leading-7 md:text-3xl text-2xl text-white text-start">
+                        EBC
+                        SIGHTSEEING</h2>
+                      <div class="max-h-0 more-info-btn opacity-0">
+                        <button
+                          class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                          <span
+                            class="font-sohne-breit-buch font-normal text-sm text-white uppercase leading-0 relative z-10">
+                            MORE INFO
+                          </span>
+                          <span
+                            class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                            <i class="bi bi-arrow-down-left text-[#373737] text-xs -rotate-180"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                    </div>
+                  </div>
+                  <div class="card-booking-tag font-sohne-breit-buch font-normal md:text-base sm:text-sm text-xs">
+                    BOOKING AVAILABLE
+                  </div>
+                </a>
+                <a href="#" class="tourism-slide relative tourism-slide-card">
+                  <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                    <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div
+                    class="relative z-10 tourism-slide-cardInfo w-full md:p-5 p-3 900:max-h-[225px] md:max-h-[200px] max-h-[180px] h-full flex items-end">
+                    <div class="max-w-[210px] space-y-2 relative z-10">
+                      <h2
+                        class="font-ginto-normal font-extrabold lg:text-[32px] lg:leading-7 md:text-3xl text-2xl text-white text-start">
+                        EBC
+                        SIGHTSEEING</h2>
+                      <div class="max-h-0 more-info-btn opacity-0">
+                        <button
+                          class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                          <span
+                            class="font-sohne-breit-buch font-normal text-sm text-white uppercase leading-0 relative z-10">
+                            MORE INFO
+                          </span>
+                          <span
+                            class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                            <i class="bi bi-arrow-down-left text-[#373737] text-xs -rotate-180"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                    </div>
+                  </div>
+                  <div class="card-booking-tag font-sohne-breit-buch font-normal md:text-base sm:text-sm text-xs">
+                    BOOKING AVAILABLE
+                  </div>
+                </a>
+                <a href="#" class="tourism-slide relative tourism-slide-card">
+                  <div class="absolute top-0 left-0 w-full h-full tourism-slide-cardImage">
+                    <img src="./assets/images/couple-images-selfiee.jpg" alt="Tour 1"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <div
+                    class="relative z-10 tourism-slide-cardInfo w-full md:p-5 p-3 900:max-h-[225px] md:max-h-[200px] max-h-[180px] h-full flex items-end">
+                    <div class="max-w-[210px] space-y-2 relative z-10">
+                      <h2
+                        class="font-ginto-normal font-extrabold lg:text-[32px] lg:leading-7 md:text-3xl text-2xl text-white text-start">
+                        EBC
+                        SIGHTSEEING</h2>
+                      <div class="max-h-0 more-info-btn opacity-0">
+                        <button
+                          class="max-w-[182px] border-0 px-2 py-1 rounded-full flex items-center justify-between gap-2.5 relative overflow-hidden">
+                          <span
+                            class="font-sohne-breit-buch font-normal text-sm text-white uppercase leading-0 relative z-10">
+                            MORE INFO
+                          </span>
+                          <span
+                            class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                            <i class="bi bi-arrow-down-left text-[#373737] text-xs -rotate-180"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="absolute top-0 right-0 h-full max-w-8 w-full tourism-slide-card-overlay">
+                    </div>
+                  </div>
+                  <div class="card-booking-tag font-sohne-breit-buch font-normal md:text-base sm:text-sm text-xs">
+                    BOOKING AVAILABLE
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="flex items-center justify-between gap-10 mt-5 pr-5">
+              <div class="flex items-center gap-5">
+                <button class="tourism-slide-btn prev"><i class="bi bi-arrow-left text-[#FF7510]"></i></button>
+                <button class="tourism-slide-btn next"><i class="bi bi-arrow-right text-[#FF7510]"></i></button>
+              </div>
+              <!-- Progress bar -->
+              <div class="tourism-slider-scrollbar">
+                <div class="tourism-slider-scrollbar-thumb"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+    </main>
+    <footer>
+      <div class="footer-top lg:h-[550px] md:h-[450px] h-[400px] relative w-full">
+        <div class="absolute bottom-0 left-0 w-full lg:h-[430px] md:h-[350px] h-[270px] z-10">
+          <div class="footertop-mountain-image h-full w-full">
+            <img src="./assets/images/chairman-section-bg-image.png" alt="footer mountain image"
+              class="w-full h-full" />
+          </div>
+          <div class="absolute bottom-0 left-0 w-full lg:h-[350px] md:h-[270px] h-[210px] overflow-hidden">
+            <div class="w-auto h-full cloud-difter-1 absolute top-0 left-2/4">
+              <img src="./assets/images/footer-clouds/footer-moving-clouds-1.png" alt="footer clouds image"
+                class="w-full h-full object-contain" />
+            </div>
+            <div class="w-auto h-full cloud-difter-2 absolute top-0 right-0">
+              <img src="./assets/images/footer-clouds/footer-moving-clouds.png" alt="footer clouds image"
+                class="w-full h-full object-contain" />
+            </div>
+            <div class="w-auto h-full cloud-difter-3 absolute top-0 left-0">
+              <img src="./assets/images/footer-clouds/footer-moving-clouds-2.png" alt="footer clouds image"
+                class="w-full h-full object-contain" />
+            </div>
+          </div>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full footerTop-content">
+          <div class="section-wrapper flex items-start md:justify-between justify-center ">
+            <div
+              class="xl:w-[500px] xl:h-[500px] 900:w-[450px] 900:h-[450px] md:w-[360px] md:h-[360px] w-[320px] h-80 bg-[#FF7510] rounded-full shrink-0 orange-circle">
+            </div>
+            <h2
+              class="font-extrabold xl:text-9xl lg:text-[110px] 900:text-8xl md:text-[80px] text-7xl text-[#FF7510] uppercase text-right leading-[0.85] tracking-tighter pt-20 md:block hidden">
+              MUSTANG HELI</h2>
+          </div>
+        </div>
+        <div class="section-wrapper relative z-20 footerTop-content-cta">
+          <div
+            class="xl:w-[500px] xl:h-[500px] 900:w-[450px] 900:h-[450px] md:w-[360px] md:h-[360px] w-[320px] h-80 flex 900:justify-center lg:pt-20 md:pt-14 pt-10 xl:pl-10 lg:pl-8 900:pl-0 md:pl-14 pl-18 md:mx-0 mx-auto">
+            <div class="flex flex-col gap-2 lg:max-w-[400px] md:max-w-[300px] max-w-[220px]">
+              <h2
+                class="font-ginto-nord font-extrabold lg:text-5xl md:text-4xl text-2xl uppercase text-white text-start">
+                READY
+                TO TAKE
+                YOUR FLIGHT ?</h2>
+              <button href="#"
+                class="book-now-btn primary-btn bg-white border border-[#FF7510] hover:border-white md:w-[157px] w-[130px] md:px-2 md:py-2.5 px-1 py-1.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden cursor-pointer">
+                <span
+                  class="btn-text font-sohne-breit-buch font-normal md:text-sm text-xs text-[#FF7510] uppercase relative z-10 text-nowrap">
+                  BOOK NOW
+                </span>
+                <span
+                  class="btn-icon bg-[#FF7510] md:w-7 md:h-7 w-5 h-5 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-white md:text-xs text-[8px] -rotate-180"></i>
+                </span>
+                <span
+                  class="btn-hover-circle block bg-[#FF7510] md:w-7 md:h-7 w-5 h-5 rounded-full absolute top-1/5 md:right-2 right-0 z-0"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-part relative z-20 bg-white">
+        <div
+          class="section-wrapper flex lg:items-start items-center justify-between xl:gap-20 gap-10 lg:pb-20 pb-10 lg:flex-row flex-col-reverse">
+          <div class="lg:w-[270px] w-full space-y-8 shrink-0 flex lg:items-start items-center flex-col">
+            <div class="w-full h-[102px] sm:block hidden">
+              <img src="./assets/images/Mustang-Logo.svg" alt="" class="w-full h-full object-contain" />
+            </div>
+            <ul class="w-full">
+              <li class="space-x-4 flex items-center sm:justify-center justify-between w-full">
+                <a href="#"
+                  class="bg-[#FF7510] w-10 h-10 flex items-center justify-center text-white rounded-full text-base">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#"
+                  class="bg-[#FF7510] w-10 h-10 flex items-center justify-center text-white rounded-full text-base">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#"
+                  class="bg-[#FF7510] w-10 h-10 flex items-center justify-center text-white rounded-full text-base">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+                <a href="#"
+                  class="bg-[#FF7510] w-10 h-10 flex items-center justify-center text-white rounded-full text-base">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+              </li>
+            </ul>
+            <ul class="space-y-3">
+              <li class="font-sohne-mono font-normal text-base text-[#373737] sm:text-start text-center">
+                E-mail:
+                email123@gmail.com</li>
+              <li class="font-sohne-mono font-normal text-base text-[#373737] sm:text-start text-center">
+                Phone No: +977
+                - 98736277126</li>
+              <li class="font-sohne-mono font-normal text-base text-[#373737] sm:text-start text-center">
+                Address:
+                Address-Office, Kathmandu,Nepal
+              </li>
+            </ul>
+          </div>
+          <div class="w-full flex items-start justify-between gap-10 lg:flex-row flex-col">
+            <div class="flex items-start justify-between gap-10 mt-6 w-full max-w-max mx-auto flex-wrap">
+              <div>
+                <h2 class="font-sohne-breit-fett font-extrabold text-xl text-[#FF7510] uppercase">Quick
+                  links</h2>
+                <ul class="quick-links space-y-6 mt-7">
+                  <li><a href="#"
+                      class="text-[#373737] hover:text-[#FF7510] transition-all duration-300 ease-in-out font-sohne-mono font-normal text-base uppercase">ABOUT
+                      US</a></li>
+                  <li><a href="#"
+                      class="text-[#373737] hover:text-[#FF7510] transition-all duration-300 ease-in-out font-sohne-mono font-normal text-base uppercase">SAFETY</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-[#373737] hover:text-[#FF7510] transition-all duration-300 ease-in-out font-sohne-mono font-normal text-base uppercase">OUR
+                      TEAM</a></li>
+                  <li><a href="#"
+                      class="text-[#373737] hover:text-[#FF7510] transition-all duration-300 ease-in-out font-sohne-mono font-normal text-base uppercase">Our
+                      Fleet</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="font-sohne-breit-fett font-extrabold text-xl text-[#FF7510] uppercase">
+                  services</h2>
+                <ul class="quick-links space-y-6 mt-7">
+                  <li><a href="#"
+                      class="text-[#373737] hover:text-[#FF7510] transition-all duration-300 ease-in-out font-sohne-mono font-normal text-base uppercase">SIGHTSEEING</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-[#373737] hover:text-[#FF7510] transition-all duration-300 ease-in-out font-sohne-mono font-normal text-base uppercase">CHARTER</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-[#373737] hover:text-[#FF7510] transition-all duration-300 ease-in-out font-sohne-mono font-normal text-base uppercase">RESCUE</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-[#373737] hover:text-[#FF7510] transition-all duration-300 ease-in-out font-sohne-mono font-normal text-base uppercase">CARGO</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-[#373737] hover:text-[#FF7510] transition-all duration-300 ease-in-out font-sohne-mono font-normal text-base uppercase">AERIAL
+                      FILMING</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="font-sohne-breit-fett font-extrabold text-xl text-[#FF7510] uppercase">
+                  RESOURCES</h2>
+                <ul class="quick-links space-y-6 mt-7">
+                  <li><a href="#"
+                      class="text-[#373737] hover:text-[#FF7510] transition-all duration-300 ease-in-out font-sohne-mono font-normal text-base uppercase">GALLERY</a>
+                  </li>
+                  <li><a href="#"
+                      class="text-[#373737] hover:text-[#FF7510] transition-all duration-300 ease-in-out font-sohne-mono font-normal text-base uppercase">BLOGS</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="footer-button flex lg:flex-col flex-row items-center gap-4 mt-6 lg:w-auto w-full justify-center">
+              <a href="#"
+                class="enquire-btn primary-btn bg-[#FF7510]! w-[182px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                <span
+                  class="btn-text font-sohne-breit-buch font-normal text-sm text-white uppercase relative z-10 text-nowrap">
+                  ENQUIRE NOW
+                </span>
+                <span class="btn-icon bg-white w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-[#FF7510] text-xs -rotate-180"></i>
+                </span>
+                <span class="btn-hover-circle block bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+              </a>
+              <a href="#"
+                class="emergency-btn secoundary-btn w-[172px] border border-[#FF7510] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                <span
+                  class="btn-text font-sohne-breit-buch font-normal text-sm text-[#FF7510] uppercase leading-0 relative z-10">
+                  emergency
+                </span>
+                <span class="btn-icon bg-[#FF7510] w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                  <i class="bi bi-arrow-down-left text-white text-xs -rotate-180"></i>
+                </span>
+                <span
+                  class="btn-hover-circle block bg-[#FF7510] w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#373737] h-[55px] flex items-center justify-center gap-6">
+          <div class="flex items-center gap-2">
+            <div class="w-[13px] h-[13px]">
+              <img src="./assets/images/icons/copyright-icon.svg" alt="" class="w-full h-full object-contain">
+            </div>
+            <p class="font-sohne-mono font-normal text-xs text-white">Mustang Heli 2025</p>
+          </div>
+          <p class="font-sohne-mono font-normal text-xs text-[#adadad]">Created By: Ikigai Tech</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Loading overlay -->
+  <div id="loader" class="fixed top-0 left-0 h-screen bg-white w-full flex items-center justify-center">
+    <div class="w-full h-full absolute top-0 left-0">
+      <img src="/assets/images/loading-background-image.png" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="flex items-center gap-2 flex-col relative z-10">
+      <div class="w-[500px] h-40">
+        <img src="/assets/images/icons/loading-helicopter-vector.svg" alt="" class="w-full h-full object-contain">
+      </div>
+      <div class="text-center">
+        <h2 class="font-extrabold text-7xl text-[#FF7510] uppercase">Loading<span class="dots"></span></h2>
+      </div>
+    </div>
+  </div>
+  <!-- GSAP (GreenSock Animation Platform) library for animations -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <!-- GSAP ScrollTrigger plugin to trigger animations on scroll -->
+  <!-- Lenis smooth scroll library -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- Draggable plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/gsap_animation.js"></script>
+</body>
+
+</html>

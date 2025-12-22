@@ -5,8 +5,11 @@ export function initReadMore(btn, content, options = {}) {
     collapsedHeight = 180,
     moreText = "READ FULL MESSAGE",
     lessText = "READ LESS MESSAGE",
+    readFullDetail = "READ FULL DETAIL",
+    readLessDetail = "READ LESS DETAIL",
   } = options;
 
+  const textContent = btn.querySelector("[data-readmore-content]");
   const textEl = btn.querySelector("[data-readmore-text]");
   let expanded = false;
 
@@ -49,6 +52,9 @@ export function initReadMore(btn, content, options = {}) {
 
     if (textEl) {
       textEl.textContent = expanded ? lessText : moreText;
+    }
+    if (textContent) {
+      textContent.textContent = expanded ? readLessDetail : readFullDetail;
     }
   });
 }

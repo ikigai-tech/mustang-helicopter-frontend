@@ -48,6 +48,14 @@
 }
 
 @font-face {
+  font-family: 'TestSohneMono-Kraftig';
+  src: url('../fonts/test-sonhe-mono/TestSohneMono-Kraftig-BF663d89cd2bd2d.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'TestSohne-Kraftig';
   src: url('../fonts/test-sonhe-normal/TestSohne-Kraftig-BF663d89cd37e26.otf') format('opentype');
   font-weight: 500;
@@ -1395,7 +1403,6 @@ Dots animation after "LOADING"
   border-radius: 4px;
   flex-shrink: 0;
   user-select: none;
-  pointer-events: none;
   overflow: hidden;
 }
 
@@ -1490,5 +1497,181 @@ Dots animation after "LOADING"
 @media (max-width: 500px) {
   .aviation-main .explore-services-section .tourism-slide {
     width: calc(100% / 1 - 100px);
+  }
+}
+
+
+/*  <!-- page section navigation --> css*/
+
+.sectionNav-items.active-section {
+  color: #FF7510;
+}
+
+.sectionNav-items span:nth-child(1),
+.sectionNav-items i {
+  transition: all 300ms ease-in-out;
+}
+
+.sectionNav-items.active-section span:nth-child(1) {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.sectionNav-items.active-section i {
+  rotate: 70deg;
+}
+
+/* Horizontal scrolling for small screens */
+.page-section-navigation .section-wrapper {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.secoundary-navigation-bar ul {
+  white-space: nowrap;
+}
+
+
+/* itinerary slider css */
+.itinerarySlider-container {
+  width: calc(100vw - ((100vw - 100%) / 2));
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.itinerarySlider-container .tourism-slide {
+  width: calc(100% / 2 - 5.33px);
+  height: 380px;
+  align-items: center;
+}
+
+.itinerarySlider-container .tourism-slider-track {
+  gap: 40px;
+}
+
+@media (max-width: 1300px) {
+  .itinerarySlider-container .tourism-slide {
+    width: calc(100% / 1 - 400.33px);
+    height: 380px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .itinerarySlider-container .tourism-slide {
+    width: calc(100% / 1 - 200.33px);
+    height: 380px;
+  }
+}
+
+@media (max-width: 900px) {
+  .itinerarySlider-container .tourism-slide {
+    width: calc(100% / 1 - 20.33px);
+    height: 380px;
+  }
+}
+
+@media (max-width: 770px) {
+  .itinerarySlider-container .tourism-slide {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+
+
+/* EXPLORE MORE TOURS slider css */
+.tourSlider-container {
+  width: calc(100vw - ((100vw - 100%) / 2));
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.tourSlider-container .tourism-slide {
+  width: calc(100% / 2 - 120.33px);
+  height: 380px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .tourSlider-container .tourism-slide {
+    width: calc(100% / 2 - 20px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .tourSlider-container .tourism-slide {
+    width: calc(100% / 3 - 10px);
+  }
+}
+
+@media (max-width: 770px) {
+  .tourSlider-container .tourism-slide {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+@media (max-width: 500px) {
+  .tourSlider-container .tourism-slide {
+    width: calc(100% / 1 - 100px);
+  }
+}
+
+/* fixed buttons css */
+
+.fixed-buttons {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  gap: 15px;
+}
+
+.fixed-buttons.is-static {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 640px) {
+  .fixed-buttons {
+    bottom: 0;
+  }
+}
+
+
+
+/* explore more stories slider css */
+.exploreSlider-container {
+  width: calc(100vw - ((100vw - 100%) / 2));
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.exploreSlider-container .tourism-slide {
+  width: calc(100% / 2 - 120.33px);
+  height: 380px;
+}
+
+
+
+@media (max-width: 1025px) {
+  .exploreSlider-container .tourism-slide {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+@media (max-width: 770px) {
+  .exploreSlider-container .tourism-slide {
+    width: calc(100% / 1 - 100px);
+  }
+}
+
+@media (max-width: 500px) {
+  .exploreSlider-container .tourism-slide {
+    width: calc(100% / 1 - 50px);
   }
 }

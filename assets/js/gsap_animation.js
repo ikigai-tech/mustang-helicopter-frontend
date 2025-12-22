@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
             elements.ctaBlock,
             { y: 0, opacity: 0 },
             {
-              y: isLargeScreen ? -400 : -250,
+              y: isLargeScreen ? -400 : -340,
               opacity: 1,
               ease: "none",
             },
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: footerTop,
-        start: "top 60%",
+        start: "top 70%",
         toggleActions: "play none none none",
       },
     });

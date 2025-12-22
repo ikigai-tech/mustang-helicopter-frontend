@@ -22,6 +22,7 @@
   --font-sohne-breit-buch: 'TestSohneBreit-Buch', sans-serif;
   --font-sohne-normal-buch: 'TestSohneNormal-Buch', sans-serif;
   --font-sohne-breit-kraftig: 'TestSohneBreit-Kraftig', sans-serif;
+  --font-sohne-mono-kraftig: 'TestSohneMono-Kraftig', sans-serif;
   --font-sohne-kraftig: 'TestSohne-Kraftig', sans-serif;
   --font-sohne-breit-halbfett: 'TestSohneBreit-Halbfett', sans-serif;
   --font-sohne-breit-fett: 'TestSohneBreit-Fett', sans-serif;
@@ -36,7 +37,7 @@
 /* 2️⃣ Reusable components go here */
 @layer components {
   .hover-scale-img {
-    @apply relative overflow-hidden rounded-lg;
+    @apply relative overflow-hidden rounded-sm;
   }
 
   .hover-scale-img img {
