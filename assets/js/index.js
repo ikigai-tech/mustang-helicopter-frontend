@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ======== Dropdown Navigation ========
   window.addEventListener('load', () => {
-    const dropdownItem = document.querySelector(".nav-item-has-dropdown");
-    if (header && dropdownItem) {
-      import('./modules/dropdown.js')
-        .then(module => module.initDropdown(header, dropdownItem))
-        .catch(err => console.warn("Dropdown module failed:", err));
-    }
+    import('./modules/dropdown.js')
+      .then(module => {
+        const dropdownItems = document.querySelectorAll(".nav-item-has-dropdown");
+        module.initDropdown(header, dropdownItems);
+      })
+      .catch(err => console.warn("Dropdown module failed:", err));
   });
 
   // ======== Custom Cursor ========
@@ -156,6 +156,12 @@ document.addEventListener("DOMContentLoaded", () => {
   import('./modules/fixed-buttons.js')
     .then(module => module.initFixedButtons())
     .catch(err => console.warn("Fixed buttons module failed:", err));
+
+
+  // ======== Counters ========
+  import('./modules/counter.js')
+    .then(module => module.initCounters())
+    .catch(err => console.warn("Counter module failed:", err));
 
 
 });

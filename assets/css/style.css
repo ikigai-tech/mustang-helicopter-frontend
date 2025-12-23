@@ -79,6 +79,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'TestSohneMono-Halbfett';
+  src: url('../fonts/test-sonhe-mono/TestSohneMono-Halbfett-BF663d89cc69f9d.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
   font-family: 'TestSohneMono-Buch';
@@ -642,7 +649,6 @@ Dots animation after "LOADING"
   position: relative;
   overflow: hidden;
   width: 100%;
-  margin: 40px 0;
   margin-top: 24px;
 }
 
@@ -862,11 +868,11 @@ Dots animation after "LOADING"
 
 
 
-/* why choose us section css */
+/* faq section */
 .wc-accordion .wc-item {
   padding-bottom: 20px;
   overflow: hidden;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #d7d7d7;
 }
 
 .wc-accordion input {
@@ -889,6 +895,7 @@ Dots animation after "LOADING"
 .wc-accordion input:checked~.wc-title .icon-plus {
   display: none;
 }
+
 
 .wc-content {
   max-height: 0;
@@ -1388,13 +1395,6 @@ Dots animation after "LOADING"
   }
 }
 
-/* faq section */
-.wc-accordion .wc-item {
-  padding-bottom: 0;
-  border-bottom: 0 solid #d7d7d7;
-}
-
-
 /* emergency services page */
 
 .aviation-carousel-track-image {
@@ -1591,8 +1591,6 @@ Dots animation after "LOADING"
   height: 380px;
 }
 
-
-
 @media (max-width: 1200px) {
   .tourSlider-container .tourism-slide {
     width: calc(100% / 2 - 20px);
@@ -1645,33 +1643,57 @@ Dots animation after "LOADING"
 
 
 /* explore more stories slider css */
-.exploreSlider-container {
+.tourSlider-container {
   width: calc(100vw - ((100vw - 100%) / 2));
   margin-left: 0;
   overflow: hidden;
 }
 
-.exploreSlider-container .tourism-slide {
-  width: calc(100% / 2 - 120.33px);
-  height: 380px;
+
+.tourSlider-container .tourism-slide {
+  width: calc(100% / 4 - 10.33px);
+  height: 370px;
 }
 
+.tourSlider-container .tourism-slide .card-booking-tag {
+  padding: 16px 4px;
+  font-weight: normal;
+}
 
+@media (max-width: 1200px) {
+  .tourSlider-container .tourism-slide {
+    width: calc(100% / 3 - 70px);
+  }
+}
 
-@media (max-width: 1025px) {
-  .exploreSlider-container .tourism-slide {
-    width: calc(100% / 2 - 10px);
+@media (max-width: 1024px) {
+  .tourSlider-container .tourism-slide {
+    width: calc(100% / 3 - 10px);
   }
 }
 
 @media (max-width: 770px) {
-  .exploreSlider-container .tourism-slide {
-    width: calc(100% / 1 - 100px);
+  .tourSlider-container .tourism-slide {
+    width: calc(100% / 2 - 10px);
   }
 }
 
 @media (max-width: 500px) {
-  .exploreSlider-container .tourism-slide {
-    width: calc(100% / 1 - 50px);
+  .tourSlider-container .tourism-slide {
+    width: calc(100% / 1 - 100px);
   }
 }
+
+
+/* Remove default date text (Chrome, Edge, Safari) */
+.custom-date-input::-webkit-datetime-edit {
+  color: transparent;
+}
+
+/* Show text only after a date is selected */
+.custom-date-input:valid::-webkit-datetime-edit {
+  color: #373737;
+}
+
+
+/* Firefox */

@@ -23,22 +23,77 @@
                     <div class="primary-navigation xl:flex hidden items-center gap-3 justify-between w-full">
                         <nav class="w-full flex items-center justify-center relative">
                             <ul role="menu" class="nav-items flex items-center gap-8">
-                                <li><a href="/aboutus.html"
-                                        class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">
+                                <li class="relative nav-item-has-dropdown">
+                                    <button
+                                        class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white cursor-pointer hover:text-[#FF7510] transition-all duration-300 ease-in-out">
                                         <span>About us</span>
-                                    </a>
+                                    </button>
+                                    <!-- Dropdown Menu -->
+                                    <div
+                                        class="dropdown-menu fixed left-0 top-[105px] w-full bg-[#373737] text-white rounded shadow-lg transition-all duration-300 z-50 border-t-3 border-t-[#464646] opacity-0 invisible xl:block hidden">
+                                        <div class="flex items-stretch gap-10 bg-[#373737] w-full section-wrapper">
+                                            <ul class="py-14 w-full">
+                                                <li>
+                                                    <a href="/aboutus.html"
+                                                        class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                                        <span class="font-sohne-breit-buch font-normal text-sm">ABOUT
+                                                            MUSTANG HELICOPTER</span>
+                                                        <i class="bi bi-arrow-up-right text-white text-base"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./aboutusCSR.html"
+                                                        class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                                        <span
+                                                            class="font-sohne-breit-buch font-normal text-sm">Corporate
+                                                            Social Responsibility
+                                                            (CSR)</span>
+                                                        <i class="bi bi-arrow-up-right text-white text-base"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="max-w-[450px] w-full shrink-0 bg-[#3D3D3D] p-8 mt-5">
+                                                <h2 class="font-ginto-nord font-extrabold text-[#FF7510] text-4xl">FOR
+                                                    YOU</h2>
+                                                <div href="#" class="w-full flex flex-col mt-4">
+                                                    <div
+                                                        class="w-full h-[200px] hover-scale-img rounded-sm overflow-hidden">
+                                                        <img src="./assets/images/couple-images-selfiee.jpg"
+                                                            alt="couple-images-selfiee"
+                                                            class="w-full h-full object-cover">
+                                                    </div>
+                                                    <div class="pt-3 space-y-2">
+                                                        <h2
+                                                            class="font-ginto-nord font-extrabold text-xl text-[#FF7510]">
+                                                            ABC: FROM THE TOP</h2>
+                                                        <a href="#"
+                                                            class="group secoundary-btn w-[182px] border border-[#FF7510] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                                                            <span
+                                                                class="btn-text font-sohne-normal-buch font-normal text-sm text-[#FF7510] uppercase leading-0 relative z-10 group-hover:text-white!">
+                                                                READ FULL STORY
+                                                            </span>
+                                                            <span
+                                                                class="btn-icon bg-[#FF7510] w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                                                                <i
+                                                                    class="bi bi-arrow-down-left text-white text-xs -rotate-180"></i>
+                                                            </span>
+                                                            <span
+                                                                class="btn-hover-circle bg-[#FF7510] w-7 h-7 rounded-full absolute top-1/5 right-2 z-0 xl:block hidden "></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="relative nav-item-has-dropdown">
-                                    <!-- Services Menu Item -->
-                                    <a href="#"
-                                        class="nav-link flex items-center gap-1 sohne-breit-kraftig font-medium text-base uppercase text-white"
-                                        aria-haspopup="true" aria-expanded="false" aria-controls="servicesMenu">
-                                        Services
-                                        <i class="bi bi-caret-down-fill text-white xl:block hidden"></i>
-                                    </a>
+                                    <button
+                                        class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white cursor-pointer hover:text-[#FF7510] transition-all duration-300 ease-in-out">
+                                        <span>Services</span>
+                                    </button>
                                     <!-- Dropdown Menu -->
                                     <div id="servicesMenu"
-                                        class="servicesNav-dropdown fixed left-0 top-[105px] w-full bg-[#373737] text-white rounded shadow-lg transition-all duration-300 z-50 border-t-3 border-t-[#464646] opacity-0 invisible xl:block hidden">
+                                        class="dropdown-menu fixed left-0 top-[105px] w-full bg-[#373737] text-white rounded shadow-lg transition-all duration-300 z-50 border-t-3 border-t-[#464646] opacity-0 invisible xl:block hidden">
                                         <div class="flex items-stretch gap-10 bg-[#373737] w-full section-wrapper">
                                             <!-- Tabs Header -->
                                             <div
@@ -70,7 +125,7 @@
                                                     class="servicesNav-tab-pane flex justify-between gap-10 w-full">
                                                     <ul class="py-14">
                                                         <li>
-                                                            <a href="#"
+                                                            <a href="./tourism-sightseeing.html"
                                                                 class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
                                                                 <span
                                                                     class="font-sohne-breit-buch font-normal text-sm">EBC
@@ -216,6 +271,13 @@
                                                 <div id="emergency-services"
                                                     class="servicesNav-tab-pane flex justify-between gap-10 w-full">
                                                     <div class="py-14">
+                                                        <a href="./emergency-services.html"
+                                                            class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                                            <span
+                                                                class="font-sohne-breit-buch font-normal text-sm pb-2">emergency
+                                                                services</span>
+                                                            <i class="bi bi-arrow-up-right text-white text-base"></i>
+                                                        </a>
                                                         <p class="font-sohne-mono font-normal text-sm text-white">Our
                                                             operations follow rigorous
                                                             aviation protocols designed for Nepal’s unique high-altitude
@@ -281,7 +343,7 @@
                                                     class="servicesNav-tab-pane flex justify-between gap-10 w-full">
                                                     <ul class="py-14">
                                                         <li>
-                                                            <a href="#"
+                                                            <a href="./aviation-services.html"
                                                                 class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
                                                                 <span
                                                                     class="font-sohne-breit-buch font-normal text-sm">CHARTER
@@ -300,7 +362,7 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#"
+                                                            <a href="./aerial-cargo.html"
                                                                 class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
                                                                 <span
                                                                     class="font-sohne-breit-buch font-normal text-sm">AERIAL
@@ -438,26 +500,181 @@
                                         </div>
                                     </div>
                                 </li>
-
-                                <li><a href="#"
-                                        class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">
+                                <li class="relative nav-item-has-dropdown">
+                                    <button
+                                        class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white cursor-pointer hover:text-[#FF7510] transition-all duration-300 ease-in-out">
                                         <span>fleet</span>
-                                    </a>
+                                    </button>
+                                    <!-- Dropdown Menu -->
+                                    <div
+                                        class="dropdown-menu fixed left-0 top-[105px] w-full bg-[#373737] text-white rounded shadow-lg transition-all duration-300 z-50 border-t-3 border-t-[#464646] opacity-0 invisible xl:block hidden">
+                                        <div class="flex items-stretch gap-10 bg-[#373737] w-full section-wrapper">
+                                            <ul class="py-14 w-full">
+                                                <li>
+                                                    <a href="./fleet.html"
+                                                        class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                                        <span class="font-sohne-breit-buch font-normal text-sm">OUR
+                                                            FLEET</span>
+                                                        <i class="bi bi-arrow-up-right text-white text-base"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./aircraft-maintenance.html"
+                                                        class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                                        <span class="font-sohne-breit-buch font-normal text-sm">Aircraft
+                                                            Maintenance Organization
+                                                            (AMO)</span>
+                                                        <i class="bi bi-arrow-up-right text-white text-base"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="max-w-[450px] w-full shrink-0 bg-[#3D3D3D] p-8 mt-5">
+                                                <h2 class="font-ginto-nord font-extrabold text-[#FF7510] text-4xl">FOR
+                                                    YOU</h2>
+                                                <div href="#" class="w-full flex flex-col mt-4">
+                                                    <div
+                                                        class="w-full h-[200px] hover-scale-img rounded-sm overflow-hidden">
+                                                        <img src="./assets/images/couple-images-selfiee.jpg"
+                                                            alt="couple-images-selfiee"
+                                                            class="w-full h-full object-cover">
+                                                    </div>
+                                                    <div class="pt-3 space-y-2">
+                                                        <h2
+                                                            class="font-ginto-nord font-extrabold text-xl text-[#FF7510]">
+                                                            ABC: FROM THE TOP</h2>
+                                                        <a href="#"
+                                                            class="group secoundary-btn w-[182px] border border-[#FF7510] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                                                            <span
+                                                                class="btn-text font-sohne-normal-buch font-normal text-sm text-[#FF7510] uppercase leading-0 relative z-10 group-hover:text-white!">
+                                                                READ FULL STORY
+                                                            </span>
+                                                            <span
+                                                                class="btn-icon bg-[#FF7510] w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                                                                <i
+                                                                    class="bi bi-arrow-down-left text-white text-xs -rotate-180"></i>
+                                                            </span>
+                                                            <span
+                                                                class="btn-hover-circle bg-[#FF7510] w-7 h-7 rounded-full absolute top-1/5 right-2 z-0 xl:block hidden "></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li><a href="#"
-                                        class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">
+                                <li class="relative nav-item-has-dropdown">
+                                    <button
+                                        class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white cursor-pointer hover:text-[#FF7510] transition-all duration-300 ease-in-out">
                                         <span>resources</span>
-                                    </a>
+                                    </button>
+                                    <!-- Dropdown Menu -->
+                                    <div
+                                        class="dropdown-menu fixed left-0 top-[105px] w-full bg-[#373737] text-white rounded shadow-lg transition-all duration-300 z-50 border-t-3 border-t-[#464646] opacity-0 invisible xl:block hidden">
+                                        <div class="flex items-stretch gap-10 bg-[#373737] w-full section-wrapper">
+                                            <ul class="py-14 w-full">
+                                                <li>
+                                                    <a href="./blogs.html"
+                                                        class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                                        <span
+                                                            class="font-sohne-breit-buch font-normal text-sm">STORIES</span>
+                                                        <i class="bi bi-arrow-up-right text-white text-base"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./faq.html"
+                                                        class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                                        <span
+                                                            class="font-sohne-breit-buch font-normal text-sm">FREQUENTLY
+                                                            ASKED QUESTION</span>
+                                                        <i class="bi bi-arrow-up-right text-white text-base"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                                        <span class="font-sohne-breit-buch font-normal text-sm">HAZARD
+                                                            SAFETY FORM</span>
+                                                        <i class="bi bi-arrow-up-right text-white text-base"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="max-w-[450px] w-full shrink-0 bg-[#3D3D3D] p-8 mt-5">
+                                                <h2 class="font-ginto-nord font-extrabold text-[#FF7510] text-4xl">FOR
+                                                    YOU</h2>
+                                                <div href="#" class="w-full flex flex-col mt-4">
+                                                    <div
+                                                        class="w-full h-[200px] hover-scale-img rounded-sm overflow-hidden">
+                                                        <img src="./assets/images/couple-images-selfiee.jpg"
+                                                            alt="couple-images-selfiee"
+                                                            class="w-full h-full object-cover">
+                                                    </div>
+                                                    <div class="pt-3 space-y-2">
+                                                        <h2
+                                                            class="font-ginto-nord font-extrabold text-xl text-[#FF7510]">
+                                                            ABC: FROM THE TOP</h2>
+                                                        <a href="#"
+                                                            class="group secoundary-btn w-[182px] border border-[#FF7510] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
+                                                            <span
+                                                                class="btn-text font-sohne-normal-buch font-normal text-sm text-[#FF7510] uppercase leading-0 relative z-10 group-hover:text-white!">
+                                                                READ FULL STORY
+                                                            </span>
+                                                            <span
+                                                                class="btn-icon bg-[#FF7510] w-7 h-7 rounded-full flex items-center justify-center relative z-10">
+                                                                <i
+                                                                    class="bi bi-arrow-down-left text-white text-xs -rotate-180"></i>
+                                                            </span>
+                                                            <span
+                                                                class="btn-hover-circle bg-[#FF7510] w-7 h-7 rounded-full absolute top-1/5 right-2 z-0 xl:block hidden "></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li><a href="#"
-                                        class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white">
+                                <li class="relative nav-item-has-dropdown">
+                                    <button
+                                        class="nav-link sohne-breit-kraftig font-medium text-base uppercase text-white cursor-pointer hover:text-[#FF7510] transition-all duration-300 ease-in-out">
                                         <span>enquire</span>
-                                    </a>
+                                    </button>
+
+                                    <div
+                                        class="dropdown-menu fixed left-0 top-[105px] w-full bg-[#373737] text-white rounded shadow-lg transition-all duration-300 z-50 border-t-3 border-t-[#464646] opacity-0 invisible xl:block hidden">
+                                        <div class="flex items-stretch gap-10 bg-[#373737] w-full section-wrapper">
+                                            <ul class="py-14 w-full">
+                                                <li>
+                                                    <a href="./book-now.html"
+                                                        class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                                        <span class="font-sohne-breit-buch font-normal text-sm">BOOKING
+                                                            ENQUIRY</span>
+                                                        <i class="bi bi-arrow-up-right text-white text-base"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./emergency.html"
+                                                        class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                                        <span
+                                                            class="font-sohne-breit-buch font-normal text-sm">EMERGENCY
+                                                            ENQUIRY</span>
+                                                        <i class="bi bi-arrow-up-right text-white text-base"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./enquiry.html"
+                                                        class="servicesNav-sub-link flex-1 py-2 text-white cursor-pointer flex items-center gap-3 text-nowrap uppercase">
+                                                        <span class="font-sohne-breit-buch font-normal text-sm">FAQ
+                                                            ENQUIRY</span>
+                                                        <i class="bi bi-arrow-up-right text-white text-base"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </nav>
                         <div class="nav-button flex items-center gap-4">
-                            <a href="#"
+                            <a href="./book-now.html"
                                 class="primary-btn bg-white w-[157px] px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
                                 <span
                                     class="btn-text font-sohne-breit-buch font-normal text-sm text-[#373737] uppercase relative z-10">
@@ -470,7 +687,6 @@
                                 <span
                                     class="btn-hover-circle xl:block hidden bg-[#373737] w-7 h-7 rounded-full absolute top-1/5 right-2 z-0"></span>
                             </a>
-
                             <a href="#"
                                 class="emergency-btn secoundary-btn w-[172px] border border-white px-2 py-2.5 rounded-full flex items-center justify-end gap-2.5 relative overflow-hidden">
                                 <span
@@ -484,7 +700,6 @@
                                 <span
                                     class="btn-hover-circle bg-white w-7 h-7 rounded-full absolute top-1/5 right-2 z-0 xl:block hidden "></span>
                             </a>
-
                         </div>
                     </div>
                     <!-- mobile navigation -->
@@ -499,12 +714,32 @@
                                         <i class="bi bi-arrow-right-short text-3xl"></i>
                                     </a>
                                 </li>
-                                <li class="w-full mnav-item">
-                                    <a href="/aboutus.html"
-                                        class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
-                                        <span>About us</span>
+
+                                <li class="w-full mnav-item mnav-has-children mnav-topLevel">
+                                    <a href="#"
+                                        class="mnav-link mnav-toggle w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                                        About us
                                         <i class="bi bi-arrow-right-short text-3xl"></i>
                                     </a>
+                                    <ul class="mnav-submenu hidden flex-col gap-10">
+                                        <li class="mnav-item mnav-has-children w-full">
+                                            <a href="/aboutus.html"
+                                                class="w-full mnav-link flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                                                <span>ABOUT MUSTANG HELICOPTER </span>
+                                                <i class="bi bi-arrow-right-short text-3xl"></i>
+                                            </a>
+                                        </li>
+                                        <li class="mnav-item mnav-has-children">
+                                            <a href="./aboutusCSR.html"
+                                                class="mnav-link flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                                                <span>Corporate Social Responsibility
+                                                    (CSR)</span>
+                                                <i class="bi bi-arrow-right-short text-3xl"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="w-full mnav-item mnav-has-children mnav-topLevel">
                                     <a href="#"
@@ -675,26 +910,124 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="w-full mnav-item">
+
+                                <li class="w-full mnav-item mnav-has-children mnav-topLevel">
                                     <a href="#"
-                                        class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
-                                        <span>fleet</span>
+                                        class="mnav-link mnav-toggle w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                                        fleet
                                         <i class="bi bi-arrow-right-short text-3xl"></i>
                                     </a>
+                                    <ul class="mnav-submenu hidden flex-col gap-10">
+                                        <li class="mnav-item mnav-has-children w-full">
+                                            <a href="./fleet.html"
+                                                class="w-full mnav-link flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                                                <span>OUR FLEET </span>
+                                                <i class="bi bi-arrow-right-short text-3xl"></i>
+                                            </a>
+                                        </li>
+                                        <li class="mnav-item mnav-has-children">
+                                            <a href="./aircraft-maintenance.html"
+                                                class="mnav-link flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                                                <span>Aircraft Maintenance Organization
+                                                    (AMO)</span>
+                                                <i class="bi bi-arrow-right-short text-3xl"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="w-full mnav-item">
+
+                                <li class="w-full mnav-item mnav-has-children mnav-topLevel">
                                     <a href="#"
-                                        class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
-                                        <span>resources</span>
+                                        class="mnav-link mnav-toggle w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                                        resources
                                         <i class="bi bi-arrow-right-short text-3xl"></i>
                                     </a>
+                                    <ul class="mnav-submenu hidden flex-col gap-10">
+                                        <li class="mnav-item mnav-has-children w-full">
+                                            <a href="./blogs.html"
+                                                class="w-full mnav-link flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                                                <span>STORIES </span>
+                                                <i class="bi bi-arrow-right-short text-3xl"></i>
+                                            </a>
+                                        </li>
+                                        <li class="mnav-item mnav-has-children">
+                                            <a href="./faq.html"
+                                                class="mnav-link flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                                                <span>FREQUENTLY ASKED QUESTION</span>
+                                                <i class="bi bi-arrow-right-short text-3xl"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="w-full mnav-item">
+
+                                <li class="w-full mnav-item mnav-has-children mnav-topLevel">
                                     <a href="#"
-                                        class="w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white">
-                                        <span>enquire</span>
+                                        class="mnav-link mnav-toggle w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                                        resources
                                         <i class="bi bi-arrow-right-short text-3xl"></i>
                                     </a>
+                                    <ul class="mnav-submenu hidden flex-col gap-10">
+                                        <li class="mnav-item mnav-has-children w-full">
+                                            <a href="./blogs.html"
+                                                class="w-full mnav-link flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                                                <span>STORIES </span>
+                                                <i class="bi bi-arrow-right-short text-3xl"></i>
+                                            </a>
+                                        </li>
+                                        <li class="mnav-item mnav-has-children">
+                                            <a href="./faq.html"
+                                                class="mnav-link flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                                                <span>FREQUENTLY ASKED QUESTION</span>
+                                                <i class="bi bi-arrow-right-short text-3xl"></i>
+                                            </a>
+                                        </li>
+                                        <li class="mnav-item mnav-has-children">
+                                            <a href="./faq.html"
+                                                class="mnav-link flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                                                <span>HAZARD SAFETY FORM</span>
+                                                <i class="bi bi-arrow-right-short text-3xl"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="w-full mnav-item mnav-has-children mnav-topLevel">
+                                    <a href="#"
+                                        class="mnav-link mnav-toggle w-full flex items-center justify-between gap-1 font-sohne-normal-buch font-medium text-2xl uppercase text-white"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="bi bi-arrow-left-short text-4xl hidden text-[#FF7510]"></i>
+                                        enquire
+                                        <i class="bi bi-arrow-right-short text-3xl"></i>
+                                    </a>
+                                    <ul class="mnav-submenu hidden flex-col gap-10">
+                                        <li class="mnav-item mnav-has-children w-full">
+                                            <a href="./book-now.html"
+                                                class="w-full mnav-link flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                                                <span>BOOKING ENQUIRY </span>
+                                                <i class="bi bi-arrow-right-short text-3xl"></i>
+                                            </a>
+                                        </li>
+                                        <li class="mnav-item mnav-has-children">
+                                            <a href="./emergency.html"
+                                                class="mnav-link flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                                                <span>EMERGENCY ENQUIRY</span>
+                                                <i class="bi bi-arrow-right-short text-3xl"></i>
+                                            </a>
+                                        </li>
+                                        <li class="mnav-item mnav-has-children">
+                                            <a href="./enquiry.html"
+                                                class="mnav-link flex items-center justify-between gap-1 font-sohne-breit-buch font-medium text-xl uppercase text-white">
+                                                <span>FAQ ENQUIRY</span>
+                                                <i class="bi bi-arrow-right-short text-3xl"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </nav>
@@ -1237,7 +1570,7 @@
                                         <span class="icon-minus"><i class="bi bi-dash text-3xl"></i></span>
                                         <span class="icon-plus"><i class="bi bi-plus text-3xl"></i></span>
                                     </label>
-                                    <div class="wc-content border-b-2 border-[#CACACA]">
+                                    <div class="wc-content">
                                         <p class="font-sohne-mono font-normal md:text-base text-sm text-[#373737]">Our
                                             operations follow
                                             rigorous
@@ -1263,7 +1596,7 @@
                                         <span class="icon-minus"><i class="bi bi-dash text-3xl"></i></span>
                                         <span class="icon-plus"><i class="bi bi-plus text-3xl"></i></span>
                                     </label>
-                                    <div class="wc-content border-b-2 border-[#CACACA]">
+                                    <div class="wc-content">
                                         <p class="font-sohne-mono font-normal md:text-base text-sm text-[#373737]">Our
                                             operations follow
                                             rigorous
@@ -1290,7 +1623,7 @@
                                         <span class="icon-minus"><i class="bi bi-dash text-3xl"></i></span>
                                         <span class="icon-plus"><i class="bi bi-plus text-3xl"></i></span>
                                     </label>
-                                    <div class="wc-content border-b-2 border-[#CACACA]">
+                                    <div class="wc-content">
                                         <p class="font-sohne-mono font-normal md:text-base text-sm text-[#373737]">Our
                                             operations follow
                                             rigorous

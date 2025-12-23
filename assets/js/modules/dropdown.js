@@ -1,57 +1,77 @@
-export function initDropdown(header, dropdownItem) {
-  const dropdownTrigger = dropdownItem.querySelector("a");
-  const dropdown = dropdownItem.querySelector(".servicesNav-dropdown");
-  let dropdownOpen = false;
+// ======== Dropdown Module ========
+export function initDropdown(header, dropdownItems) {
+  let openDropdownItem = null;
 
-  const openDropdown = () => {
-    if (!dropdown) return;
+  const openDropdown = (dropdownItem) => {
+    const dropdown = dropdownItem.querySelector(".dropdown-menu");
+    const trigger = dropdownItem.querySelector("button");
+    if (!dropdown || !trigger) return;
+
+    // Close any previously open dropdown
+    if (openDropdownItem && openDropdownItem !== dropdownItem) {
+      closeDropdown(openDropdownItem);
+    }
+
     dropdown.style.opacity = "1";
     dropdown.style.visibility = "visible";
     header.classList.add("dropdown-active");
-    dropdownTrigger.setAttribute("aria-expanded", "true");
-    dropdownOpen = true;
+    trigger.setAttribute("aria-expanded", "true");
+    openDropdownItem = dropdownItem;
   };
 
-  const closeDropdown = () => {
-    if (!dropdown) return;
+  const closeDropdown = (dropdownItem) => {
+    const dropdown = dropdownItem.querySelector(".dropdown-menu");
+    const trigger = dropdownItem.querySelector("button");
+    if (!dropdown || !trigger) return;
+
     dropdown.style.opacity = "0";
     dropdown.style.visibility = "hidden";
     header.classList.remove("dropdown-active");
-    dropdownTrigger.setAttribute("aria-expanded", "false");
-    dropdownOpen = false;
+    trigger.setAttribute("aria-expanded", "false");
+
+    if (openDropdownItem === dropdownItem) openDropdownItem = null;
   };
 
-  dropdownItem.addEventListener("mouseenter", openDropdown);
+  dropdownItems.forEach(dropdownItem => {
+    const trigger = dropdownItem.querySelector("button");
+    const dropdown = dropdownItem.querySelector(".dropdown-menu");
 
-  document.querySelectorAll(".nav-items > li").forEach(navItem => {
-    navItem.addEventListener("mouseenter", () => {
-      if (!dropdownOpen) return;
-      if (!navItem.classList.contains("nav-item-has-dropdown")) return;
-      if (navItem !== dropdownItem) {
-        closeDropdown();
-        const newDropdown = navItem.querySelector(".servicesNav-dropdown");
-        if (newDropdown) {
-          newDropdown.style.opacity = "1";
-          newDropdown.style.visibility = "visible";
-        }
+    // Hover to open
+    dropdownItem.addEventListener("mouseenter", () => openDropdown(dropdownItem));
+
+    // Keyboard support
+    trigger.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openDropdownItem === dropdownItem ? closeDropdown(dropdownItem) : openDropdown(dropdownItem);
+      }
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        openDropdown(dropdownItem);
+        dropdown.querySelector("a")?.focus();
+      }
+    });
+
+    dropdown.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        closeDropdown(dropdownItem);
+        trigger.focus();
       }
     });
   });
 
-  header.addEventListener("mouseleave", closeDropdown);
+  // Close when leaving the header
+  header.addEventListener("mouseleave", () => {
+    if (openDropdownItem) closeDropdown(openDropdownItem);
+  });
 
-  if (dropdownTrigger && dropdown) {
-    dropdownTrigger.addEventListener("keydown", e => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); dropdownOpen ? closeDropdown() : openDropdown(); }
-      if (e.key === "ArrowDown") { e.preventDefault(); openDropdown(); dropdown.querySelector("a")?.focus(); }
-    });
-
-    dropdown.addEventListener("keydown", e => {
-      if (e.key === "Escape") { closeDropdown(); dropdownTrigger.focus(); }
-    });
-
-    document.addEventListener("click", e => {
-      if (!dropdown.contains(e.target) && !dropdownTrigger.contains(e.target)) closeDropdown();
-    });
-  }
+  // Close when clicking outside
+  document.addEventListener("click", e => {
+    if (!openDropdownItem) return;
+    const dropdown = openDropdownItem.querySelector(".dropdown-menu");
+    const trigger = openDropdownItem.querySelector("button");
+    if (!dropdown.contains(e.target) && !trigger.contains(e.target)) {
+      closeDropdown(openDropdownItem);
+    }
+  });
 }

@@ -246,4 +246,51 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   initFooterAnimation();
+
+
+
+  /* =====================================================
+   * 4️⃣ CHAIRMAN SECTION ANIMATION
+   ===================================================== */
+  function initChairmanSectionAnimation() {
+    const section = document.querySelector(".about-chairman-section");
+    const image = section?.querySelector(".chairman-image");
+    const content = section?.querySelector(".chairman-content");
+
+    if (!section || !image || !content) return;
+
+    gsap.set([image, content], { opacity: 0 });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top 45%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    tl.fromTo(
+      image,
+      { y: 220, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.out",
+      }
+    ).fromTo(
+      content,
+      { y: -140, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power3.out",
+      },
+      "-=0.6" // overlap animation
+    );
+  }
+
+  initChairmanSectionAnimation();
+
 });
