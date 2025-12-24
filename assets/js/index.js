@@ -163,6 +163,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(module => module.initCounters())
     .catch(err => console.warn("Counter module failed:", err));
 
+  // ======== helicopter tabs ========
+  import('./modules/helicopter-tabs.js')
+    .then(module => module.initHelicopterTabs())
+    .catch(err => console.warn("Helicopter tabs module failed:", err));
+
 
 });
 
