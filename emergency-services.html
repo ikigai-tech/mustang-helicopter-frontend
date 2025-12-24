@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/output.css">
-  <title>EMERGENCY SERVICES</title>
+  <title>Emergency Services</title>
 </head>
 
 <body>
@@ -1029,7 +1029,8 @@
                 <img src="./assets/images/icons/helicopter-Vector.svg" alt="" class="w-full h-full object-contain">
               </div>
               <div class="flex flex-col md:items-start items-center">
-                <h2 class="font-ginto-nord font-extrabold xl:text-6xl text-4xl text-white">780+</h2>
+                <h2 class="counter font-ginto-nord font-extrabold xl:text-6xl text-4xl text-white" data-target="780">0+
+                </h2>
                 <p class="font-sohne-breit-buch font-normal xl:text-base text-sm text-white text-nowrap">CLIENTS PER
                   MONTH</p>
               </div>
@@ -1039,7 +1040,8 @@
                 <img src="./assets/images/icons/bell-Vector.svg" alt="" class="w-full h-full object-contain">
               </div>
               <div class="flex flex-col md:items-start items-center">
-                <h2 class="font-ginto-nord font-extrabold xl:text-6xl text-4xl text-white">780+</h2>
+                <h2 class="counter font-ginto-nord font-extrabold xl:text-6xl text-4xl text-white" data-target="1080">0+
+                </h2>
                 <p class="font-sohne-breit-buch font-normal xl:text-base text-sm text-white text-nowrap">RESCUE
                   OPERATION</p>
               </div>
@@ -1113,25 +1115,25 @@
               class="bi bi-arrow-right-short text-2xl"></i></button>
           <div class="carousel-track flex h-full">
             <div class="carousel-item">
-              <div class="aviation-carousel-track-image">
+              <div class="aviation-carousel-track-image hover-scale-img">
                 <img src="./assets/images/aviation-service/aviationCarousel1.svg" alt=""
                   class="w-full h-full object-cover" />
               </div>
             </div>
             <div class="carousel-item">
-              <div class="aviation-carousel-track-image">
+              <div class="aviation-carousel-track-image hover-scale-img">
                 <img src="./assets/images/aviation-service/aviationCarousel2.svg" alt=""
                   class="w-full h-full object-cover" />
               </div>
             </div>
             <div class="carousel-item">
-              <div class="aviation-carousel-track-image">
+              <div class="aviation-carousel-track-image hover-scale-img">
                 <img src="./assets/images/aviation-service/aviationCarousel1.svg" alt=""
                   class="w-full h-full object-cover" />
               </div>
             </div>
             <div class="carousel-item">
-              <div class="aviation-carousel-track-image">
+              <div class="aviation-carousel-track-image hover-scale-img">
                 <img src="./assets/images/aviation-service/aviationCarousel2.svg" alt=""
                   class="w-full h-full object-cover" />
               </div>
@@ -1464,26 +1466,13 @@
             <div class="w-full h-[102px] sm:block hidden">
               <img src="./assets/images/Mustang-Logo.svg" alt="" class="w-full h-full object-contain" />
             </div>
-            <ul class="w-full">
-              <li class="space-x-4 flex items-center sm:justify-center justify-between w-full">
-                <a href="#"
-                  class="bg-[#FF7510] w-10 h-10 flex items-center justify-center text-white rounded-full text-base">
-                  <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="#"
-                  class="bg-[#FF7510] w-10 h-10 flex items-center justify-center text-white rounded-full text-base">
-                  <i class="bi bi-instagram"></i>
-                </a>
-                <a href="#"
-                  class="bg-[#FF7510] w-10 h-10 flex items-center justify-center text-white rounded-full text-base">
-                  <i class="bi bi-whatsapp"></i>
-                </a>
-                <a href="#"
-                  class="bg-[#FF7510] w-10 h-10 flex items-center justify-center text-white rounded-full text-base">
-                  <i class="bi bi-twitter-x"></i>
-                </a>
-              </li>
-            </ul>
+            <div class="bg-fall fg-inflate fg-color footer-social-icons">
+              <a href="#" class="social-icons"> <i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-icons"> <i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-icons"><i class="bi bi-whatsapp"></i></a>
+              <a href="#" class="social-icons"> <i class="bi bi-twitter-x"></i>
+              </a>
+            </div>
             <ul class="space-y-3">
               <li class="font-sohne-mono font-normal text-base text-[#373737] sm:text-start text-center">E-mail:
                 email123@gmail.com</li>

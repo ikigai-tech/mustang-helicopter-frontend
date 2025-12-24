@@ -785,6 +785,7 @@ Dots animation after "LOADING"
 
 .tourism-slide-btn:hover {
   background-color: #FF7510;
+  border-color: #FF7510 !important;
 }
 
 .tourism-slide-btn i {
@@ -1684,16 +1685,56 @@ Dots animation after "LOADING"
   }
 }
 
+/* footer socail icons */
 
-/* Remove default date text (Chrome, Edge, Safari) */
-.custom-date-input::-webkit-datetime-edit {
+.footer-social-icons a.social-icons {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  perspective: 40px;
+}
+
+.footer-social-icons a.social-icons i {
+  font-size: 18px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  z-index: 2;
+}
+
+/* background circle */
+.footer-social-icons a.social-icons::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #FF7510;
+  transform-origin: center 44px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 1;
   color: transparent;
 }
 
-/* Show text only after a date is selected */
-.custom-date-input:valid::-webkit-datetime-edit {
-  color: #373737;
+
+/* foreground inflate */
+.fg-inflate a:hover i {
+  transform: scale(1.5);
+  color: #FF7510;
 }
 
+/* SHADOW effect on background (instead of plain color) */
+.bg-fall a:hover::before {
+  box-shadow:
+    0 0 8px rgba(59, 89, 152, 0.6),
+    0 0 16px rgba(59, 89, 152, 0.4),
+    0 0 24px rgba(59, 89, 152, 0.2);
+  transform: rotateX(90deg) scale(0.8);
+}
 
-/* Firefox */
+.bg-fall a.social-icons:hover::before {
+  box-shadow: 0 0 6px #ff4b39, 0 0 12px #ff4b39, 0 0 18px #ff4b39;
+}
